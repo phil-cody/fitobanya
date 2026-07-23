@@ -1,288 +1,234 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <header class="header">
-      <div class="container">
-        <div class="header__content">
-          <div class="header__logo">
-            <a href="#"
-              ><img src="./assets/image/logo-light.svg" alt="Логотип"
-            /></a>
-          </div>
-          <nav class="header__nav">
-            <ul>
-              <li>
-                <a href="#"
-                  >Каталог
-                  <img
-                    src="./assets/image/icons/arrow-icon.svg"
-                    alt="Стрелка открытия пункта навигации"
-                    class="arrow"
-                  />
-                </a>
-                <div class="header__category-list">
-                  <ul>
-                    <li>
-                      <a href="#">Сауны из канадского кедра</a>
-                    </li>
-                    <li>
-                      <a href="#">Сауны из Российского кедра</a>
-                    </li>
-                    <li>
-                      <a href="#">Кедровые фитобочки</a>
-                    </li>
-                    <li>
-                      <a href="#">Электрические печи</a>
-                    </li>
-                    <li>
-                      <a href="#">Комплектующие и аксессуары</a>
-                    </li>
-                    <li>
-                      <a href="#">Криосауны</a>
-                    </li>
-                  </ul>
-                </div>
-              </li>
-              <li>
-                <a href="#">О компании</a>
-              </li>
-              <li>
-                <a href="#">Наши работы</a>
-              </li>
-              <li>
-                <a href="#">Отзывы</a>
-              </li>
-              <li>
-                <a href="#">Доставка и оплата</a>
-              </li>
-              <li>
-                <a href="#">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header__contacts">
-            <div class="header__contacts-base">
-              <div class="header__phone">
-                <a href="tel:88003008327"
-                  >8 (800) 300-83-27
-                  <img
-                    src="./assets/image/icons/arrow-icon.svg"
-                    alt="Кнопка показа вкладки контактов"
-                    class="arrow"
-                  />
-                </a>
-                <div class="header__contacts-list">
-                  <ul>
-                    <li>
-                      <a href="tel:88003008327">8 (800) 300-83-27</a>
-                      <p>Бесплатно по России</p>
-                    </li>
-                    <li>
-                      <a href="tel:89267706833">8 (926) 770-68-33</a>
-                      <p>Звоните, пишите в Telegram</p>
-                    </li>
-                    <li>
-                      <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
-                      <p>Электронная почта</p>
-                    </li>
-                    <li>
-                      <div class="contacts__social-list">
-                        <a href="#"
-                          ><img
-                            src="./assets/image/icons/max-icon.svg"
-                            alt="Переход в мессенджер Макс"
-                        /></a>
-                        <a href="#"
-                          ><img
-                            src="./assets/image/icons/vk-icon.svg"
-                            alt="Переход в Вконтакте"
-                        /></a>
-                        <a href="#"
-                          ><img
-                            src="./assets/image/icons/telegram-icon.svg"
-                            alt="Переход в Телеграм"
-                        /></a>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo">
+          <a href="#">
+            <img src="./assets/image/logo-light.svg" alt="Логотип" />
+          </a>
+        </div>
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul>
+            <li>
+              <a href="#">Каталог
+                <img src="./assets/image/icons/arrow-icon.svg" alt="Стрелка открытия пункта навигации" class="arrow" />
+              </a>
+              <div class="header__category-list">
+                <ul>
+                  <li>
+                    <a href="#">Сауны из канадского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Сауны из Российского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Кедровые фитобочки</a>
+                  </li>
+                  <li>
+                    <a href="#">Электрические печи</a>
+                  </li>
+                  <li>
+                    <a href="#">Комплектующие и аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="#">Криосауны</a>
+                  </li>
+                </ul>
               </div>
-              <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
-            </div>
-            <div class="header__contacts-action">
-              <button class="header__search-btn btn">
-                <img
-                  src="./assets/image/icons/search-icon.svg"
-                  alt="Кнопка для поиска по сайту"
-                />
-              </button>
-              <button class="header__cart-btn btn">
-                <img
-                  src="./assets/image/icons/cart-icon.svg"
-                  alt="Кнопка для просмотра корзины"
-                />
-              </button>
-            </div>
-          </div>
-          <button class="header__burger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-          <div class="header__menu">
-            <div class="menu__header">
-              <div class="menu__logo">
-                <a href="#"
-                  ><img src="./assets/image/logo-dark.svg" alt="Логотип"
-                /></a>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Наши работы</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+            <li>
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <div class="header__contacts-base">
+            <div class="header__phone">
+              <a href="tel:88003008327">8 (800) 300-83-27
+                <img src="./assets/image/icons/arrow-icon.svg" alt="Кнопка показа вкладки контактов" class="arrow" />
+              </a>
+              <div class="header__contacts-list">
+                <ul>
+                  <li>
+                    <a href="tel:88003008327">8 (800) 300-83-27</a>
+                    <p>Бесплатно по России</p>
+                  </li>
+                  <li>
+                    <a href="tel:89267706833">8 (926) 770-68-33</a>
+                    <p>Звоните, пишите в Telegram</p>
+                  </li>
+                  <li>
+                    <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                    <p>Электронная почта</p>
+                  </li>
+                  <li>
+                    <div class="contacts__social-list">
+                      <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+                      <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                      <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+                    </div>
+                  </li>
+                </ul>
               </div>
-              <button class="menu__close">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
             </div>
-            <nav class="menu__nav">
-              <ul>
-                <li>
-                  <a href="#"
-                    >Каталог
-                    <img
-                      src="./assets/image/icons/arrow-icon-dark.svg"
-                      alt="Стрелка открытия пункта навигации"
-                      class="arrow"
-                    />
-                  </a>
-                </li>
-                <li>
-                  <a href="#">О компании</a>
-                </li>
-                <li>
-                  <a href="#">Наши работы</a>
-                </li>
-                <li>
-                  <a href="#">Отзывы</a>
-                </li>
-                <li>
-                  <a href="#">Доставка и оплата</a>
-                </li>
-                <li>
-                  <a href="#">Контакты</a>
-                </li>
-              </ul>
-            </nav>
-            <div class="menu__contacts">
-              <div class="menu__contacts-base">
-                <div class="menu__phone">
-                  <a href="tel:88003008327"
-                    >8 (800) 300-83-27
-                    <img
-                      src="./assets/image/icons/arrow-icon-dark.svg"
-                      alt="Кнопка показа вкладки контактов"
-                      class="arrow"
-                    />
-                  </a>
-                  <div class="header__contacts-list">
-                    <ul>
-                      <li>
-                        <a href="tel:88003008327">8 (800) 300-83-27</a>
-                        <p>Бесплатно по России</p>
-                      </li>
-                      <li>
-                        <a href="tel:89267706833">8 (926) 770-68-33</a>
-                        <p>Звоните, пишите в Telegram</p>
-                      </li>
-                      <li>
-                        <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
-                        <p>Электронная почта</p>
-                      </li>
-                      <li>
-                        <div class="contacts__social-list">
-                          <a href="#"
-                            ><img
-                              src="./assets/image/icons/max-icon.svg"
-                              alt="Переход в мессенджер Макс"
-                          /></a>
-                          <a href="#"
-                            ><img
-                              src="./assets/image/icons/vk-icon.svg"
-                              alt="Переход в Вконтакте"
-                          /></a>
-                          <a href="#"
-                            ><img
-                              src="./assets/image/icons/telegram-icon.svg"
-                              alt="Переход в Телеграм"
-                          /></a>
-                        </div>
-                      </li>
-                    </ul>
+            <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+          </div>
+          <div class="header__contacts-action">
+            <button type="button" class="header__search-btn btn">
+              <img src="./assets/image/icons/search-icon.svg" alt="Кнопка для поиска по сайту" />
+            </button>
+            <button type="button" class="header__cart-btn btn">
+              <img src="./assets/image/icons/cart-icon.svg" alt="Кнопка для просмотра корзины" />
+            </button>
+          </div>
+        </div>
+        <button type="button" class="header__burger" id="burger-open" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__menu" id="burger-menu">
+          <div class="menu__header">
+            <div class="menu__logo">
+              <a href="#"><img src="./assets/image/logo-dark.svg" alt="Логотип" /></a>
+            </div>
+            <button type="button" class="menu__close" id="burger-close" aria-label="Закрыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="menu__content">
+            <div class="menu-1-level level-1-active" id="burger-menu-1-level">
+              <nav class="menu__nav" aria-label="Каталог">
+                <ul>
+                  <li>
+                    <a href="#" class="toggle-level-menu">
+                      Каталог
+                      <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации"
+                        class="arrow">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">О компании</a>
+                  </li>
+                  <li>
+                    <a href="#">Наши работы</a>
+                  </li>
+                  <li>
+                    <a href="#">Отзывы</a>
+                  </li>
+                  <li>
+                    <a href="#">Доставка и оплата</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="menu__contacts">
+                <div class="menu__contacts-base">
+                  <div class="menu__phone">
+                    <a href="tel:88003008327">8 (800) 300-83-27
+                      <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Кнопка показа вкладки контактов"
+                        class="arrow" />
+                    </a>
+                    <div class="header__contacts-list">
+                      <ul>
+                        <li>
+                          <a href="tel:88003008327">8 (800) 300-83-27</a>
+                          <p>Бесплатно по России</p>
+                        </li>
+                        <li>
+                          <a href="tel:89267706833">8 (926) 770-68-33</a>
+                          <p>Звоните, пишите в Telegram</p>
+                        </li>
+                        <li>
+                          <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                          <p>Электронная почта</p>
+                        </li>
+                        <li>
+                          <div class="contacts__social-list">
+                            <a href="#"><img src="./assets/image/icons/max-icon.svg"
+                                alt="Переход в мессенджер Макс" /></a>
+                            <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                            <a href="#"><img src="./assets/image/icons/telegram-icon.svg"
+                                alt="Переход в Телеграм" /></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
+                  <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
                 </div>
-                <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
               </div>
             </div>
-          </div>
-          <div class="header__menu menu-category">
-            <div class="menu__header">
-              <div class="menu__logo">
-                <a href="#"
-                  ><img src="./assets/image/logo-dark.svg" alt="Логотип"
-                /></a>
-              </div>
-              <button class="menu__close">
-                <span></span>
-                <span></span>
-                <span></span>
-              </button>
+            <div class="menu-2-level level-1-active" id="burger-menu-2-level">
+              <nav class="menu__nav" aria-label="Навигация каталога">
+                <div class="menu__nav-title toggle-level-menu">
+                  <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации" />
+                  <h3>Каталог</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#">Сауны из канадского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Сауны из Российского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Кедровые фитобочки</a>
+                  </li>
+                  <li>
+                    <a href="#">Электрические печи</a>
+                  </li>
+                  <li>
+                    <a href="#">Комплектующие и аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="#">Криосауны</a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-            <nav class="menu__nav">
-              <div class="menu__nav-title">
-                <img
-                  src="./assets/image/icons/arrow-icon-dark.svg"
-                  alt="Стрелка открытия пункта навигации"
-                />
-                <h3>Каталог</h3>
-              </div>
-              <ul>
-                <li>
-                  <a href="#">Сауны из канадского кедра</a>
-                </li>
-                <li>
-                  <a href="#">Сауны из Российского кедра</a>
-                </li>
-                <li>
-                  <a href="#">Кедровые фитобочки</a>
-                </li>
-                <li>
-                  <a href="#">Электрические печи</a>
-                </li>
-                <li>
-                  <a href="#">Комплектующие и аксессуары</a>
-                </li>
-                <li>
-                  <a href="#">Криосауны</a>
-                </li>
-              </ul>
-            </nav>
           </div>
-          <div class="header__overlay"></div>
         </div>
+        <div class="header__overlay" id="overlay"></div>
       </div>
-    </header>
-    <main>
-      <section>
-        <div class="container">
-          <h1>hello</h1>
-        </div>
-      </section>
-    </main>
-    <footer></footer>
-    <script src="./scripts/main.js"></script>
-  </body>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="container">
+        <h1>hello</h1>
+      </div>
+    </section>
+  </main>
+  <footer></footer>
+  <script src="./scripts/header.js"></script>
+  <script src="./scripts/main.js"></script>
+</body>
+
 </html>
