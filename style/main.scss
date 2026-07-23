@@ -1,0 +1,19 @@
+@use './abstracts/mixins';
+@use './abstracts/variables' as *;
+@use './base/reset';
+@use './base/typography';
+@use './layout/header';
+@use './components/burger-menu';
+@use './layout/footer';
+@use './layout/container';
+
+body {
+  min-height: 100dvh;
+
+}
+
+main {
+  background: $primary;
+  min-height: 100dvh;
+  padding-top: 200px;
+}

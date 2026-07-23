@@ -1,0 +1,120 @@
+// ===== ЦВЕТА
+$borders: #c0bbb5;
+$white-5: rgba(232, 222, 203, 0.05);
+$borders-alpha: rgba(232, 222, 203, 0.2);
+$black: #000;
+$black-5: rgba(0, 0, 0, 0.05);
+$background: #e2dfd9;
+$surface: #ebe9e5;
+$surface-contrast: #e1dfd8;
+$primary: #544945;
+$primary-sub: rgba(84, 73, 69, 0.1);
+$text-color-medium: #8d8580;
+$text-color-low: #aba39e;
+$text-color-default: #544945;
+$text-color-inverse: #e2dfd9;
+$text-color-inverse-alpha: rgba(226, 223, 217, 0.7);
+$green: #5f7358;
+$green-2: #45544d;
+$orange: #e59d28;
+$red: #cf304e;
+
+// ===== СКРУГЛЕНИЯ
+// Десктоп
+$radius-xxs: 10px;
+$radius-xs: 12px;
+$radius-s: 16px;
+$radius-md: 20px;
+$radius-lg: 24px;
+$radius-xl: 32px;
+$radius-max: 999px;
+// Мобильные
+$radius-xxs-mobile: 8px;
+$radius-xs-mobile: 10px;
+$radius-s-mobile: 14px;
+$radius-md-mobile: 18px;
+$radius-lg-mobile: 20px;
+$radius-xl-mobile: 28px;
+
+// ===== ОТСТУПЫ
+$spacing-none: 0;
+$spacing-xxxxs: 2px;
+$spacing-xxxs: 4px;
+$spacing-xxs: 8px;
+$spacing-xs: 12px;
+$spacing-sm: 16px;
+$spacing-md: 20px;
+$spacing-lg: 24px;
+$spacing-xl: 28px;
+$spacing-xxl: 32px;
+$spacing-xxxl: 40px;
+
+$spacing-xxxs-mobile: 2px;
+$spacing-xxs-mobile: 4px;
+$spacing-xs-mobile: 10px;
+$spacing-sm-mobile: 14px;
+$spacing-md-mobile: 16px;
+$spacing-lg-mobile: 18px;
+$spacing-xl-mobile: 20px;
+$spacing-xxl-mobile: 24px;
+$spacing-xxxl-mobile: 28px;
+
+// ===== ЗАГОЛОВКИ
+$heading-font-weight: 400;
+$heading-line-height: 1;
+$heading-letter-spacing: -0.03%;
+
+$heading-1-font-size: 68px;
+$heading-1-font-size-mobile: 32px;
+
+$heading-1-sm-font-size: 56px;
+$heading-1-sm-font-size-mobile:32px;
+
+$heading-2-font-size: 40px;
+$heading-2-font-size-mobile: 28px;
+
+$heading-3-font-size: 32px;
+$heading-3-font-size-mobile: 24px;
+
+$heading-4-font-size: 28px;
+$heading-4-font-size-mobile: 20px;
+
+$heading-5-font-size: 24px;
+$heading-5-font-size-mobile: 18px;
+
+$heading-6-font-size: 20px;
+$heading-6-font-size-mobile: 16px;
+
+
+// ===== ТЕКСТ
+$text-font-weight: 400;
+$text-font-weight-medium: 600;
+$text-line-height: 1.25;
+$text-letter-spacing: 0;
+
+$text-lg-font-size: 18px;
+$text-lg-font-size-mobile: 16px;
+
+$text-md-font-size: 16px;
+$text-md-font-size-mobile:14px;
+
+$text-sm-font-size: 14px;
+$text-sm-font-size-mobile: 12px;
+
+$text-xs-font-size: 12px;
+$text-xs-font-size-mobile: 10px;
+
+$text-medium-lg-font-size: 18px;
+$text-medium-lg-font-size-mobile: 16px;
+
+$text-medium-md-font-size: 16px;
+$text-medium-md-font-size-mobile: 14px;
+
+$text-medium-sm-font-size: 14px;
+$text-medium-sm-font-size-mobile: 12px;
+
+$text-medium-xs-font-size: 12px;
+$text-medium-xs-font-size-mobile: 10px;
+
+$text-button-font-size: 16px;
+$text-button-font-size-mobile: 14px;

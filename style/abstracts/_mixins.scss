@@ -1,0 +1,45 @@
+@use "./variables" as *;
+
+// ----- Миксины для расположения флекс-элементов ----- //
+
+@mixin flex {
+  display: flex;
+}
+
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// ----- Миксин для текста заголовков
+@mixin heading {
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+  letter-spacing: $heading-letter-spacing;
+}
+
+// ----- Миксин для обычного текста
+@mixin text {
+  font-weight: $text-font-weight;
+  line-height: $text-line-height;
+  letter-spacing: $text-letter-spacing;
+}

@@ -1,0 +1,12 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.container {
+  padding: $spacing-none $spacing-xxxl;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @media (max-width: 540px) {
+    padding: $spacing-none $spacing-md-mobile;
+  }
+}

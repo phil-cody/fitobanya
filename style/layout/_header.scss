@@ -1,0 +1,306 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.header {
+  position: fixed;
+  background: transparent;
+  min-width: 100%;
+  @include text;
+
+  &__content {
+    padding: $spacing-sm $spacing-none;
+    @include flex-between;
+    flex-direction: row;
+    gap: calc($spacing-xxxl * 1.75);
+
+    @media (max-width: 1380px) {
+      gap: $spacing-xxxl;
+    }
+  }
+  &__logo {
+    flex-grow: 0;
+
+    img {
+      min-width: 198px;
+      width: 198px;
+      height: 24px;
+
+      @media (max-width: 540px) {
+        min-width: 133px;
+        width: 133px;
+        height: 16px;
+      }
+    }
+  }
+  &__nav {
+    @media (max-width: 1324px) {
+      display: none;
+    }
+
+    ul {
+      @include flex-between;
+      flex-direction: row;
+      gap: $spacing-lg;
+      color: $text-color-inverse;
+      font-size: $text-md-font-size;
+    }
+
+    li {
+      position: relative;
+      transition: all 0.5s ease;
+
+      a {
+        @include flex-between;
+        flex-direction: row;
+        gap: $spacing-xs-mobile;
+        text-wrap: nowrap;
+
+        img {
+          transition: all 0.5s ease;
+        }
+      }
+      &:hover {
+        .header__category-list {
+          display: block;
+        }
+        img {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+
+  &__category-list {
+    display: none;
+    position: absolute;
+    padding-top: $spacing-lg-mobile;
+    margin-left: -$spacing-xs-mobile;
+
+    ul {
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-none;
+      padding: calc($spacing-xxxs + $spacing-xxxxs);
+      background-color: $background;
+      border: none;
+      border-radius: $radius-lg;
+
+      li {
+        transition: all 0.5s ease;
+        width: 100%;
+
+        &:hover {
+          background-color: $surface;
+          border: none;
+          border-radius: $radius-max;
+        }
+      }
+
+      a {
+        color: $primary;
+        padding: $spacing-xs $spacing-sm;
+      }
+    }
+  }
+
+  &__contacts {
+    @include flex-end;
+    align-items: center;
+    gap: $spacing-xxl;
+    flex-grow: 2;
+
+    @media (max-width: 540px) {
+      display: none;
+    }
+
+    &-base {
+      @include flex-start;
+      flex-direction: column;
+      gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+      @media (max-width: 1324px) {
+        display: none;
+      }
+
+      .header__phone {
+        cursor: pointer;
+        position: relative;
+
+        a {
+          @include flex-start;
+          align-items: center;
+          gap: $spacing-sm;
+          color: $text-color-inverse;
+          font-size: $text-medium-md-font-size;
+          font-weight: $text-font-weight-medium;
+          text-wrap: nowrap;
+        }
+
+        img {
+          height: $spacing-xs-mobile;
+          transition: all 0.5s ease;
+        }
+
+        &:hover {
+          .header__contacts-list {
+            display: block;
+          }
+
+          .arrow {
+            transform: rotate(180deg);
+          }
+        }
+      }
+
+      a {
+        color: $text-color-inverse-alpha;
+        font-size: $text-md-font-size;
+      }
+
+      .header__contacts-list {
+        display: none;
+        position: absolute;
+        padding-top: $spacing-xs-mobile;
+        // margin-right: -12px;
+        right: 0;
+        cursor: default;
+
+        ul {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-none;
+          padding: calc($spacing-xxxs + $spacing-xxxxs);
+          background-color: $background;
+          border: none;
+          border-radius: $radius-lg;
+
+          li {
+            transition: all 0.5s ease;
+            padding: $spacing-xs $spacing-sm;
+            width: 100%;
+            @include flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: calc($spacing-xxxxs + $spacing-xxxs);
+            border-bottom: 1px solid $borders;
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+
+          a {
+            color: $text-color-default;
+          }
+
+          p {
+            text-wrap: nowrap;
+            color: $text-color-medium;
+            font-size: $text-sm-font-size;
+          }
+
+          .contacts__social-list {
+            @include flex-start;
+            gap: $spacing-xs;
+
+            a {
+              padding: $spacing-xs-mobile;
+              background-color: $primary;
+              border: none;
+              border-radius: $radius-max;
+
+              img {
+                width: 20px;
+                height: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+    &-action {
+      @include flex-end;
+      align-items: center;
+      gap: $spacing-xs;
+
+      button {
+        width: calc($spacing-xxxl + $spacing-sm);
+        height: calc($spacing-xxxl + $spacing-sm);
+        @include flex-center;
+        box-shadow: inset 0 0 0 1px $borders-alpha;
+        border: none;
+        border-radius: $radius-max;
+        background-color: $white-5;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__burger {
+    @include flex-between;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    height: $spacing-lg;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    flex-grow: 0;
+
+    @media (max-width: 1324px) {
+      display: flex;
+    }
+
+    @media (max-width: 540px) {
+      height: $spacing-xs;
+    }
+
+    span {
+      width: $spacing-xxl;
+      height: $spacing-xxxxs;
+      background-color: $text-color-inverse;
+      position: relative;
+      transition: all 0.5s ease;
+
+      @media (max-width: 540px) {
+        width: $spacing-lg-mobile;
+      }
+    }
+    &.burger-open {
+      span {
+        &:first-child {
+          top: 11px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:last-child {
+          bottom: 11px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    z-index: 999;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      @media (max-width: 540px) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
