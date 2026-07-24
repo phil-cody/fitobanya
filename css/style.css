@@ -69,14 +69,14 @@ button {
 
 @font-face {
   font-family: "Onest";
-  src: url("../../assets/fonts/Onest-VariableFont_wght.woff2") format("woff2");
+  src: url("../assets/fonts/Onest-VariableFont_wght.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Onest";
-  src: url("../../assets/fonts/Onest-VariableFont_wght.woff2") format("woff2");
+  src: url("../assets/fonts/Onest-VariableFont_wght.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
@@ -784,7 +784,7 @@ pre {
 .hero {
   padding: 88px 0 46px;
   min-height: 700px;
-  background: url("../../assets/image/hero/hero-bg-desktop.webp");
+  background: url("../assets/image/hero/hero-bg-desktop.webp");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -796,7 +796,7 @@ pre {
 }
 @media (max-width: 650px) {
   .hero {
-    background: url("../../assets/image/hero/hero-bg-mobile.webp");
+    background: url("../assets/image/hero/hero-bg-mobile.webp");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 52px 0 18px;

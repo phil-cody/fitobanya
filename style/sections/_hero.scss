@@ -4,7 +4,7 @@
 .hero {
   padding: 88px $spacing-none 46px;
   min-height: 700px;
-  background: url("../../assets/image/hero/hero-bg-desktop.webp");
+  background: url("../assets/image/hero/hero-bg-desktop.webp");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -13,7 +13,7 @@
   color: $text-color-inverse;
 
   @media (max-width: 650px) {
-    background: url("../../assets/image/hero/hero-bg-mobile.webp");
+    background: url("../assets/image/hero/hero-bg-mobile.webp");
     background-size: cover;
     background-repeat: no-repeat;
     padding: calc($spacing-xxl + $spacing-md) $spacing-none $spacing-lg-mobile;
