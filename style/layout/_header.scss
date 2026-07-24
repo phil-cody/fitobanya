@@ -7,6 +7,7 @@
   background: transparent;
   min-width: 100%;
   @include text;
+  transition: all 0.5s ease;
 
   &__content {
     padding: $spacing-sm $spacing-none;
@@ -232,7 +233,7 @@
         border: none;
         border-radius: $radius-max;
         background-color: $white-5;
-        backdrop-filter: blur(24px);
+        @include backdrop-24;
         cursor: pointer;
       }
     }
@@ -308,4 +309,9 @@
       }
     }
   }
+
+  &__sticky {
+		background-color: $black-30;
+    @include backdrop-24;
+	}
 }

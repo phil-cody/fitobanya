@@ -93,8 +93,7 @@
     &:before {
       content: "";
       position: absolute;
-      backdrop-filter: blur(24px);
-      -webkit-backdrop-filter: blur(24px);
+      @include backdrop-24;
       background-color: $white-5;
       border-radius: $radius-lg;
       box-shadow: inset 0 0 0 1px $borders-alpha;

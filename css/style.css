@@ -134,6 +134,7 @@ pre {
   font-weight: 400;
   line-height: 125%;
   letter-spacing: 0;
+  transition: all 0.5s ease;
 }
 .header__content {
   padding: 16px 0;
@@ -356,6 +357,7 @@ pre {
   border-radius: 999px;
   background-color: rgba(232, 222, 203, 0.05);
   backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   cursor: pointer;
 }
 .header__burger {
@@ -425,6 +427,11 @@ pre {
     visibility: visible;
     opacity: 1;
   }
+}
+.header__sticky {
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
 }
 
 .header__menu {

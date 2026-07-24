@@ -43,3 +43,8 @@
   line-height: $text-line-height;
   letter-spacing: $text-letter-spacing;
 }
+
+@mixin backdrop-24 {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
