@@ -189,7 +189,7 @@
       .menu__phone {
         position: relative;
 
-        a {
+        summary {
           @include flex-start;
           align-items: center;
           gap: calc($spacing-xs-mobile - $spacing-xxxxs);
@@ -197,10 +197,15 @@
           font-size: $text-medium-md-font-size;
           font-weight: $text-font-weight-medium;
           text-wrap: nowrap;
+          list-style: none;
+          cursor: pointer;
+
+          ::-webkit-details-marker {
+            display: none;
+          }
         }
 
-        &:hover,
-        &:active {
+        &:open {
           .arrow {
             transform: rotate(270deg);
           }
