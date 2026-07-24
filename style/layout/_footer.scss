@@ -1,2 +1,173 @@
-@use '../abstracts/mixins' as *;
-@use '../abstracts/variables' as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.footer {
+  min-width: 100%;
+  @include text;
+
+  &__main {
+    background-color: $primary;
+    color: $text-color-inverse-alpha;
+    font-size: $text-md-font-size;
+    padding: calc($spacing-xxxl * 1.5) $spacing-none
+      calc($spacing-lg-mobile * 3);
+
+    @media (max-width: 770px) {
+      padding: $spacing-xl $spacing-none;
+      font-size: $text-md-font-size-mobile;
+    }
+
+    .footer__content {
+      @include flex-start;
+      gap: $spacing-xxxl;
+
+      @media (max-width: 770px) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+
+      .footer__info,
+      .footer__catalog,
+      .footer__company {
+        @include flex-start;
+        flex-direction: column;
+
+        h6 {
+          color: $text-color-inverse;
+          font-size: $heading-6-font-size;
+
+          @media (max-width: 770px) {
+            font-size: $heading-6-font-size-mobile;
+          }
+        }
+      }
+
+      .footer__info {
+        width: fit-content;
+        gap: $spacing-xxl;
+        margin-right: calc($spacing-xxxl * 3 - $spacing-xxs);
+
+        @media (max-width: 940px) {
+          margin-right: calc($spacing-xxxl + $spacing-xxs);
+        }
+
+        @media (max-width: 770px) {
+          margin-right: $spacing-none;
+          gap: $spacing-lg;
+          position: relative;
+        }
+
+        .footer__logo {
+          position: relative;
+          top: -$spacing-xxxxs;
+
+          img {
+            min-width: 198px;
+            width: 198px;
+            height: $spacing-lg;
+          }
+        }
+
+        .footer__contacts {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-xs;
+
+          @media (max-width: 770px) {
+            gap: calc($spacing-xxxxs + $spacing-xxxs);
+          }
+        }
+
+        .footer__address {
+          @include flex-start;
+          flex-direction: column;
+          gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+          @media (max-width: 770px) {
+            gap: $spacing-xxxs;
+          }
+
+          address {
+            color: $text-color-inverse;
+            font-style: normal;
+          }
+        }
+
+        .footer__socials {
+          @media (max-width: 650px) {
+            gap: $spacing-xs-mobile;
+
+            a {
+              width: 44px;
+              height: 44px;
+            }
+          }
+        }
+      }
+      .footer__catalog,
+      .footer__company {
+        gap: $spacing-lg-mobile;
+
+        @media (max-width: 770px) {
+          gap: $spacing-sm-mobile;
+
+          ul {
+            gap: calc($spacing-xxxxs + $spacing-xxxs);
+          }
+        }
+
+        ul {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-xs-mobile;
+
+          @media (max-width: 650px) {
+            gap: $spacing-xxxs;
+          }
+        }
+      }
+
+      .footer__catalog {
+        text-wrap: nowrap;
+        margin-right: calc($spacing-xxxl * 1.55);
+
+        @media (max-width: 940px) {
+          margin-right: $spacing-none;
+          text-wrap: wrap;
+        }
+
+        @media (max-width: 770px) {
+          margin-bottom: $spacing-xxs;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: $primary-dark;
+    color: $text-color-medium;
+    font-size: $text-md-font-size;
+    padding: $spacing-sm $spacing-none;
+
+    @media (max-width: 650px) {
+      font-size: $text-md-font-size-mobile;
+    }
+
+    ul {
+      @include flex-between;
+      gap: $spacing-lg;
+      flex-wrap: wrap;
+      row-gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+      & li:first-child {
+        flex-grow: 1;
+      }
+
+      @media (max-width: 650px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $spacing-xxxs;
+      }
+    }
+  }
+}

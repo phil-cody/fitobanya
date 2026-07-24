@@ -24,7 +24,7 @@
     img {
       min-width: 198px;
       width: 198px;
-      height: 24px;
+      height: $spacing-lg;
 
       @media (max-width: 540px) {
         min-width: 133px;
@@ -142,7 +142,13 @@
           width: max-content;
         }
 
-        img {
+        .socials a {
+          background-color: $primary;
+          width: 48px;
+          @include flex-center;
+        }
+
+        .arrow {
           height: $spacing-xxs;
           transition: all 0.5s ease;
         }
@@ -206,19 +212,8 @@
           }
 
           .contacts__social-list {
-            @include flex-start;
-            gap: $spacing-xs;
-
             a {
               padding: $spacing-xs-mobile;
-              background-color: $primary;
-              border: none;
-              border-radius: $radius-max;
-
-              img {
-                width: 20px;
-                height: 20px;
-              }
             }
           }
         }
@@ -237,7 +232,7 @@
         border: none;
         border-radius: $radius-max;
         background-color: $white-5;
-        backdrop-filter: blur(24px); 
+        backdrop-filter: blur(24px);
         cursor: pointer;
       }
     }

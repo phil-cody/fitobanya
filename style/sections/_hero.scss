@@ -26,7 +26,6 @@
   }
 
   .container {
-    min-width: 100%;
     height: calc(700px - 88px - 46px);
     @include flex-end;
 

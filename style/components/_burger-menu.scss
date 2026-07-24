@@ -5,7 +5,7 @@
   width: 100%;
   position: fixed;
   z-index: 1000;
-  top: -150dvw;
+  top: -200dvw;
   left: 0;
   background-color: $surface;
   @include flex-start;
@@ -262,19 +262,8 @@
             }
 
             .contacts__social-list {
-              @include flex-start;
-              gap: $spacing-xs;
-
               a {
-                padding: $spacing-xs-mobile;
                 background-color: $primary;
-                border: none;
-                border-radius: $radius-max;
-
-                img {
-                  width: 20px;
-                  height: 20px;
-                }
               }
             }
           }
