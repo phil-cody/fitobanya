@@ -93,6 +93,7 @@ pre {
 
 .header {
   position: fixed;
+  z-index: 1000;
   background: transparent;
   min-width: 100%;
   font-weight: 400;
@@ -383,6 +384,7 @@ pre {
   width: 100%;
   height: 100%;
   background-color: #e2dfd9;
+  inset: 0;
   z-index: 999;
   display: block;
   opacity: 0;
@@ -508,7 +510,6 @@ pre {
 .header__menu .menu__content {
   transition: top 0.5s ease;
   width: 100%;
-  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -534,8 +535,6 @@ pre {
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
-  position: relative;
-  z-index: 1005;
   transition: all 0.5s ease;
 }
 .header__menu #burger-menu-1-level .menu__nav ul {
@@ -615,10 +614,10 @@ pre {
 }
 .header__menu #burger-menu-1-level .menu__contacts .menu__phone .header__contacts-list {
   display: none;
-  position: absolute;
-  padding-top: 10px;
-  left: 0;
+  position: static;
+  padding-top: 8px;
   cursor: default;
+  transition: all 0.5s ease;
 }
 .header__menu #burger-menu-1-level .menu__contacts .menu__phone .header__contacts-list ul {
   display: flex;
@@ -676,8 +675,6 @@ pre {
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
-  position: relative;
-  z-index: 1003;
   transition: all 0.5s ease;
 }
 .header__menu #burger-menu-2-level .menu__nav ul {
@@ -880,15 +877,28 @@ pre {
 }
 .hero .hero__sticker {
   padding: 20px;
-  box-shadow: inset 0 0 0 1px rgba(232, 222, 203, 0.2);
   border-radius: 24px;
-  background-color: rgba(232, 222, 203, 0.05);
-  backdrop-filter: blur(24px);
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
   gap: 20px;
+  z-index: 0;
+  isolation: isolate;
+  position: relative;
+}
+.hero .hero__sticker:before {
+  content: "";
+  position: absolute;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background-color: rgba(232, 222, 203, 0.05);
+  border-radius: 24px;
+  box-shadow: inset 0 0 0 1px rgba(232, 222, 203, 0.2);
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
 }
 @media (max-width: 650px) {
   .hero .hero__sticker {
@@ -899,6 +909,8 @@ pre {
 .hero .hero__sticker .hero__sticker-icon {
   align-self: flex-end;
   padding: 7px;
+  position: relative;
+  z-index: 1;
 }
 @media (max-width: 650px) {
   .hero .hero__sticker .hero__sticker-icon {
@@ -910,6 +922,8 @@ pre {
   height: 12px;
 }
 .hero .hero__sticker p {
+  position: relative;
+  z-index: 1;
   font-size: 20px;
   max-width: 158px;
   min-width: 158px;

@@ -83,13 +83,27 @@
   }
   .hero__sticker {
     padding: $spacing-md;
-    box-shadow: inset 0 0 0 1px $borders-alpha;
     border-radius: $radius-lg;
-    background-color: $white-5;
-    backdrop-filter: blur(24px);
     @include flex-start;
     flex-direction: column;
     gap: $spacing-md;
+    z-index:0;
+    isolation: isolate;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      background-color: $white-5;
+      border-radius: $radius-lg;
+      box-shadow: inset 0 0 0 1px $borders-alpha;
+      z-index: 0;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
 
     @media (max-width: 650px) {
       padding: $spacing-md-mobile;
@@ -99,6 +113,8 @@
     .hero__sticker-icon {
       align-self: flex-end;
       padding: calc($spacing-xxxxs * 3.5);
+      position: relative;
+      z-index: 1;
 
       @media (max-width: 650px) {
         align-self: flex-start;
@@ -111,6 +127,8 @@
     }
 
     p {
+      position: relative;
+      z-index: 1;
       font-size: $heading-6-font-size;
       max-width: 158px;
       min-width: 158px;

@@ -116,7 +116,6 @@
   .menu__content {
     transition: top 0.5s ease;
     width: 100%;
-    position: relative;
     @include flex-start;
     gap: $spacing-lg;
     padding: $spacing-none $spacing-xxxl $spacing-lg;
@@ -137,8 +136,6 @@
     @include flex-start;
     flex-direction: column;
     gap: $spacing-md;
-    position: relative;
-    z-index: 1005;
     transition: all 0.5s ease;
 
     .menu__nav {
@@ -220,10 +217,10 @@
 
         .header__contacts-list {
           display: none;
-          position: absolute;
-          padding-top: $spacing-xs-mobile;
-          left: 0;
+          position: static;
+          padding-top: $spacing-xxs;
           cursor: default;
+          transition: all 0.5s ease;
 
           ul {
             @include flex-start;
@@ -285,8 +282,6 @@
     @include flex-start;
     flex-direction: column;
     gap: $spacing-md;
-    position: relative;
-    z-index: 1003;
     transition: all 0.5s ease;
 
     .menu__nav {
