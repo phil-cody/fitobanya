@@ -7,13 +7,16 @@
 @use './layout/footer';
 @use './layout/container';
 
+@use './pages/home';
+
 body {
   min-height: 100dvh;
-
+  min-width: 100dvw;
+  width: 100%;
+  background-color: $background;
 }
 
 main {
-  background: $primary;
-  min-height: 100dvh;
-  padding-top: 200px;
+  min-width: 100%;
+  width: 100%;
 }

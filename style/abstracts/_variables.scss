@@ -61,8 +61,8 @@ $spacing-xxxl-mobile: 28px;
 
 // ===== ЗАГОЛОВКИ
 $heading-font-weight: 400;
-$heading-line-height: 1;
-$heading-letter-spacing: -0.03%;
+$heading-line-height: 100%;
+$heading-letter-spacing: -3%;
 
 $heading-1-font-size: 68px;
 $heading-1-font-size-mobile: 32px;
@@ -89,7 +89,7 @@ $heading-6-font-size-mobile: 16px;
 // ===== ТЕКСТ
 $text-font-weight: 400;
 $text-font-weight-medium: 600;
-$text-line-height: 1.25;
+$text-line-height: 125%;
 $text-letter-spacing: 0;
 
 $text-lg-font-size: 18px;

@@ -52,11 +52,15 @@
       a {
         @include flex-between;
         flex-direction: row;
-        gap: $spacing-xs-mobile;
+        gap: $spacing-sm;
         text-wrap: nowrap;
+        width: max-content;
 
         img {
           transition: all 0.5s ease;
+          margin-right: 6px;
+          width: 14px;
+          height: 8px;
         }
       }
       &:hover {
@@ -106,7 +110,7 @@
   &__contacts {
     @include flex-end;
     align-items: center;
-    gap: $spacing-xxl;
+    gap: $spacing-xxxl;
     flex-grow: 2;
 
     @media (max-width: 540px) {
@@ -134,10 +138,11 @@
           font-size: $text-medium-md-font-size;
           font-weight: $text-font-weight-medium;
           text-wrap: nowrap;
+          width: max-content;
         }
 
         img {
-          height: $spacing-xs-mobile;
+          height: $spacing-xxs;
           transition: all 0.5s ease;
         }
 
@@ -231,6 +236,7 @@
         border: none;
         border-radius: $radius-max;
         background-color: $white-5;
+        backdrop-filter: blur(24px); 
         cursor: pointer;
       }
     }
@@ -241,12 +247,13 @@
     display: none;
     flex-direction: column;
     position: relative;
-    height: $spacing-lg;
     background-color: transparent;
     border: none;
     transition: all 0.5s ease;
     cursor: pointer;
     flex-grow: 0;
+    gap: $spacing-xxxs;
+    transform: translate(-2px, -1px);
 
     @media (max-width: 1324px) {
       display: flex;
@@ -258,13 +265,13 @@
 
     span {
       width: $spacing-xxl;
-      height: $spacing-xxxxs;
+      min-height: $spacing-xxxxs;
       background-color: $text-color-inverse;
       position: relative;
       transition: all 0.5s ease;
 
       @media (max-width: 540px) {
-        width: $spacing-lg-mobile;
+        width: $spacing-xl-mobile;
       }
     }
     &.burger-open {

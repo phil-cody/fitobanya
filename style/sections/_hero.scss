@@ -1,0 +1,127 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.hero {
+  padding: 88px $spacing-none 46px;
+  min-height: 700px;
+  background: url("../../assets/image/hero/hero-bg-desktop.webp");
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-width: 100%;
+  @include flex-end;
+  color: $text-color-inverse;
+
+  @media (max-width: 650px) {
+    background: url("../../assets/image/hero/hero-bg-mobile.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: calc($spacing-xxl + $spacing-md) $spacing-none $spacing-lg-mobile;
+    min-height: 0;
+    height: calc(100dvw * 1.33);
+  }
+
+  @media (max-width: 540px) {
+    padding: calc($spacing-xxl + $spacing-md) $spacing-none $spacing-lg-mobile;
+  }
+
+  .container {
+    min-width: 100%;
+    height: calc(700px - 88px - 46px);
+    @include flex-end;
+
+    @media (max-width: 650px) {
+      height: calc(100dvw * 1.33 - 88px - 46px);
+    }
+
+    @media (max-width: 540px) {
+      height: calc(100dvw * 1.33 - 68px - $spacing-lg-mobile);
+    }
+  }
+
+  .hero__content {
+    width: 100%;
+    @include flex-between;
+    align-items: flex-end;
+
+    @media (max-width: 650px) {
+      height: 100%;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+  .hero__text {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @media (max-width: 650px) {
+      gap: $spacing-xs-mobile;
+    }
+
+    h1 {
+      font-size: $heading-1-sm-font-size;
+
+      @media (max-width: 770px) {
+        font-size: $heading-1-sm-font-size-mobile;
+      }
+    }
+
+    p {
+      font-size: $text-md-font-size;
+      max-width: 472px;
+
+      @media (max-width: 770px) {
+        max-width: 350px;
+      }
+
+      @media (max-width: 540px) {
+        max-width: 272px;
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+  .hero__sticker {
+    padding: $spacing-md;
+    box-shadow: inset 0 0 0 1px $borders-alpha;
+    border-radius: $radius-lg;
+    background-color: $white-5;
+    backdrop-filter: blur(24px);
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @media (max-width: 650px) {
+      padding: $spacing-md-mobile;
+      gap: $spacing-xs-mobile;
+    }
+
+    .hero__sticker-icon {
+      align-self: flex-end;
+      padding: calc($spacing-xxxxs * 3.5);
+
+      @media (max-width: 650px) {
+        align-self: flex-start;
+      }
+
+      img {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    p {
+      font-size: $heading-6-font-size;
+      max-width: 158px;
+      min-width: 158px;
+      line-height: 120%;
+      letter-spacing: -3%;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+        min-width: 141px;
+        max-width: 141px;
+      }
+    }
+  }
+}
