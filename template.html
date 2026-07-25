@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/style.css" />
   <title>Document</title>
 </head>
@@ -84,7 +85,7 @@
                     <p>Электронная почта</p>
                   </li>
                   <li>
-                    <div class="contacts__social-list">
+                    <div class="contacts__social-list socials">
                       <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
                       <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
                       <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
@@ -96,10 +97,10 @@
             <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
           </div>
           <div class="header__contacts-action">
-            <button type="button" class="header__search-btn btn">
+            <button type="button" class="header__search-btn">
               <img src="./assets/image/icons/search-icon.svg" alt="Кнопка для поиска по сайту" />
             </button>
-            <button type="button" class="header__cart-btn btn">
+            <button type="button" class="header__cart-btn">
               <img src="./assets/image/icons/cart-icon.svg" alt="Кнопка для просмотра корзины" />
             </button>
           </div>
@@ -150,11 +151,11 @@
               </nav>
               <div class="menu__contacts">
                 <div class="menu__contacts-base">
-                  <div class="menu__phone">
-                    <a href="tel:88003008327">8 (800) 300-83-27
+                  <details class="menu__phone">
+                    <summary>8 (800) 300-83-27
                       <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Кнопка показа вкладки контактов"
                         class="arrow" />
-                    </a>
+                    </summary>
                     <div class="header__contacts-list">
                       <ul>
                         <li>
@@ -170,7 +171,7 @@
                           <p>Электронная почта</p>
                         </li>
                         <li>
-                          <div class="contacts__social-list">
+                          <div class="contacts__social-list socials">
                             <a href="#"><img src="./assets/image/icons/max-icon.svg"
                                 alt="Переход в мессенджер Макс" /></a>
                             <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
@@ -180,7 +181,7 @@
                         </li>
                       </ul>
                     </div>
-                  </div>
+                  </details>
                   <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
                 </div>
               </div>
@@ -220,15 +221,152 @@
     </div>
   </header>
   <main>
-    <section>
+    <section class="form-cost">
       <div class="container">
-
+        <div class="form-cost__content">
+          <div class="form-cost__text">
+            <h2>РАССЧИТАТЬ СТОИМОСТЬ САУНЫ</h2>
+            <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+          </div>
+          <div class="form-cost__form">
+            <form action="#" method="post">
+              <fieldset class="form-cost__types">
+                <div class="form-cost__radio">
+                  <h6>Тип сауны</h6>
+                  <ul>
+                    <li>
+                      <label for="finnish-sauna">Финская</label>
+                      <input type="radio" name="finnish-sauna" id="finnish-sauna" value="finnish-sauna">
+                    </li>
+                    <li>
+                      <label for="infrared-sauna">Инфракрасная</label>
+                      <input type="radio" name="infrared-sauna" id="infrared-sauna" value="infrared-sauna">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Размер</h6>
+                  <ul>
+                    <li>
+                      <label for="corner-size">Угловая</label>
+                      <input type="radio" name="corner-size" id="corner-size" value="corner-size">
+                    </li>
+                    <li>
+                      <label for="straight-size">Прямая</label>
+                      <input type="radio" name="straight-size" id="straight-size" value="straight-size">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Древесина</h6>
+                  <ul>
+                    <li>
+                      <label for="canadian-cedar">Канадский кедр</label>
+                      <input type="radio" name="canadian-cedar" id="canadian-cedar" value="canadian-cedar">
+                    </li>
+                    <li>
+                      <label for="russian-cedar">Российский кедр</label>
+                      <input type="radio" name="russian-cedar" id="russian-cedar" value="russian-cedar">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-cost__contacts">
+                <h6>Куда выслать расчёт?</h6>
+                <ul>
+                  <li>
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                  </li>
+                  <li>
+                    <label for="phone-number">Номер телефона</label>
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="+7 911 123-45-67" required>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="form-cost__submit-box">
+                <button type="submit" class="form-cost__submit btn btn-light">Отправить заявку</button>
+                <fieldset class="form-cost__pd-policy">
+                  <input type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+                  <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                    Федеральным законом Nº 152-ФЗ</label>
+                </fieldset>
+                </div>
+            </form>
+          </div>
+        </div>
       </div>
     </section>
   </main>
-  <footer></footer>
-  <script src="./scripts/header.js"></script>
-  <script src="./scripts/main.js"></script>
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <a href="#">
+                <img src="./assets/image/logo-light.svg" alt="Логотип" />
+              </a>
+            </div>
+            <div class="footer__contacts">
+              <h6>
+                <a href="tel:88003008327">8 (800) 300-83-27</a>
+              </h6>
+              <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+            </div>
+            <div class="footer__address">
+              <address>Московская область, г. Реутов, ул.Октября, 5Б</address>
+              <p>Ежедневно <time datetime="09:00">9:00</time> - <time datetime="19:00">19:00</time></p>
+            </div>
+            <div class="footer__socials socials">
+              <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+              <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+              <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+            </div>
+          </div>
+          <div class="footer__catalog">
+            <h6>Каталог</h6>
+            <ul>
+              <li><a href="#">Финские сауны в квартиру</a></li>
+              <li><a href="#">Фитобочки</a></li>
+              <li><a href="#">Комбинированная финская с инфракрасной сауной</a></li>
+              <li><a href="#">Инфракрасные сауны</a></li>
+              <li><a href="#">Инфракрасные сауны с гималайской солью</a></li>
+              <li><a href="#">Комбинированная финская с паровой сауной</a></li>
+              <li><a href="#">Электрические печи</a></li>
+              <li><a href="#">Парогенераторы</a></li>
+              <li><a href="#">Фитосборы</a></li>
+              <li><a href="#">Соляные сауны</a></li>
+              <li><a href="#">Комплектующие для саун</a></li>
+            </ul>
+          </div>
+          <div class="footer__company">
+            <h6>Компания</h6>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Портфолио</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <ul>
+          <li>© 2026 ФИТОБАНЯ</li>
+          <li>Политика конфиденциальности</li>
+          <li>Политика обработки персональных данных</li>
+          <li>Публичная оферта</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="./scripts/header.js" defer></script>
+  <script src="./scripts/form.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
 </body>
 
 </html>

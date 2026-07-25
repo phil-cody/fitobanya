@@ -60,6 +60,7 @@
 
     h2 {
       font-size: $heading-2-font-size;
+      text-transform: uppercase;
       @include heading;
 
       @media (max-width: 770px) {
