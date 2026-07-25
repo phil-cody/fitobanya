@@ -1,26 +1,32 @@
-@use './abstracts/mixins' as *;
-@use './abstracts/variables' as *;
-@use './base/reset';
-@use './base/typography';
-@use './components/socials';
-@use './layout/header';
-@use './components/burger-menu';
-@use './layout/footer';
-@use './layout/container';
+@use "./abstracts/mixins" as *;
+@use "./abstracts/variables" as *;
+@use "./base/reset";
+@use "./base/typography";
+@use "./components/socials";
+@use "./components/buttons";
+@use "./components/custom-checkbox";
+@use "./layout/header";
+@use "./components/burger-menu";
+@use "./sections/form-cost";
+@use "./layout/footer";
+@use "./layout/container";
 
-@use './pages/home';
+@use "./pages/home";
 
 body {
   @include flex;
   flex-direction: column;
   min-height: 100dvh;
-  min-width: 100dvw;
-  width: 100%;
+  min-width: 100%;
+  width: 100dvw;
   background-color: $background;
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
 }
 
 main {
   min-width: 100%;
-  width: 100%;
+  width: 100dvw;
   flex: 1;
 }

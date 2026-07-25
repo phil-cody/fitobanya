@@ -13,14 +13,14 @@
     padding: $spacing-sm $spacing-none;
     @include flex-between;
     flex-direction: row;
-    gap: calc($spacing-xxxl * 1.75);
-
-    @media (max-width: 1380px) {
-      gap: $spacing-xxxl;
-    }
+    gap: $spacing-md;
   }
+  
   &__logo {
-    flex-grow: 0;
+
+    @media (max-width: 1324px) {
+      flex-grow: 0;
+    }
 
     img {
       min-width: 198px;
@@ -35,6 +35,8 @@
     }
   }
   &__nav {
+    width: fit-content;
+
     @media (max-width: 1324px) {
       display: none;
     }
@@ -113,7 +115,10 @@
     @include flex-end;
     align-items: center;
     gap: $spacing-xxxl;
-    flex-grow: 2;
+
+    @media (max-width: 1324px) {
+      flex-grow: 2;
+    }
 
     @media (max-width: 540px) {
       display: none;

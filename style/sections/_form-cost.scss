@@ -1,0 +1,299 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.form-cost {
+  background-color: $primary;
+  padding: $spacing-none $spacing-none 48px;
+  min-width: 100%;
+  @include flex-end;
+  color: $text-color-inverse;
+  @include text;
+  border-bottom: 1px solid $borders-alpha;
+
+  @media (max-width: 770px) {
+    padding-bottom: $spacing-xl;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  &__content {
+    width: 100%;
+    @include flex-start;
+    align-items: stretch;
+    gap: calc($spacing-xxxl * 1.25);
+
+    @media (max-width: 1150px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 770px) {
+      gap: $spacing-md;
+    }
+  }
+
+  .form-cost__text,
+  .form-cost__form {
+    padding-top: calc($spacing-xxxl * 1.5);
+    padding-bottom: $spacing-xs;
+
+    @media (max-width: 770px) {
+      padding-top: $spacing-xl;
+      padding-bottom: $spacing-none;
+    }
+  }
+
+  .form-cost__text {
+    max-width: 408px;
+    @include flex-between;
+    align-items: flex-start;
+    flex-direction: column;
+
+    @media (max-width: 1150px) {
+      gap: $spacing-xxxl;
+    }
+
+    @media (max-width: 540px) {
+      gap: $spacing-xs;
+    }
+
+    h2 {
+      font-size: $heading-2-font-size;
+      @include heading;
+
+      @media (max-width: 770px) {
+        font-size: $heading-2-font-size-mobile;
+      }
+    }
+
+    p {
+      font-size: $text-md-font-size;
+      color: $text-color-inverse-alpha;
+      max-width: 311px;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+  .form-cost__form {
+    padding-left: calc($spacing-xxxl * 1.25);
+    border-left: 1px solid $borders-alpha;
+
+    @media (max-width: 540px) {
+      padding-top: 22px;
+    }
+
+    @media (max-width: 1150px) {
+      border-top: 1px solid $borders-alpha;
+      border-left: none;
+      padding-left: 0;
+    }
+
+    form {
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-xxxl;
+
+      @media (max-width: 540px) {
+        gap: $spacing-xxxl-mobile;
+      }
+    }
+
+    fieldset {
+      h6 {
+        font-size: $heading-6-font-size;
+        @include heading;
+
+        @media (max-width: 770px) {
+          font-size: $heading-6-font-size-mobile;
+        }
+      }
+    }
+  }
+
+  &__types {
+    @include flex-start;
+    flex-wrap: wrap;
+    gap: 29px;
+  }
+
+  &__radio {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    @media (max-width: 540px) {
+      gap: $spacing-xs;
+    }
+
+    ul {
+      @include flex-start;
+      gap: $spacing-xs-mobile;
+
+      @media (max-width: 540px) {
+        gap: calc($spacing-xxxxs + $spacing-xxxs);
+      }
+
+      li {
+        padding: $spacing-xs $spacing-sm;
+        border: 1px solid $borders-alpha;
+        border-radius: $radius-max;
+        cursor: pointer;
+        letter-spacing: -2%;
+
+        @media (max-width: 540px) {
+          padding: calc($spacing-xxxxs * 3.5) 13px;
+        }
+
+        &.checked {
+          background-color: $text-color-inverse;
+
+          label {
+            color: $green-2;
+          }
+        }
+      }
+
+      label {
+        font-size: $text-md-font-size;
+        color: $text-color-inverse-alpha;
+        cursor: pointer;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+
+      input {
+        display: none;
+      }
+    }
+  }
+
+  &__contacts {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-lg;
+
+    @media (max-width: 770px) {
+      gap: $spacing-md-mobile;
+    }
+
+    @media (max-width: 540px) {
+      width: 100%;
+    }
+
+    ul {
+      @include flex-start;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+      width: 100%;
+
+      @media (max-width: 540px) {
+        flex-direction: column;
+      }
+    }
+
+    li {
+      padding: $spacing-xs-mobile $spacing-none;
+      width: 340px;
+      border-bottom: 1px solid $borders-alpha;
+      @include flex-start;
+      flex-direction: column;
+      gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+      @media (max-width: 540px) {
+        width: 100%;
+        gap: $spacing-xxxxs;
+        padding: calc($spacing-xxxxs + $spacing-xxxs) $spacing-none;
+      }
+
+      label {
+        font-size: $text-sm-font-size;
+        color: $text-color-inverse-alpha;
+
+        @media (max-width: 770px) {
+          font-size: $text-sm-font-size-mobile;
+        }
+      }
+
+      input {
+        border: none;
+        background-color: transparent;
+        padding: $spacing-none;
+        width: 100%;
+        color: $text-color-inverse;
+        font-size: $text-md-font-size;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+
+        &::placeholder {
+          color: $text-color-inverse;
+          font-size: $text-md-font-size;
+
+          @media (max-width: 770px) {
+            font-size: $text-md-font-size-mobile;
+          }
+        }
+
+        &:focus-visible {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    color: $green-2;
+
+    @media (max-width: 540px) {
+      width: 100%;
+      padding: 17px;
+      letter-spacing: -2%;
+    }
+  }
+
+  &__submit-box {
+    @include flex-start;
+    gap: $spacing-xxxl;
+    width: 100%;
+
+    @media (max-width: 770px) {
+      gap: $spacing-xl;
+    }
+
+    @media (max-width: 540px) {
+      flex-direction: column;
+    }
+  }
+
+  &__pd-policy {
+    align-self: center;
+    @include flex-center;
+    gap: $spacing-xs-mobile;
+    font-size: $text-sm-font-size;
+    color: $text-color-inverse-alpha;
+
+    @media (max-width: 770px) {
+      font-size: $text-sm-font-size-mobile;
+    }
+
+    @media (max-width: 540px) {
+      align-self: flex-start;
+    }
+
+    label {
+      max-width: 580px;
+
+      @media (max-width: 770px) {
+        max-width: 280px;
+        line-height: 1.25;
+      }
+    }
+  }
+}

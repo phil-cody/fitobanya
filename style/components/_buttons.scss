@@ -1,2 +1,26 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
+
+.btn {
+  font-size: $text-button-font-size;
+  padding: $spacing-lg 22px;
+  border: none;
+  border-radius: $radius-max;
+  text-wrap: nowrap;
+  cursor: pointer;
+
+  @media (max-width: 770px) {
+    font-size: $text-button-font-size-mobile;
+    padding: $spacing-lg $spacing-lg-mobile;
+  }
+}
+
+.btn-light {
+  background-color: $background;
+  color: $text-color-default;
+}
+
+.btn-dark {
+  background-color: $text-color-default;
+  color: $text-color-inverse;
+}

@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+[role="switch"] {
+  appearance: none;
+  min-width: $spacing-lg;
+  min-height: $spacing-lg;
+  width: $spacing-lg;
+  height: $spacing-lg;
+  border: none;
+  border-radius: calc($radius-xs / 2);
+  background-color: $background;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: url("../assets/image/icons/checkbox-icon.svg");
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: $spacing-xxxs;
+  }
+
+  &:checked {
+    &::after {
+      content: "";
+    }
+  }
+}

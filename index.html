@@ -97,10 +97,10 @@
             <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
           </div>
           <div class="header__contacts-action">
-            <button type="button" class="header__search-btn btn">
+            <button type="button" class="header__search-btn">
               <img src="./assets/image/icons/search-icon.svg" alt="Кнопка для поиска по сайту" />
             </button>
-            <button type="button" class="header__cart-btn btn">
+            <button type="button" class="header__cart-btn">
               <img src="./assets/image/icons/cart-icon.svg" alt="Кнопка для просмотра корзины" />
             </button>
           </div>
@@ -237,6 +237,82 @@
         </div>
       </div>
     </section>
+    <section class="form-cost">
+      <div class="container">
+        <div class="form-cost__content">
+          <div class="form-cost__text">
+            <h2>РАССЧИТАТЬ СТОИМОСТЬ САУНЫ</h2>
+            <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+          </div>
+          <div class="form-cost__form">
+            <form action="#" method="post">
+              <fieldset class="form-cost__types">
+                <div class="form-cost__radio">
+                  <h6>Тип сауны</h6>
+                  <ul>
+                    <li>
+                      <label for="finnish-sauna">Финская</label>
+                      <input type="radio" name="finnish-sauna" id="finnish-sauna" value="finnish-sauna">
+                    </li>
+                    <li>
+                      <label for="infrared-sauna">Инфракрасная</label>
+                      <input type="radio" name="infrared-sauna" id="infrared-sauna" value="infrared-sauna">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Размер</h6>
+                  <ul>
+                    <li>
+                      <label for="corner-size">Угловая</label>
+                      <input type="radio" name="corner-size" id="corner-size" value="corner-size">
+                    </li>
+                    <li>
+                      <label for="straight-size">Прямая</label>
+                      <input type="radio" name="straight-size" id="straight-size" value="straight-size">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Древесина</h6>
+                  <ul>
+                    <li>
+                      <label for="canadian-cedar">Канадский кедр</label>
+                      <input type="radio" name="canadian-cedar" id="canadian-cedar" value="canadian-cedar">
+                    </li>
+                    <li>
+                      <label for="russian-cedar">Российский кедр</label>
+                      <input type="radio" name="russian-cedar" id="russian-cedar" value="russian-cedar">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-cost__contacts">
+                <h6>Куда выслать расчёт?</h6>
+                <ul>
+                  <li>
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                  </li>
+                  <li>
+                    <label for="phone-number">Номер телефона</label>
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="+7 911 123-45-67" required>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="form-cost__submit-box">
+                <button type="submit" class="form-cost__submit btn btn-light">Отправить заявку</button>
+                <fieldset class="form-cost__pd-policy">
+                  <input type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+                  <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                    Федеральным законом Nº 152-ФЗ</label>
+                </fieldset>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
   <footer class="footer">
     <div class="footer__main">
@@ -304,8 +380,9 @@
       </div>
     </div>
   </footer>
-  <script src="./scripts/header.js"></script>
-  <script src="./scripts/main.js"></script>
+  <script src="./scripts/header.js" defer></script>
+  <script src="./scripts/form.js" defer></script>
+  <script src="./scripts/main.js" defer></script>
 </body>
 
 </html>
