@@ -33,8 +33,8 @@
     }
   }
 
-  .form-cost__text,
-  .form-cost__form {
+  &__text,
+  &__form {
     padding-top: calc($spacing-xxxl * 1.5);
     padding-bottom: $spacing-xs;
 
@@ -44,7 +44,7 @@
     }
   }
 
-  .form-cost__text {
+  &__text {
     max-width: 408px;
     @include flex-between;
     align-items: flex-start;
@@ -78,7 +78,7 @@
       }
     }
   }
-  .form-cost__form {
+  &__form {
     padding-left: calc($spacing-xxxl * 1.25);
     border-left: 1px solid $borders-alpha;
 

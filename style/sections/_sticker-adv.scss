@@ -2,8 +2,12 @@
 @use "../abstracts/variables" as *;
 
 .sticker-adv {
-  padding: calc($spacing-xxxl * 2.5) $spacing-none;
+  padding: calc($spacing-xxxxl * 2) $spacing-none;
   min-width: 100%;
+
+  @media(max-width: 540px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
 
   .sticker-adv__content {
     background: url("../assets/image/sticker-adv/sticker-adv-bg.webp");
