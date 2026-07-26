@@ -74,7 +74,6 @@ h3,
 h4,
 h5,
 h6 {
-  text-wrap: balance;
   font-weight: 400;
   line-height: 100%;
   letter-spacing: -3%;
@@ -1635,6 +1634,133 @@ pre {
   max-height: 280px;
   height: auto;
   object-fit: contain;
+}
+
+.sticker-adv {
+  padding: 100px 0;
+  min-width: 100%;
+}
+.sticker-adv .sticker-adv__content {
+  background: url("../assets/image/sticker-adv/sticker-adv-bg.webp");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 32px;
+  width: 100%;
+  padding: 0 clamp(24px, 3.5dvw, 50px);
+  color: #e2dfd9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 851px) {
+  .sticker-adv .sticker-adv__content {
+    padding-top: 24px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 650px) {
+  .sticker-adv .sticker-adv__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.sticker-adv .sticker-adv__content h3 {
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -3%;
+  font-size: 32px;
+  max-width: 245px;
+}
+@media (max-width: 1100px) {
+  .sticker-adv .sticker-adv__content h3 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 650px) {
+  .sticker-adv .sticker-adv__content h3 {
+    max-width: 279px;
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+}
+.sticker-adv .sticker-adv__image {
+  position: relative;
+}
+.sticker-adv .sticker-adv__image img {
+  position: relative;
+  z-index: 5;
+  width: clamp(286px, 27.2dvw, 392px);
+}
+@media (max-width: 851px) {
+  .sticker-adv .sticker-adv__image {
+    order: 1;
+    margin: 0 auto;
+  }
+}
+.sticker-adv .sticker-adv__image-badge {
+  z-index: 3;
+  font-size: 18px;
+  letter-spacing: -3%;
+  color: #544945;
+  position: absolute;
+  top: 44.5%;
+  left: 0;
+  width: 28%;
+  padding: clamp(7px, 0.5dvw, 8px) clamp(6px, 0.7dvw, 10px);
+  padding-right: 40px;
+  background-color: #e2dfd9;
+  border-radius: 12px;
+}
+@media (max-width: 1100px) {
+  .sticker-adv .sticker-adv__image-badge {
+    font-size: 14px;
+  }
+}
+.sticker-adv .sticker-adv__info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  align-items: center;
+  gap: clamp(8px, 2.2dvw, 32px);
+}
+@media (max-width: 851px) {
+  .sticker-adv .sticker-adv__info {
+    flex-direction: column;
+  }
+}
+.sticker-adv .sticker-adv__info p {
+  font-size: 16px;
+  max-width: 200px;
+}
+@media (max-width: 991px) {
+  .sticker-adv .sticker-adv__info p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 851px) {
+  .sticker-adv .sticker-adv__info p {
+    align-items: flex-start;
+  }
+}
+.sticker-adv .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 15px 20px;
+  flex-shrink: 0;
+}
+@media (max-width: 1100px) {
+  .sticker-adv .btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 851px) {
+  .sticker-adv .btn {
+    width: 100%;
+  }
 }
 
 body {

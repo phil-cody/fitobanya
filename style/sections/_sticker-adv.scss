@@ -1,0 +1,115 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.sticker-adv {
+  padding: calc($spacing-xxxl * 2.5) $spacing-none;
+  min-width: 100%;
+
+  .sticker-adv__content {
+    background: url("../assets/image/sticker-adv/sticker-adv-bg.webp");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $radius-xl;
+    width: 100%;
+    padding: $spacing-none clamp($spacing-lg, 3.5dvw, $spacing-xxxxl);
+    color: $text-color-inverse;
+    @include flex-between;
+
+    @media (max-width: 851px) {
+      padding-top: $spacing-lg;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 650px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    h3 {
+      @include heading;
+      font-size: $heading-3-font-size;
+      max-width: 245px;
+
+      @media (max-width: 1100px) {
+        font-size: $heading-3-font-size-mobile;
+      }
+
+      @media (max-width: 650px) {
+        max-width: 279px;
+        font-size: $heading-4-font-size-mobile;
+        margin-bottom: calc($spacing-xxxxs + $spacing-xxxs);
+      }
+    }
+  }
+  .sticker-adv__image {
+    position: relative;
+
+    img {
+      position: relative;
+      z-index: 5;
+      width: clamp(286px, 27.2dvw, 392px);
+    }
+
+    @media (max-width: 851px) {
+      order: 1;
+      margin: 0 auto;
+    }
+  }
+  .sticker-adv__image-badge {
+    z-index: 3;
+    font-size: $text-lg-font-size;
+    letter-spacing: -3%;
+    color: $text-color-default;
+    position: absolute;
+    top: 44.5%;
+    left: 0;
+    width: 28%;
+    padding: clamp(7px, 0.5dvw, $spacing-xxs)
+      clamp(6px, 0.7dvw, $spacing-xs-mobile);
+    padding-right: $spacing-xxxl;
+    background-color: $text-color-inverse;
+    border-radius: $radius-xs;
+
+    @media (max-width: 1100px) {
+      font-size: $text-md-font-size-mobile;
+    }
+  }
+  .sticker-adv__info {
+    @include flex-end;
+    align-items: center;
+    gap: clamp($spacing-xxs, 2.2dvw, $spacing-xxl);
+
+    @media (max-width: 851px) {
+      flex-direction: column;
+    }
+
+    p {
+      font-size: $text-md-font-size;
+      max-width: 200px;
+
+      @media (max-width: 991px) {
+        font-size: $text-md-font-size-mobile;
+      }
+
+      @media (max-width: 851px) {
+        align-items: flex-start;
+      }
+    }
+  }
+  .btn {
+    @include flex-between;
+    justify-content: center;
+    gap: $spacing-lg-mobile;
+    padding: calc($spacing-sm - 1px) $spacing-md;
+    flex-shrink: 0;
+
+    @media (max-width: 1100px) {
+      font-size: $text-button-font-size-mobile;
+    }
+
+    @media (max-width: 851px) {
+      width: 100%;
+    }
+  }
+}
