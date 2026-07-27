@@ -29,15 +29,16 @@
     width: min(100vw, 1440px);
     max-width: none;
     margin: $spacing-none calc(50% - min(50vw, 720px));
-
     padding: $spacing-none $spacing-xxxl;
     box-sizing: border-box;
-
     @include flex-start;
     align-items: stretch;
     gap: $spacing-md;
     overflow-x: auto;
     overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: $spacing-xxxxl;
 
     @media (min-width: 771px) {
       scrollbar-width: none;
@@ -84,6 +85,7 @@
     @include flex-start;
     flex-direction: column;
     gap: $spacing-lg;
+    scroll-snap-align: start;
 
     @media (max-width: 540px) {
       min-width: 216px;

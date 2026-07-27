@@ -5,65 +5,80 @@ const nextArr = Array.from(document.querySelectorAll(".button__next"));
 const fault = 4;
 
 for (let i = 0; i < sliderArr.length; i++) {
-  const slider = sliderArr[i];
-  const cards = Array.from(slider.children);
+  const cards = Array.from(sliderArr[i].children);
   const prev = prevArr[i];
   const next = nextArr[i];
 
-  const getPaddingLeft = () =>
-    parseFloat(window.getComputedStyle(slider).paddingLeft) || 0;
+  if (sliderArr[i].scrollLeft <= fault) {
+    prev.disabled = true;
+  }
 
-  const getMaxScroll = () => slider.scrollWidth - slider.clientWidth;
+  sliderArr[i].addEventListener("scroll", () => {
+    let sliderWidth = sliderArr[i].scrollWidth;
+    let viewSliderWidth = sliderArr[i].clientWidth;
+    const maxScroll = sliderWidth - viewSliderWidth;
 
-  const updateButtons = () => {
-    const maxScroll = getMaxScroll();
-
-    prev.disabled = slider.scrollLeft <= fault;
-    next.disabled = slider.scrollLeft >= maxScroll - fault;
-  };
-
-  const scrollToCard = (card) => {
-    const sliderRect = slider.getBoundingClientRect();
-    const cardRect = card.getBoundingClientRect();
-    const paddingLeft = getPaddingLeft();
-    const maxScroll = getMaxScroll();
-    const targetScroll = slider.scrollLeft
-      + cardRect.left
-      - (sliderRect.left + paddingLeft);
-
-    slider.scrollTo({
-      left: Math.max(0, Math.min(targetScroll, maxScroll)),
-      behavior: "smooth",
-    });
-  };
-
-  updateButtons();
-
-  slider.addEventListener("scroll", updateButtons);
-
-  prev.addEventListener("click", () => {
-    const sliderRect = slider.getBoundingClientRect();
-    const contentStart = sliderRect.left + getPaddingLeft();
-
-    const target = [...cards]
-      .reverse()
-      .find((card) => card.getBoundingClientRect().left < contentStart - fault);
-
-    if (target) {
-      scrollToCard(target);
+    if (sliderArr[i].scrollLeft >= maxScroll - fault) {
+      next.disabled = true;
+    } else if (sliderArr[i].scrollLeft <= fault) {
+      prev.disabled = true;
+    } else {
+      next.disabled = false;
+      prev.disabled = false;
     }
   });
 
-  next.addEventListener("click", () => {
-    const sliderRect = slider.getBoundingClientRect();
-    const contentStart = sliderRect.left + getPaddingLeft();
+  prev.addEventListener("click", () => {
+    let target = null;
 
-    const target = cards.find(
-      (card) => card.getBoundingClientRect().left > contentStart + fault
-    );
+    const sliderRect = sliderArr[i].getBoundingClientRect();
 
-    if (target) {
-      scrollToCard(target);
+    for (let j = cards.length - 1; j >= 0; j--) {
+      const card = cards[j];
+      const cardRect = card.getBoundingClientRect();
+
+      if (cardRect.left < sliderRect.left - fault) {
+        target = card;
+        break;
+      }
     }
+
+    if (!target) return;
+
+    const targetRect = target.getBoundingClientRect();
+    const newScroll =
+      targetRect.left - sliderRect.left + sliderArr[i].scrollLeft;
+
+    sliderArr[i].scrollTo({
+      left: newScroll,
+      behavior: "smooth",
+    });
+  });
+
+  next.addEventListener("click", () => {
+    let target = null;
+
+    const sliderRect = sliderArr[i].getBoundingClientRect();
+
+    for (let j = 0; j < cards.length; j++) {
+      const card = cards[j];
+      const cardRect = card.getBoundingClientRect();
+
+      if (cardRect.left > sliderRect.left + fault) {
+        target = card;
+        break;
+      }
+    }
+
+    if (!target) return;
+
+    const targetRect = target.getBoundingClientRect();
+    const newScroll =
+      targetRect.left - sliderRect.left + sliderArr[i].scrollLeft;
+
+    sliderArr[i].scrollTo({
+      left: newScroll,
+      behavior: "smooth",
+    });
   });
 }

@@ -481,7 +481,87 @@
         </div>
       </div>
     </section>
-    <section class="reviews"></section>
+    <section class="reviews" data-carousel>
+      <div class="container">
+        <div class="reviews__content">
+          <div class="reviews__title">
+            <h2>ОТЗЫВЫ О НАШЕЙ РАБОТЕ</h2>
+            <p>Практический опыт, подтвержденный реальными объектами и результатами</p>
+          </div>
+          <div class="reviews__list carousel" data-carousel-track>
+            <div class="reviews__item">
+              <div class="reviews__item-header">
+                <div class="reviews__item-avatar">
+                  <span>АМ</span>
+                </div>
+                <div class="reviews__item-name">
+                  <h6>Алексей Морозов</h6>
+                  <p>10 декабря 2025</p>
+                </div>
+              </div>
+              <div class="reviews__item-content">
+                <p>Заказывали финскую сауну для загородного дома. Помогли подобрать подходящую модель под размеры
+                  помещения, подробно объяснили отличия комплектаций. Изготовили и доставили в оговоренные сроки.
+                  Качеством материалов и сборки полностью довольны</p>
+              </div>
+              <a href="#" class="reviews__item-link">
+                <img src="./assets/image/icons/yandex-icon.svg" alt="Оригинал отзыва">
+                <p>Оригинал отзыва</p>
+              </a>
+            </div>
+            <div class="reviews__item">
+              <div class="reviews__item-header">
+                <div class="reviews__item-avatar">
+                  <span>АМ</span>
+                </div>
+                <div class="reviews__item-name">
+                  <h6>Елена Крылова</h6>
+                  <p>10 декабря 2025</p>
+                </div>
+              </div>
+              <div class="reviews__item-content">
+                <p>Искали надежного производителя для оснащения небольшой SPA-зоны. Понравилось, что работают напрямую с
+                  собственного производства и готовы адаптировать проект под наши требования. Все вопросы решались
+                  быстро, оборудование получили без задержек</p>
+              </div>
+              <a href="#" class="reviews__item-link">
+                <img src="./assets/image/icons/link-icon-medium.svg" alt="Оригинал отзыва">
+                <p>Оригинал отзыва</p>
+              </a>
+            </div>
+            <div class="reviews__item">
+              <div class="reviews__item-header">
+                <div class="reviews__item-avatar">
+                  <span>АМ</span>
+                </div>
+                <div class="reviews__item-name">
+                  <h6>Алексей Морозов</h6>
+                  <p>10 декабря 2025</p>
+                </div>
+              </div>
+              <div class="reviews__item-content">
+                <p>Заказывали финскую сауну для загородного дома. Помогли подобрать подходящую модель под размеры
+                  помещения, подробно объяснили отличия комплектаций. Изготовили и доставили в оговоренные сроки.
+                  Качеством материалов и сборки полностью довольны</p>
+              </div>
+              <a href="#" class="reviews__item-link">
+                <img src="./assets/image/icons/yandex-icon.svg" alt="Оригинал отзыва">
+                <p>Оригинал отзыва</p>
+              </a>
+            </div>
+          </div>
+          <div class="reviews__scroll-progress" data-carousel-progress></div>
+          <div class="reviews__carousel-btn">
+            <button class="button__prev" data-carousel-prev>
+              <img src="./assets/image/icons/arrow-icon-medium.svg" alt="Пролистать влево" />
+            </button>
+            <button class="button__next" data-carousel-next>
+              <img src="./assets/image/icons/arrow-icon-medium.svg" alt="Пролистать вправо" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="gallery"></section>
     <section class="faq"></section>
     <section class="form-cost">
@@ -627,6 +707,7 @@
       </div>
     </div>
   </footer>
+  <script src="./scripts/carousel.js" defer></script>
   <script src="./scripts/slider.js" defer></script>
   <script src="./scripts/header.js" defer></script>
   <script src="./scripts/form.js" defer></script>
