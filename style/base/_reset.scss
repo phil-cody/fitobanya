@@ -19,19 +19,6 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
-
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-
-  scrollbar-color: transparent;
-
-  &::-webkit-scrollbar {
-    width: 0;
-  }
-
-  @media (pointer: fine) {
-    scrollbar-width: thin;
-  }
 }
 
 img,

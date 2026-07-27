@@ -43,7 +43,6 @@ openBurgerBtn.addEventListener("click", openMenu);
 
 document.addEventListener("click", (event) => {
   const target = event.target;
-  console.log(target)
 
   if (
     isMenuOpen &&
