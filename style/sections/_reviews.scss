@@ -54,7 +54,7 @@
     scroll-behavior: smooth;
     padding: $spacing-none $spacing-xxxl;
     box-sizing: border-box;
-
+    position: relative;
     @include flex-start;
     align-items: stretch;
     gap: $spacing-md;
@@ -74,7 +74,7 @@
 
     @media (max-width: 540px) {
       padding: $spacing-none $spacing-sm;
-      gap: $spacing-xxs;
+      gap: $spacing-sm;
     }
   }
 
@@ -224,14 +224,14 @@
       }
     }
 
-    .button__prev {
+    .carousel-button__prev {
       transform: translateX(-50%);
 
       img {
         transform: rotate(90deg);
       }
     }
-    .button__next {
+    .carousel-button__next {
       transform: translateX(50%);
 
       img {

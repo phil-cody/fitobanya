@@ -1,84 +1,89 @@
-const sliderArr = Array.from(document.querySelectorAll(".slider"));
-const prevArr = Array.from(document.querySelectorAll(".button__prev"));
-const nextArr = Array.from(document.querySelectorAll(".button__next"));
+(() => {
+  const fault = 4;
 
-const fault = 4;
+  document.querySelectorAll(".slider").forEach((slider) => {
+    const cards = Array.from(slider.children).filter(
+      (item) => !item.matches("[data-slider-controls]"),
+    );
 
-for (let i = 0; i < sliderArr.length; i++) {
-  const cards = Array.from(sliderArr[i].children);
-  const prev = prevArr[i];
-  const next = nextArr[i];
+    const section = slider.closest("section") || slider.parentElement;
+    const prev = section.querySelector(".button__prev");
+    const next = section.querySelector(".button__next");
 
-  if (sliderArr[i].scrollLeft <= fault) {
-    prev.disabled = true;
-  }
+    if (!cards.length || !prev || !next) return;
 
-  sliderArr[i].addEventListener("scroll", () => {
-    let sliderWidth = sliderArr[i].scrollWidth;
-    let viewSliderWidth = sliderArr[i].clientWidth;
-    const maxScroll = sliderWidth - viewSliderWidth;
+    const getPaddingLeft = () =>
+      parseFloat(window.getComputedStyle(slider).paddingLeft) || 0;
 
-    if (sliderArr[i].scrollLeft >= maxScroll - fault) {
-      next.disabled = true;
-    } else if (sliderArr[i].scrollLeft <= fault) {
-      prev.disabled = true;
-    } else {
-      next.disabled = false;
-      prev.disabled = false;
-    }
-  });
+    const getMaxScroll = () =>
+      Math.max(0, slider.scrollWidth - slider.clientWidth);
 
-  prev.addEventListener("click", () => {
-    let target = null;
+    const getContentStart = () => {
+      return slider.getBoundingClientRect().left + getPaddingLeft();
+    };
 
-    const sliderRect = sliderArr[i].getBoundingClientRect();
+    const getActiveCardIndex = () => {
+      const contentStart = getContentStart();
 
-    for (let j = cards.length - 1; j >= 0; j--) {
-      const card = cards[j];
+      let activeIndex = 0;
+      let closestDistance = Infinity;
+
+      cards.forEach((card, index) => {
+        const distance = Math.abs(
+          card.getBoundingClientRect().left - contentStart,
+        );
+
+        if (distance < closestDistance) {
+          closestDistance = distance;
+          activeIndex = index;
+        }
+      });
+
+      return activeIndex;
+    };
+
+    const updateButtons = () => {
+      const maxScroll = getMaxScroll();
+
+      prev.disabled = slider.scrollLeft <= fault;
+      next.disabled = slider.scrollLeft >= maxScroll - fault;
+    };
+
+    const scrollToCard = (card) => {
+      const sliderRect = slider.getBoundingClientRect();
       const cardRect = card.getBoundingClientRect();
 
-      if (cardRect.left < sliderRect.left - fault) {
-        target = card;
-        break;
+      const targetScroll =
+        slider.scrollLeft +
+        cardRect.left -
+        (sliderRect.left + getPaddingLeft());
+
+      slider.scrollTo({
+        left: Math.max(0, Math.min(targetScroll, getMaxScroll())),
+        behavior: "smooth",
+      });
+    };
+
+    slider.addEventListener("scroll", updateButtons);
+
+    prev.addEventListener("click", () => {
+      const activeIndex = getActiveCardIndex();
+      const target = cards[activeIndex - 1];
+
+      if (target) {
+        scrollToCard(target);
       }
-    }
-
-    if (!target) return;
-
-    const targetRect = target.getBoundingClientRect();
-    const newScroll =
-      targetRect.left - sliderRect.left + sliderArr[i].scrollLeft;
-
-    sliderArr[i].scrollTo({
-      left: newScroll,
-      behavior: "smooth",
     });
-  });
 
-  next.addEventListener("click", () => {
-    let target = null;
+    next.addEventListener("click", () => {
+      const activeIndex = getActiveCardIndex();
+      const target = cards[activeIndex + 1];
 
-    const sliderRect = sliderArr[i].getBoundingClientRect();
-
-    for (let j = 0; j < cards.length; j++) {
-      const card = cards[j];
-      const cardRect = card.getBoundingClientRect();
-
-      if (cardRect.left > sliderRect.left + fault) {
-        target = card;
-        break;
+      if (target) {
+        scrollToCard(target);
       }
-    }
-
-    if (!target) return;
-
-    const targetRect = target.getBoundingClientRect();
-    const newScroll =
-      targetRect.left - sliderRect.left + sliderArr[i].scrollLeft;
-
-    sliderArr[i].scrollTo({
-      left: newScroll,
-      behavior: "smooth",
     });
+
+    updateButtons();
   });
-}
+})();

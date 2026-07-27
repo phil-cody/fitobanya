@@ -3,11 +3,14 @@
 
 .btn {
   font-size: $text-button-font-size;
+  line-height: $text-line-height;
   padding: $spacing-lg 22px;
   border: none;
   border-radius: $radius-max;
   text-wrap: nowrap;
   cursor: pointer;
+  @include flex-center;
+  gap: $spacing-sm-mobile;
 
   @media (max-width: 770px) {
     font-size: $text-button-font-size-mobile;

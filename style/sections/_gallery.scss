@@ -1,0 +1,252 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.gallery {
+  min-width: 100%;
+  padding: calc($spacing-xxxxl * 2) $spacing-none;
+
+  @media (max-width: 540px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
+
+  &__content {
+    position: relative;
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-xxxxl;
+    color: $text-color-default;
+
+    @media (max-width: 770px) {
+      gap: $spacing-md;
+    }
+
+    @media (max-width: 540px) {
+      gap: $spacing-md;
+      align-items: stretch;
+    }
+
+    .gallery__header {
+      width: 100%;
+      @include flex-end;
+      justify-content: space-between;
+      gap: $spacing-md;
+
+      @media (max-width: 540px) {
+        display: contents;
+      }
+
+      &-link {
+        gap: $spacing-sm;
+        padding: 22px;
+        padding-right: 30px;
+
+        @media (max-width: 540px) {
+          padding: $spacing-lg-mobile;
+          order: 1;
+        }
+      }
+    }
+
+    .gallery__title {
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-sm;
+      max-width: 615px;
+
+      @media (max-width: 770px) {
+        max-width: 370px;
+      }
+
+      @media (max-width: 540px) {
+        gap: $spacing-sm-mobile;
+      }
+
+      h2 {
+        @include heading;
+        font-size: $heading-2-font-size;
+
+        @media (max-width: 770px) {
+          font-size: $heading-2-font-size-mobile;
+        }
+      }
+
+      p {
+        @include text;
+        font-size: $text-md-font-size;
+        color: $text-color-medium;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+    }
+  }
+  &__list {
+    width: min(100vw, 1440px);
+    max-width: none;
+    margin: $spacing-none (-$spacing-xxxl);
+    padding: $spacing-none;
+    box-sizing: border-box;
+    @include flex-start;
+    align-items: stretch;
+    gap: 1px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    position: relative;
+
+    @media (min-width: 771px) {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+
+    @media (max-width: 770px) {
+      padding-bottom: $spacing-md;
+
+      &::-webkit-scrollbar {
+        display: block;
+        height: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        margin-inline: $spacing-xxxl;
+        background-color: $primary-sub;
+        border-radius: $radius-max;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $primary;
+        border-radius: $radius-max;
+      }
+    }
+
+    @media (max-width: 540px) {
+      margin: $spacing-none (-$spacing-sm);
+      padding: $spacing-none $spacing-none $spacing-md;
+
+      &::-webkit-scrollbar-track {
+        margin-inline: $spacing-sm;
+      }
+    }
+  }
+
+  &__item {
+    min-width: 480px;
+    width: 480px;
+    min-height: 535px;
+    height: 535px;
+    @include flex-end;
+    justify-content: flex-start;
+    gap: $spacing-lg;
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      bottom: 0;
+      width: 100%;
+      height: 30%;
+      background: linear-gradient(to top, $black, transparent);
+      opacity: 0.6;
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      z-index: 1;
+    }
+
+    &-info {
+      position: relative;
+      z-index: 5;
+      padding: $spacing-lg;
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-xs-mobile;
+
+      @media (max-width: 770px) {
+        gap: 6px;
+        padding: $spacing-sm;
+      }
+
+      h6 {
+        @include heading;
+        font-size: $heading-6-font-size;
+        color: $text-color-inverse;
+      }
+
+      p {
+        @include text;
+        font-size: $text-md-font-size;
+        color: $text-color-inverse-alpha;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+    }
+
+    @media (max-width: 540px) {
+      min-width: 288px;
+      width: 288px;
+      min-height: 306px;
+      height: 306px;
+    }
+  }
+
+  &__slider-btn {
+    position: absolute;
+    z-index: 100;
+    @include flex-between;
+    width: 100%;
+    top: 57%;
+
+    @media (max-width: 770px) {
+      display: none;
+    }
+
+    button {
+      width: calc($spacing-xxxl + $spacing-sm-mobile);
+      height: calc($spacing-xxxl + $spacing-sm-mobile);
+      @include flex-center;
+      border: none;
+      border-radius: $radius-max;
+      background-color: $white-5;
+      opacity: 1;
+      cursor: pointer;
+      @include backdrop-24;
+
+      &:disabled {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    .button__prev {
+      transform: translateX(-50%);
+
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    .button__next {
+      transform: translateX(50%);
+
+      img {
+        transform: rotate(270deg);
+      }
+    }
+  }
+}
