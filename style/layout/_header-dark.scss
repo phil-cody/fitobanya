@@ -1,0 +1,330 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.header-dark {
+  position: fixed;
+  z-index: 100;
+  background: transparent;
+  min-width: 100%;
+  @include text;
+  transition: all 0.5s ease;
+
+  @media (max-width: 540px) {
+    position: absolute;
+  }
+
+  .header__content {
+    padding: $spacing-sm $spacing-none;
+    @include flex-between;
+    flex-direction: row;
+    gap: $spacing-md;
+  }
+  
+  .header__logo {
+
+    @media (max-width: 1324px) {
+      flex-grow: 0;
+    }
+
+    img {
+      min-width: 198px;
+      width: 198px;
+      height: $spacing-lg;
+
+      @media (max-width: 540px) {
+        min-width: 133px;
+        width: 133px;
+        height: 16px;
+      }
+    }
+  }
+
+  .header__nav {
+    width: fit-content;
+
+    @media (max-width: 1324px) {
+      display: none;
+    }
+
+    ul {
+      @include flex-between;
+      flex-direction: row;
+      gap: $spacing-lg;
+      color: $text-color-default;
+      font-size: $text-md-font-size;
+    }
+
+    li {
+      position: relative;
+      transition: all 0.5s ease;
+
+      a {
+        @include flex-between;
+        flex-direction: row;
+        gap: $spacing-sm;
+        text-wrap: nowrap;
+        width: max-content;
+
+        img {
+          transition: all 0.5s ease;
+          margin-top: 6px;
+          height: 14px;
+          width: 8px;
+          transform: rotate(90deg);
+        }
+      }
+      &:hover {
+        .header__category-list {
+          display: block;
+        }
+        img {
+          transform: rotate(270deg);
+        }
+      }
+    }
+  }
+
+  .header__category-list {
+    display: none;
+    position: absolute;
+    padding-top: $spacing-lg-mobile;
+    margin-left: -$spacing-xs-mobile;
+
+    ul {
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-none;
+      padding: calc($spacing-xxxs + $spacing-xxxxs);
+      background-color: $surface;
+      border: none;
+      border-radius: $radius-lg;
+
+      li {
+        transition: all 0.5s ease;
+        width: 100%;
+
+        &:hover {
+          background-color: $background;
+          border: none;
+          border-radius: $radius-max;
+        }
+      }
+
+      a {
+        color: $primary;
+        padding: $spacing-xs $spacing-sm;
+      }
+    }
+  }
+
+  .header__contacts {
+    @include flex-end;
+    align-items: center;
+    gap: $spacing-xxxl;
+
+    @media (max-width: 1324px) {
+      flex-grow: 2;
+    }
+
+    @media (max-width: 540px) {
+      display: none;
+    }
+
+    &-base {
+      @include flex-start;
+      flex-direction: column;
+      gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+      @media (max-width: 1324px) {
+        display: none;
+      }
+
+      .header__phone {
+        cursor: pointer;
+        position: relative;
+
+        a {
+          @include flex-start;
+          align-items: center;
+          gap: $spacing-sm;
+          color: $text-color-default;
+          font-size: $text-medium-md-font-size;
+          font-weight: $text-font-weight-medium;
+          text-wrap: nowrap;
+          width: max-content;
+        }
+
+        .socials a {
+          background-color: $primary;
+          width: 48px;
+          @include flex-center;
+        }
+
+        .arrow {
+          height: $spacing-xxs;
+          transition: all 0.5s ease;
+          transform: rotate(90deg);
+          height: 14px;
+          width: 8px;
+        }
+
+        &:hover {
+          .header__contacts-list {
+            display: block;
+          }
+
+          .arrow {
+            transform: rotate(270deg);
+          }
+        }
+      }
+
+      a {
+        color: $text-color-medium;
+        font-size: $text-md-font-size;
+      }
+
+      .header__contacts-list {
+        display: none;
+        position: absolute;
+        padding-top: $spacing-xs-mobile;
+        right: 0;
+        cursor: default;
+
+        ul {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-none;
+          padding: calc($spacing-xxxs + $spacing-xxxxs);
+          background-color: $surface;
+          border: none;
+          border-radius: $radius-lg;
+
+          li {
+            transition: all 0.5s ease;
+            padding: $spacing-xs $spacing-sm;
+            width: 100%;
+            @include flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: calc($spacing-xxxxs + $spacing-xxxs);
+            border-bottom: 1px solid $borders;
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+
+          a {
+            color: $text-color-default;
+          }
+
+          p {
+            text-wrap: nowrap;
+            color: $text-color-medium;
+            font-size: $text-sm-font-size;
+          }
+
+          .contacts__social-list {
+            a {
+              padding: $spacing-xs-mobile;
+            }
+          }
+        }
+      }
+    }
+    &-action {
+      @include flex-end;
+      align-items: center;
+      gap: $spacing-xs;
+
+      button {
+        width: calc($spacing-xxxl + $spacing-sm);
+        height: calc($spacing-xxxl + $spacing-sm);
+        @include flex-center;
+        box-shadow: inset 0 0 0 1px $borders-alpha;
+        border: none;
+        border-radius: $radius-max;
+        background-color: $surface;
+        @include backdrop-24;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .header__burger {
+    @include flex-between;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    flex-grow: 0;
+    gap: $spacing-xxxs;
+    transform: translate(-2px, -1px);
+
+    @media (max-width: 1324px) {
+      display: flex;
+    }
+
+    @media (max-width: 540px) {
+      height: $spacing-xs;
+    }
+
+    span {
+      width: $spacing-xxl;
+      min-height: $spacing-xxxxs;
+      background-color: $primary;
+      position: relative;
+      transition: all 0.5s ease;
+
+      @media (max-width: 540px) {
+        width: $spacing-xl-mobile;
+      }
+    }
+    &.burger-open {
+      span {
+        &:first-child {
+          top: 11px;
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:last-child {
+          bottom: 11px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  .header__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    inset: 0;
+    z-index: 999;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+
+    &.active {
+      @media (max-width: 540px) {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.header__sticky {
+		background-color: $white-40;
+    @include backdrop-24;
+	}
+}

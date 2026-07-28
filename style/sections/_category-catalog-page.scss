@@ -1,0 +1,136 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.category {
+  padding: $spacing-none;
+  padding-bottom: calc($spacing-xxxxl * 2);
+  min-width: 100%;
+
+  @media (max-width: 770px) {
+    padding-bottom: $spacing-xxxl;
+  }
+
+  .container {
+    padding: $spacing-none;
+  }
+
+  .category__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin: $spacing-none;
+    padding: $spacing-none;
+
+    @media (max-width: 540px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .category__item {
+    min-width: 0;
+    padding: clamp($spacing-lg, 2.78vw, $spacing-xxxl);
+    min-height: clamp(259px, 35vw, 502px);
+    background-color: $background;
+    border: 1px solid $borders;
+    border-collapse: collapse;
+    position: relative;
+
+    @media (max-width: 770px) {
+      padding: $spacing-md $spacing-sm;
+    }
+
+    a {
+      @include flex-between;
+      flex-direction: column;
+      gap: clamp($spacing-sm-mobile, 1.67vw, $spacing-lg);
+      height: 100%;
+
+      @media (max-width: 770px) {
+        align-items: flex-start;
+        gap: $spacing-sm-mobile;
+      }
+    }
+
+    .link__icon {
+      position: absolute;
+      @include flex-center;
+      width: 24px;
+      height: 24px;
+      top: 30px;
+      right: 30px;
+
+      @media (max-width: 770px) {
+        top: $spacing-sm;
+        right: $spacing-sm;
+      }
+    }
+
+    &-info {
+      align-self: flex-start;
+      width: 100%;
+      @include flex;
+      align-items: flex-start;
+      justify-content: flex-end;
+      flex-direction: column;
+      gap: $spacing-sm-mobile;
+
+      @media (max-width: 770px) {
+        gap: 6px;
+      }
+
+      h4 {
+        @include heading;
+        font-size: $heading-4-font-size;
+        color: $text-color-default;
+        text-wrap: wrap;
+
+        @media (max-width: 770px) {
+          font-size: $heading-6-font-size-mobile;
+          line-height: 120%;
+        }
+      }
+
+      p {
+        @include text;
+        font-size: $text-md-font-size;
+        color: $text-color-medium;
+        text-wrap: wrap;
+        margin-bottom: $spacing-xs-mobile;
+
+        @media (max-width: 770px) {
+          font-size: $text-sm-font-size-mobile;
+          margin-bottom: $spacing-xxxs;
+        }
+      }
+
+      .item__badge-list {
+        @include flex-start;
+        gap: $spacing-xs-mobile;
+        flex-wrap: wrap;
+
+        li {
+          background-color: $primary;
+          padding: $spacing-xs-mobile $spacing-sm;
+          border-radius: $radius-max;
+          color: $text-color-inverse;
+          font-size: $text-button-font-size;
+          @include text;
+
+          @media (max-width: 770px) {
+            font-size: $text-sm-font-size-mobile;
+            padding: 6px $spacing-xs-mobile;
+          }
+        }
+      }
+    }
+
+    &-img {
+      img {
+        max-width: 166px;
+        width: 100%;
+        max-height: 128px;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

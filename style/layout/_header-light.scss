@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.header {
+.header-light {
   position: fixed;
   z-index: 100;
   background: transparent;
@@ -13,14 +13,14 @@
     position: absolute;
   }
 
-  &__content {
+  .header__content {
     padding: $spacing-sm $spacing-none;
     @include flex-between;
     flex-direction: row;
     gap: $spacing-md;
   }
   
-  &__logo {
+  .header__logo {
 
     @media (max-width: 1324px) {
       flex-grow: 0;
@@ -38,7 +38,7 @@
       }
     }
   }
-  &__nav {
+  .header__nav {
     width: fit-content;
 
     @media (max-width: 1324px) {
@@ -82,7 +82,7 @@
     }
   }
 
-  &__category-list {
+  .header__category-list {
     display: none;
     position: absolute;
     padding-top: $spacing-lg-mobile;
@@ -115,7 +115,7 @@
     }
   }
 
-  &__contacts {
+  .header__contacts {
     @include flex-end;
     align-items: center;
     gap: $spacing-xxxl;
@@ -248,7 +248,7 @@
     }
   }
 
-  &__burger {
+  .header__burger {
     @include flex-between;
     display: none;
     flex-direction: column;
@@ -297,7 +297,7 @@
     }
   }
 
-  &__overlay {
+  .header__overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -319,7 +319,7 @@
     }
   }
 
-  &__sticky {
+  &.header__sticky {
 		background-color: $black-30;
     @include backdrop-24;
 	}

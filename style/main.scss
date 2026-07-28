@@ -6,7 +6,6 @@
 @use "./components/socials";
 @use "./components/buttons";
 @use "./components/custom-checkbox";
-@use "./layout/header";
 @use "./components/burger-menu";
 @use "./sections/form-cost";
 @use "./layout/footer";
@@ -15,6 +14,7 @@
 @use "./sections/success-popup";
 
 @use "./pages/home";
+@use "./pages/catalog-page";
 
 body {
   @include flex;
