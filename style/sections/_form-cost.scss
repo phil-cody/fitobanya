@@ -148,8 +148,9 @@
           padding: calc($spacing-xxxxs * 3.5) 13px;
         }
 
-        &.checked {
+        &:has(input:checked) {
           background-color: $text-color-inverse;
+          border-color: $text-color-inverse;
 
           label {
             color: $green-2;
@@ -168,7 +169,11 @@
       }
 
       input {
-        display: none;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
       }
     }
   }

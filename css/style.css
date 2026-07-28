@@ -1051,10 +1051,11 @@ pre {
     padding: 7px 13px;
   }
 }
-.form-cost__radio ul li.checked {
+.form-cost__radio ul li:has(input:checked) {
   background-color: #e2dfd9;
+  border-color: #e2dfd9;
 }
-.form-cost__radio ul li.checked label {
+.form-cost__radio ul li:has(input:checked) label {
   color: #45544d;
 }
 .form-cost__radio ul label {
@@ -1068,7 +1069,11 @@ pre {
   }
 }
 .form-cost__radio ul input {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
 }
 .form-cost__contacts {
   display: flex;
