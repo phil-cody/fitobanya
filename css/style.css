@@ -406,6 +406,7 @@ pre {
   gap: 20px;
   padding-bottom: 16px;
   width: 250px;
+  height: 40px;
 }
 @media (max-width: 540px) {
   .header__menu #burger-menu-1-level .menu__nav ul li a {
@@ -557,7 +558,7 @@ pre {
   width: 100%;
 }
 .header__menu #burger-menu-2-level .menu__nav .menu__nav-title img {
-  transform: rotate(180deg);
+  transform: rotate(90deg);
 }
 .header__menu #burger-menu-2-level .menu__nav .menu__nav-title h3 {
   text-transform: uppercase;
@@ -565,8 +566,9 @@ pre {
   color: #544945;
 }
 .header__menu .arrow {
-  height: 14px;
-  width: 8px;
+  width: 14px;
+  height: 8px;
+  transform: rotate(270deg);
 }
 
 .menu__open {
@@ -3412,11 +3414,6 @@ pre {
   align-items: center;
   transition: all 0.5s ease;
 }
-.faq .faq__list li .faq__list-header .faq__open img {
-  transform: rotate(90deg);
-  width: 8px;
-  height: 14px;
-}
 
 .header-dark {
   position: fixed;
@@ -3491,9 +3488,6 @@ pre {
 .header-dark .header__nav li a img {
   transition: all 0.5s ease;
   margin-top: 6px;
-  height: 14px;
-  width: 8px;
-  transform: rotate(90deg);
 }
 .header-dark .header__nav li:hover .header__category-list {
   display: block;
@@ -3586,9 +3580,6 @@ pre {
 .header-dark .header__contacts-base .header__phone .arrow {
   height: 8px;
   transition: all 0.5s ease;
-  transform: rotate(90deg);
-  height: 14px;
-  width: 8px;
 }
 .header-dark .header__contacts-base .header__phone:hover .header__contacts-list {
   display: block;

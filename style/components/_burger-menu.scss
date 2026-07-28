@@ -162,6 +162,7 @@
             gap: $spacing-md;
             padding-bottom: $spacing-sm;
             width: 250px;
+            height: $spacing-xxxl;
 
             @media (max-width: 540px) {
               width: 100%;
@@ -322,7 +323,7 @@
         width: 100%;
 
         img {
-          transform: rotate(180deg);
+          transform: rotate(90deg);
         }
 
         h3 {
@@ -335,8 +336,9 @@
   }
 
   .arrow {
-    height: $spacing-sm-mobile;
-    width: $spacing-xxs;
+    width: $spacing-sm-mobile;
+    height: $spacing-xxs;
+    transform: rotate(270deg);
   }
 }
 .menu__open {

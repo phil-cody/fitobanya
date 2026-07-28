@@ -161,12 +161,6 @@
           height: $spacing-lg;
           @include flex-center;
           transition: all 0.5s ease;
-
-          img {
-            transform: rotate(90deg);
-            width: $spacing-xxs;
-            height: $spacing-sm-mobile;
-          }
         }
       }
     }
