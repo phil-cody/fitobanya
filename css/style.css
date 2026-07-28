@@ -1764,7 +1764,7 @@ pre {
     padding: 40px 0;
   }
 }
-.detailed .detailed__content {
+.detailed__content {
   background-image: url("../assets/image/detailed/detailed-bg-desktop.png"), linear-gradient(320deg, #544945 50%, #685d59);
   background-position: left top, center;
   background-repeat: no-repeat;
@@ -1780,7 +1780,7 @@ pre {
   width: 100%;
 }
 @media (max-width: 940px) {
-  .detailed .detailed__content {
+  .detailed__content {
     background-image: url("../assets/image/detailed/detailed-bg-mobile.png"), linear-gradient(to bottom left, #544945, #685d59);
     background-size: 92% 58.5%, 100%;
     flex-direction: column;
@@ -1788,7 +1788,7 @@ pre {
   }
 }
 @media (max-width: 540px) {
-  .detailed .detailed__content {
+  .detailed__content {
     padding: 22px;
   }
 }
@@ -2764,6 +2764,192 @@ pre {
 }
 .gallery__slider-btn .button__next img {
   transform: rotate(270deg);
+}
+
+.faq {
+  padding: 0;
+  padding-bottom: 100px;
+  min-width: 100%;
+}
+@media (max-width: 540px) {
+  .faq {
+    padding-bottom: 40px;
+  }
+}
+.faq__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: stretch;
+  gap: 40px;
+  width: 100%;
+}
+@media (max-width: 940px) {
+  .faq__content {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+@media (max-width: 540px) {
+  .faq__content {
+    gap: 20px;
+  }
+}
+.faq__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 50px;
+  min-width: clamp(328px, 30.5dvw, 440px);
+  width: clamp(328px, 30.5dvw, 440px);
+}
+@media (max-width: 1150px) {
+  .faq__info {
+    flex-direction: column;
+  }
+}
+@media (max-width: 940px) {
+  .faq__info {
+    width: 100%;
+    display: contents;
+  }
+}
+@media (max-width: 770px) {
+  .faq__info {
+    gap: 20px;
+  }
+}
+.faq__info-text {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 770px) {
+  .faq__info-text {
+    gap: 16px;
+  }
+}
+.faq__info-text h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  color: #544945;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: -3%;
+}
+@media (max-width: 770px) {
+  .faq__info-text h2 {
+    font-size: 28px;
+  }
+}
+.faq__info-text p {
+  font-size: 16px;
+  color: #8d8580;
+  line-height: 129%;
+}
+@media (max-width: 770px) {
+  .faq__info-text p {
+    font-size: 14px;
+  }
+}
+.faq__info-btn {
+  order: 1;
+  text-align: center;
+  padding: 22px;
+}
+@media (max-width: 770px) {
+  .faq__info-btn {
+    padding: 18px;
+  }
+}
+.faq .faq__list {
+  max-width: 785px;
+}
+.faq .faq__list ul {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0;
+}
+.faq .faq__list li {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 24px 0;
+  gap: 0;
+  border-bottom: 1px solid #c0bbb5;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+@media (max-width: 770px) {
+  .faq .faq__list li {
+    padding: 17px 0;
+  }
+}
+.faq .faq__list li p {
+  color: #8d8580;
+  font-size: 16px;
+  overflow: hidden;
+  max-height: 0;
+  transition: all 0.5s ease;
+  line-height: 129%;
+}
+@media (max-width: 770px) {
+  .faq .faq__list li p {
+    font-size: 14px;
+  }
+}
+.faq .faq__list li.active {
+  gap: 16px;
+}
+@media (max-width: 770px) {
+  .faq .faq__list li.active {
+    gap: 14px;
+  }
+}
+.faq .faq__list li.active .faq__open {
+  transform: rotate(180deg);
+  transition: all 0.5s ease;
+}
+.faq .faq__list li .faq__list-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.faq .faq__list li .faq__list-header h6 {
+  color: #544945;
+  font-size: 20px;
+  max-width: 590px;
+  line-height: 122%;
+}
+@media (max-width: 770px) {
+  .faq .faq__list li .faq__list-header h6 {
+    font-size: 16px;
+    max-width: 100%;
+  }
+}
+.faq .faq__list li .faq__list-header .faq__open {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+}
+.faq .faq__list li .faq__list-header .faq__open img {
+  transform: rotate(90deg);
+  width: 8px;
+  height: 14px;
 }
 
 body {

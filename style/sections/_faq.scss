@@ -1,0 +1,174 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.faq {
+  padding: $spacing-none;
+  padding-bottom: calc($spacing-xxxxl * 2);
+  min-width: 100%;
+
+  @media (max-width: 540px) {
+    padding-bottom: $spacing-xxxl;
+  }
+
+  &__content {
+    @include flex-between;
+    align-items: stretch;
+    gap: $spacing-xxxl;
+    width: 100%;
+
+    @media (max-width: 940px) {
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+
+    @media (max-width: 540px) {
+      gap: $spacing-md;
+    }
+  }
+
+  &__info {
+    @include flex-between;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: calc($spacing-xxxl * 1.25);
+    min-width: clamp(328px, 30.5dvw, 440px);
+    width: clamp(328px, 30.5dvw, 440px);
+
+    @media (max-width: 1150px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 940px) {
+      width: 100%;
+      display: contents;
+    }
+
+    @media (max-width: 770px) {
+      gap: $spacing-md;
+    }
+
+    &-text {
+      width: 100%;
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-md;
+
+      @media (max-width: 770px) {
+        gap: $spacing-sm;
+      }
+
+      h2 {
+        font-size: $heading-2-font-size;
+        text-transform: uppercase;
+        color: $text-color-default;
+        @include heading;
+
+        @media (max-width: 770px) {
+          font-size: $heading-2-font-size-mobile;
+        }
+      }
+
+      p {
+        font-size: $text-md-font-size;
+        color: $text-color-medium;
+        line-height: 129%;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+    }
+
+    &-btn {
+      order: 1;
+      text-align: center;
+      padding: 22px;
+
+      @media (max-width: 770px) {
+        padding: $spacing-lg-mobile;
+      }
+    }
+  }
+
+  .faq__list {
+    max-width: 785px;
+
+    ul {
+      @include flex-start;
+      flex-direction: column;
+      gap: $spacing-none;
+    }
+
+    li {
+      width: 100%;
+      @include flex-start;
+      flex-direction: column;
+      padding: $spacing-lg $spacing-none;
+      gap: $spacing-none;
+      border-bottom: 1px solid $borders;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      @media (max-width: 770px) {
+        padding: 17px $spacing-none;
+      }
+
+      p {
+        color: $text-color-medium;
+        font-size: $text-md-font-size;
+        overflow: hidden;
+        max-height: $spacing-none;
+        transition: all 0.5s ease;
+        line-height: 129%;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+
+      &.active {
+        gap: $spacing-sm;
+
+        @media (max-width: 770px) {
+          gap: $spacing-sm-mobile;
+        }
+
+        .faq__open {
+          transform: rotate(180deg);
+          transition: all 0.5s ease;
+        }
+      }
+
+      .faq__list-header {
+        width: 100%;
+        @include flex-between;
+        gap: $spacing-md;
+
+        h6 {
+          color: $text-color-default;
+          font-size: $heading-6-font-size;
+          max-width: 590px;
+          line-height: 122%;
+
+          @media (max-width: 770px) {
+            font-size: $heading-6-font-size-mobile;
+            max-width: 100%;
+          }
+        }
+
+        .faq__open {
+          width: $spacing-lg;
+          height: $spacing-lg;
+          @include flex-center;
+          transition: all 0.5s ease;
+
+          img {
+            transform: rotate(90deg);
+            width: $spacing-xxs;
+            height: $spacing-sm-mobile;
+          }
+        }
+      }
+    }
+  }
+}

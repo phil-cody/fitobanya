@@ -9,7 +9,7 @@
     padding: $spacing-xxxl $spacing-none;
   }
 
-  .detailed__content {
+  &__content {
     background-image:
       url("../assets/image/detailed/detailed-bg-desktop.png"),
       linear-gradient(320deg, $primary 50%, #685d59);
