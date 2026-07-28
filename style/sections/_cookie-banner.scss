@@ -1,0 +1,102 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  transform: translateX(-50%);
+  padding: $spacing-none;
+  z-index: 1005;
+  opacity: 0;
+  visibility: hidden;
+  max-width: 713px;
+  width: 713px;
+  transition: all 0.5s ease;
+  pointer-events: none;
+
+  @media (max-width: 770px) {
+    width: 328px;
+  }
+
+  &--visible {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  .container {
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: $radius-lg;
+    padding: $spacing-lg;
+    position: relative;
+    transition: transform 0.5s ease;
+
+    @media (max-width: 770px) {
+      border-radius: $spacing-lg-mobile;
+      padding: $spacing-lg-mobile;
+    }
+
+    .cookie-banner--visible & {
+      transform: translateY(0);
+    }
+  }
+
+  &__content {
+    @include flex-between;
+    gap: $spacing-lg;
+
+    @media (max-width: 770px) {
+      flex-direction: column;
+      align-items: stretch;
+      gap: $spacing-lg-mobile;
+    }
+  }
+
+  &__text {
+    max-width: 522px;
+    flex: 1;
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-sm-mobile;
+
+    @media (max-width: 770px) {
+      gap: $spacing-xs-mobile;
+    }
+
+    h5 {
+      font-size: $heading-5-font-size;
+      @include heading;
+      line-height: 110%;
+      color: $text-color-inverse;
+
+      @media (max-width: 770px) {
+        font-size: $heading-5-font-size-mobile;
+      }
+    }
+
+    p {
+      @include text;
+      font-size: $text-md-font-size;
+      color: $text-color-inverse-alpha;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+
+  &__button {
+    background-color: $surface;
+    color: $black;
+    padding: $spacing-sm $spacing-md;
+    transition: all 0.5s ease;
+    flex-shrink: 0;
+
+    @media (max-width: 770px) {
+      padding: $spacing-sm-mobile $spacing-md-mobile;
+    }
+  }
+}
