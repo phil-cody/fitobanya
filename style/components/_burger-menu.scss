@@ -5,7 +5,7 @@
   width: 100%;
   position: fixed;
   z-index: 1000;
-  top: -200dvw;
+  top: -200dvh;
   left: 0;
   background-color: $surface;
   @include flex-start;
@@ -15,7 +15,8 @@
   -webkit-box-shadow: 0px 6px 19px 1px $black-5;
   box-shadow: 0px 6px 19px 1px $black-5;
   max-height: 100dvh;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   .menu__header {
     width: 100%;

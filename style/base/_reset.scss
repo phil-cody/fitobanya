@@ -11,6 +11,31 @@
   margin: 0;
 }
 
+dialog {
+  opacity: 0;
+  transition: all 0.5s ease;
+
+  &[open] {
+    opacity: 1;
+
+    &::backdrop {
+      opacity: 1;
+    }
+  }
+
+  &::backdrop {
+    opacity: 0;
+    background-color: rgba(226, 223, 217, 0.7);
+    @include backdrop-24;
+  }
+}
+
+@starting-style {
+  dialog[open], dialog[open]::backdrop {
+    opacity: 0;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     interpolate-size: allow-keywords;

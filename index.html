@@ -446,7 +446,7 @@
               <h2>НАДЕЖНЫЙ ПРОИЗВОДИТЕЛЬ БАННОГО ОБОРУДОВАНИЯ</h2>
               <p>Контролируем качество материалов, сборки и комплектации на каждом этапе изготовления</p>
             </div>
-            <a  href=# class="detailed__info-btn btn btn-light">Подробнее о нас</a>
+            <a href=# class="detailed__info-btn btn btn-light">Подробнее о нас</a>
           </div>
           <div class="detailed__advantages">
             <div class="detailed__advantages-item">
@@ -625,14 +625,15 @@
               <h2>ВОПРОС-ОТВЕТ</h2>
               <p>Мы собрали самые частые вопросы от наших клиентов, если вы не нашли ответа - свяжитесь с нами</p>
             </div>
-            <button class="faq__info-btn btn btn-dark">Задать вопрос</button>
+            <button class="faq__info-btn btn btn-dark" name="feedback" data-btn="popup">Задать вопрос</button>
           </div>
           <div class="faq__list accordeon">
             <ul>
               <li>
                 <div class="faq__list-header">
                   <h6>Работаете ли вы с гостиницами, SPA-комплексами и другими коммерческими объектами?</h6>
-                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg" alt="Посмотреть ответ на вопрос"></div>
+                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg"
+                      alt="Посмотреть ответ на вопрос"></div>
                 </div>
                 <p>Да. Мы поставляем оборудование как для частных клиентов, так и для бизнеса, включая отели,
                   SPA-центры, фитнес-клубы и базы отдыха.</p>
@@ -640,7 +641,8 @@
               <li>
                 <div class="faq__list-header">
                   <h6>Сколько времени занимает изготовление сауны?</h6>
-                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg" alt="Посмотреть ответ на вопрос"></div>
+                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg"
+                      alt="Посмотреть ответ на вопрос"></div>
                 </div>
                 <p>Да. Мы поставляем оборудование как для частных клиентов, так и для бизнеса, включая отели,
                   SPA-центры, фитнес-клубы и базы отдыха.</p>
@@ -648,7 +650,8 @@
               <li>
                 <div class="faq__list-header">
                   <h6>Можно ли установить сауну в квартире?</h6>
-                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg" alt="Посмотреть ответ на вопрос"></div>
+                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg"
+                      alt="Посмотреть ответ на вопрос"></div>
                 </div>
                 <p>Да. Мы поставляем оборудование как для частных клиентов, так и для бизнеса, включая отели,
                   SPA-центры, фитнес-клубы и базы отдыха.</p>
@@ -656,7 +659,8 @@
               <li>
                 <div class="faq__list-header">
                   <h6>Из какого материала изготавливаются сауны?</h6>
-                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg" alt="Посмотреть ответ на вопрос"></div>
+                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg"
+                      alt="Посмотреть ответ на вопрос"></div>
                 </div>
                 <p>Да. Мы поставляем оборудование как для частных клиентов, так и для бизнеса, включая отели,
                   SPA-центры, фитнес-клубы и базы отдыха.</p>
@@ -664,7 +668,8 @@
               <li>
                 <div class="faq__list-header">
                   <h6>Доставляете ли вы сауны в регионы?</h6>
-                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg" alt="Посмотреть ответ на вопрос"></div>
+                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg"
+                      alt="Посмотреть ответ на вопрос"></div>
                 </div>
                 <p>Да. Мы поставляем оборудование как для частных клиентов, так и для бизнеса, включая отели,
                   SPA-центры, фитнес-клубы и базы отдыха.</p>
@@ -672,7 +677,8 @@
               <li>
                 <div class="faq__list-header">
                   <h6>Можно ли заказать сауну по индивидуальным размерам?</h6>
-                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg" alt="Посмотреть ответ на вопрос"></div>
+                  <div class="faq__open"><img src="./assets/image/icons/arrow-icon-dark.svg"
+                      alt="Посмотреть ответ на вопрос"></div>
                 </div>
                 <p>Да. Мы поставляем оборудование как для частных клиентов, так и для бизнеса, включая отели,
                   SPA-центры, фитнес-клубы и базы отдыха.</p>
@@ -825,12 +831,71 @@
       </div>
     </div>
   </footer>
+  <dialog class="feedback" id="popup_feedback">
+    <div class="container">
+      <div class="feedback__content">
+        <div class="feedback__header">
+          <div class="feedback__title">
+            <h2>Свяжитесь с нами</h2>
+            <button class="feedback__close" data-btn="close">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+        </div>
+        <form action="#" method="post" class="feedback__form">
+          <fieldset class="feedback__data">
+            <ul>
+              <li>
+                <label for="name-feedback">Ваше имя</label>
+                <input type="text" name="name-feedback" id="name-feedback" placeholder="Иван Иванов" required>
+              </li>
+              <li>
+                <label for="phone-number-feedback">Номер телефона</label>
+                <input type="tel" name="phone-number-feedback" id="phone-number-feedback" placeholder="+7 911 123-45-67"
+                  required>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="feedback__submit-box">
+            <button type="submit" class="feedback__submit btn btn-light">Отправить заявку</button>
+            <fieldset class="feedback__pd-policy">
+              <input type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+              <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                Федеральным законом Nº 152-ФЗ</label>
+            </fieldset>
+          </div>
+        </form>
+        <div class="feedback__contacts">
+          <img src="./assets/image/icons/phone-call-icon.svg" alt="Позвонить по номеру 8 (800) 300-83-27">
+          <a href="tel:8 (800) 300-83-27">8 (800) 300-83-27</a>
+          <p>Ежедневно <time datetime="09:00">9:00</time> - <time datetime="19:00">19:00</time></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <dialog class="success" id="popup_success">
+    <div class="container">
+      <div class="success__content">
+        <button class="success__close" data-btn="close">
+          <span></span>
+          <span></span>
+        </button>
+        <img src="./assets/image/icons/success.svg" alt="">
+        <div class="success__text">
+          <h2>Спасибо за заявку</h2>
+          <p>Мы получили ваш запрос и скоро перезвоним</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/accordeon.js" defer></script>
   <script src="./scripts/carousel.js" defer></script>
   <script src="./scripts/slider.js" defer></script>
   <script src="./scripts/header.js" defer></script>
-  <script src="./scripts/form.js" defer></script>
+  <script src="./scripts/popup.js" defer></script>
 </body>
 
 </html>

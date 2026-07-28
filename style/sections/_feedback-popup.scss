@@ -1,0 +1,240 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.feedback {
+  max-width: 640px;
+  width: 640px;
+  background-color: $green-2;
+  border: none;
+  position: fixed;
+  z-index: 1100;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .container {
+    padding: $spacing-xxxl;
+  }
+
+  &__content {
+    width: 100%;
+    @include flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: $spacing-xxxxl;
+  }
+
+  &__header {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    .feedback__title {
+      @include flex-between;
+      gap: $spacing-md;
+      width: 100%;
+
+      h2 {
+        @include heading;
+        font-size: $heading-2-font-size;
+        color: $text-color-inverse;
+      }
+
+      .feedback__close {
+        width: fit-content;
+        height: fit-content;
+        @include flex;
+        flex-direction: column;
+        gap: $spacing-sm-mobile;
+        background-color: transparent;
+        border: none;
+
+        span {
+          display: block;
+          background-color: $text-color-inverse;
+          width: $spacing-lg-mobile;
+          height: $spacing-xxxxs;
+          position: relative;
+
+          &:first-child {
+            transform: rotate(45deg);
+            top: 8px;
+          }
+
+          &:last-child {
+            transform: rotate(-45deg);
+            top: -8px;
+          }
+        }
+      }
+    }
+
+    p {
+      color: $text-color-inverse-alpha;
+      font-size: $text-md-font-size;
+      max-width: 417px;
+    }
+  }
+
+  &__form {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    @media (max-width: 540px) {
+      gap: $spacing-xxxl-mobile;
+    }
+  }
+
+  &__data {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-lg;
+    width: 100%;
+
+    @media (max-width: 770px) {
+      gap: $spacing-md-mobile;
+    }
+
+    @media (max-width: 540px) {
+      width: 100%;
+    }
+
+    ul {
+      @include flex-start;
+      flex-wrap: wrap;
+      gap: $spacing-sm;
+      width: 100%;
+
+      @media (max-width: 540px) {
+        flex-direction: column;
+      }
+    }
+
+    li {
+      padding: $spacing-xs-mobile $spacing-none;
+      width: 100%;
+      border-bottom: 1px solid $borders-alpha;
+      @include flex-start;
+      flex-direction: column;
+      gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+      @media (max-width: 540px) {
+        width: 100%;
+        gap: $spacing-xxxxs;
+        padding: calc($spacing-xxxxs + $spacing-xxxs) $spacing-none;
+      }
+
+      label {
+        font-size: $text-sm-font-size;
+        color: $text-color-inverse-alpha;
+
+        @media (max-width: 770px) {
+          font-size: $text-sm-font-size-mobile;
+        }
+      }
+
+      input {
+        border: none;
+        background-color: transparent;
+        padding: $spacing-none;
+        width: 100%;
+        color: $text-color-inverse;
+        font-size: $text-md-font-size;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+
+        &::placeholder {
+          color: $text-color-inverse;
+          font-size: $text-md-font-size;
+
+          @media (max-width: 770px) {
+            font-size: $text-md-font-size-mobile;
+          }
+        }
+
+        &:focus-visible {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+
+  &__submit {
+    color: $green-2;
+    padding: 22px;
+
+    @media (max-width: 540px) {
+      width: 100%;
+      padding: 17px;
+      letter-spacing: -2%;
+    }
+  }
+
+  &__submit-box {
+    @include flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-xxxl;
+    width: 100%;
+
+    @media (max-width: 770px) {
+      gap: $spacing-xl;
+    }
+
+    @media (max-width: 540px) {
+      flex-direction: column;
+    }
+  }
+
+  &__pd-policy {
+    align-self: center;
+    @include flex-center;
+    gap: $spacing-xs-mobile;
+    font-size: $text-sm-font-size;
+    color: $text-color-inverse-alpha;
+
+    @media (max-width: 770px) {
+      font-size: $text-sm-font-size-mobile;
+    }
+
+    @media (max-width: 540px) {
+      align-self: flex-start;
+    }
+
+    label {
+      max-width: 580px;
+
+      @media (max-width: 770px) {
+        max-width: 280px;
+        line-height: 1.25;
+      }
+    }
+  }
+
+  &__contacts {
+    @include flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    img {
+      width: $spacing-md;
+      height: $spacing-md;
+    }
+
+    a {
+      color: $text-color-inverse;
+      line-height: 120%;
+      letter-spacing: -3%;
+      font-size: $heading-6-font-size;
+    }
+
+    p {
+      color: $text-color-inverse-alpha;
+      @include text;
+      font-size: $text-sm-font-size;
+    }
+  }
+}
