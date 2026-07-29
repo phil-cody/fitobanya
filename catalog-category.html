@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header header-dark">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo">
+          <a href="#">
+            <img src="./assets/image/logo-dark.svg" alt="Логотип" />
+          </a>
+        </div>
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul>
+            <li>
+              <a href="#">Каталог
+                <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации"
+                  class="arrow" />
+              </a>
+              <div class="header__category-list">
+                <ul>
+                  <li>
+                    <a href="#">Сауны из канадского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Сауны из Российского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Кедровые фитобочки</a>
+                  </li>
+                  <li>
+                    <a href="#">Электрические печи</a>
+                  </li>
+                  <li>
+                    <a href="#">Комплектующие и аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="#">Криосауны</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="#">О компании</a>
+            </li>
+            <li>
+              <a href="#">Наши работы</a>
+            </li>
+            <li>
+              <a href="#">Отзывы</a>
+            </li>
+            <li>
+              <a href="#">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <div class="header__contacts-base">
+            <div class="header__phone">
+              <a href="tel:88003008327">8 (800) 300-83-27
+                <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Кнопка показа вкладки контактов"
+                  class="arrow" />
+              </a>
+              <div class="header__contacts-list">
+                <ul>
+                  <li>
+                    <a href="tel:88003008327">8 (800) 300-83-27</a>
+                    <p>Бесплатно по России</p>
+                  </li>
+                  <li>
+                    <a href="tel:89267706833">8 (926) 770-68-33</a>
+                    <p>Звоните, пишите в Telegram</p>
+                  </li>
+                  <li>
+                    <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                    <p>Электронная почта</p>
+                  </li>
+                  <li>
+                    <div class="contacts__social-list socials">
+                      <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+                      <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                      <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+          </div>
+          <div class="header__contacts-action">
+            <button type="button" class="header__search-btn">
+              <img src="./assets/image/icons/search-icon-medium.svg" alt="Кнопка для поиска по сайту" />
+            </button>
+            <button type="button" class="header__cart-btn">
+              <img src="./assets/image/icons/cart-icon-medium.svg" alt="Кнопка для просмотра корзины" />
+            </button>
+          </div>
+        </div>
+        <button type="button" class="header__burger" id="burger-open" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__menu" id="burger-menu">
+          <div class="menu__header">
+            <div class="menu__logo">
+              <a href="#"><img src="./assets/image/logo-dark.svg" alt="Логотип" /></a>
+            </div>
+            <button type="button" class="menu__close" id="burger-close" aria-label="Закрыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="menu__content">
+            <div class="menu-1-level level-1-active" id="burger-menu-1-level">
+              <nav class="menu__nav" aria-label="Каталог">
+                <ul>
+                  <li>
+                    <a href="#" class="toggle-level-menu">
+                      Каталог
+                      <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации"
+                        class="arrow">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">О компании</a>
+                  </li>
+                  <li>
+                    <a href="#">Наши работы</a>
+                  </li>
+                  <li>
+                    <a href="#">Отзывы</a>
+                  </li>
+                  <li>
+                    <a href="#">Доставка и оплата</a>
+                  </li>
+                  <li>
+                    <a href="#">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="menu__contacts">
+                <div class="menu__contacts-base">
+                  <details class="menu__phone">
+                    <summary>8 (800) 300-83-27
+                      <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Кнопка показа вкладки контактов"
+                        class="arrow" />
+                    </summary>
+                    <div class="header__contacts-list">
+                      <ul>
+                        <li>
+                          <a href="tel:88003008327">8 (800) 300-83-27</a>
+                          <p>Бесплатно по России</p>
+                        </li>
+                        <li>
+                          <a href="tel:89267706833">8 (926) 770-68-33</a>
+                          <p>Звоните, пишите в Telegram</p>
+                        </li>
+                        <li>
+                          <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                          <p>Электронная почта</p>
+                        </li>
+                        <li>
+                          <div class="contacts__social-list socials">
+                            <a href="#"><img src="./assets/image/icons/max-icon.svg"
+                                alt="Переход в мессенджер Макс" /></a>
+                            <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                            <a href="#"><img src="./assets/image/icons/telegram-icon.svg"
+                                alt="Переход в Телеграм" /></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                  <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-2-level level-1-active" id="burger-menu-2-level">
+              <nav class="menu__nav" aria-label="Навигация каталога">
+                <div class="menu__nav-title toggle-level-menu">
+                  <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации" />
+                  <h3>Каталог</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="#">Сауны из канадского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Сауны из Российского кедра</a>
+                  </li>
+                  <li>
+                    <a href="#">Кедровые фитобочки</a>
+                  </li>
+                  <li>
+                    <a href="#">Электрические печи</a>
+                  </li>
+                  <li>
+                    <a href="#">Комплектующие и аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="#">Криосауны</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header__overlay" id="overlay"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="title">
+      <div class="container">
+        <div class="title__content">
+          <nav class="title__breadcrumbs">
+            <ul>
+              <li>
+                <a href="./index.html">Главная</a>
+              </li>
+              <li>
+                <a href="./catalog.html">Каталог</a>
+              </li>
+            </ul>
+          </nav>
+          <h1>КАТАЛОГ</h1>
+        </div>
+      </div>
+    </section>
+    <section class="category">
+      <div class="container">
+        <ul class="category__content">
+          <li class="category__item">
+            <a href="#">
+              <div class="link__icon"><img src="./assets/image/icons/link-icon-medium.svg" alt=""></div>
+              <div class="category__item-img"><img src="./assets/image/category-list/canadian-cedar.webp" alt=""></div>
+              <div class="category__item-info">
+                <h4>САУНЫ ИЗ КАНАДСКОГО КЕДРА</h4>
+                <p>Короткое описание для категории</p>
+                <ul class="item__badge-list">
+                  <li>Финские</li>
+                  <li>Инфракрасные</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="category__item">
+            <a href="#">
+              <div class="link__icon">
+                <img src="./assets/image/icons/link-icon-medium.svg" alt="">
+              </div>
+              <div class="category__item-img">
+                <img src="./assets/image/category-list/russian-cedar.webp" alt="">
+              </div>
+              <div class="category__item-info">
+                <h4>САУНЫ ИЗ РОССИЙСКОГО КЕДРА</h4>
+                <p>Короткое описание для категории</p>
+                <ul class="item__badge-list">
+                  <li>Финские</li>
+                  <li>Инфракрасные</li>
+                  <li>Комбинированные</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="category__item">
+            <a href="#">
+              <div class="link__icon">
+                <img src="./assets/image/icons/link-icon-medium.svg" alt="">
+              </div>
+              <div class="category__item-img">
+                <img src="./assets/image/category-list/cryosaunas.webp" alt="">
+              </div>
+              <div class="category__item-info">
+                <h4>КРИОСАУНЫ</h4>
+                <p>Короткое описание для категории</p>
+                <ul class="item__badge-list">
+                  <li>Все криосауны</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="category__item">
+            <a href="#">
+              <div class="link__icon">
+                <img src="./assets/image/icons/link-icon-medium.svg" alt="">
+              </div>
+              <div class="category__item-img">
+                <img src="./assets/image/category-list/cedar-cask.webp" alt="">
+              </div>
+              <div class="category__item-info">
+                <h4>КЕДРОВЫЕ БОЧКИ</h4>
+                <p>Короткое описание для категории</p>
+                <ul class="item__badge-list">
+                  <li>Овальные</li>
+                  <li>Прямые</li>
+                  <li>Горизонтальные</li>
+                  <li>Двухместные</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="category__item">
+            <a href="#">
+              <div class="link__icon">
+                <img src="./assets/image/icons/link-icon-medium.svg" alt="">
+              </div>
+              <div class="category__item-img">
+                <img src="./assets/image/category-list/electro-oven.webp" alt="">
+              </div>
+              <div class="category__item-info">
+                <h4>ПЕЧИ</h4>
+                <p>Короткое описание для категории</p>
+                <ul class="item__badge-list">
+                  <li>Savo</li>
+                  <li>Harvia</li>
+                  <li>Karina</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+          <li class="category__item">
+            <a href="#">
+              <div class="link__icon">
+                <img src="./assets/image/icons/link-icon-medium.svg" alt="">
+              </div>
+              <div class="category__item-img">
+                <img src="./assets/image/category-list/accessories.webp" alt="">
+              </div>
+              <div class="category__item-info">
+                <h4>КОМПЛЕКТУЮЩИЕ</h4>
+                <p>Короткое описание для категории</p>
+                <ul class="item__badge-list">
+                  <li>Камни для печи</li>
+                </ul>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="form-cost">
+      <div class="container">
+        <div class="form-cost__content">
+          <div class="form-cost__text">
+            <h2>РАССЧИТАТЬ СТОИМОСТЬ САУНЫ</h2>
+            <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+          </div>
+          <div class="form-cost__form">
+            <form action="#" method="post">
+              <fieldset class="form-cost__types">
+                <div class="form-cost__radio">
+                  <h6>Тип сауны</h6>
+                  <ul>
+                    <li>
+                      <label for="finnish-sauna">Финская</label>
+                      <input type="radio" name="type-sauna" id="finnish-sauna" value="finnish-sauna" checked>
+                    </li>
+                    <li>
+                      <label for="infrared-sauna">Инфракрасная</label>
+                      <input type="radio" name="type-sauna" id="infrared-sauna" value="infrared-sauna">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Размер</h6>
+                  <ul>
+                    <li>
+                      <label for="corner-size">Угловая</label>
+                      <input type="radio" name="sauna-size" id="corner-size" value="corner-size" checked>
+                    </li>
+                    <li>
+                      <label for="straight-size">Прямая</label>
+                      <input type="radio" name="sauna-size" id="straight-size" value="straight-size">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Древесина</h6>
+                  <ul>
+                    <li>
+                      <label for="canadian-cedar">Канадский кедр</label>
+                      <input type="radio" name="wood-type" id="canadian-cedar" value="canadian-cedar" checked>
+                    </li>
+                    <li>
+                      <label for="russian-cedar">Российский кедр</label>
+                      <input type="radio" name="wood-type" id="russian-cedar" value="russian-cedar">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-cost__contacts">
+                <h6>Куда выслать расчёт?</h6>
+                <ul>
+                  <li>
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                  </li>
+                  <li>
+                    <label for="phone-number">Номер телефона</label>
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="+7 911 123-45-67" required>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="form-cost__submit-box">
+                <button type="submit" class="form-cost__submit btn btn-light">Отправить заявку</button>
+                <fieldset class="form-cost__pd-policy">
+                  <input type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+                  <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                    Федеральным законом Nº 152-ФЗ</label>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <a href="#">
+                <img src="./assets/image/logo-light.svg" alt="Логотип" />
+              </a>
+            </div>
+            <div class="footer__contacts">
+              <h6>
+                <a href="tel:88003008327">8 (800) 300-83-27</a>
+              </h6>
+              <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+            </div>
+            <div class="footer__address">
+              <address>Московская область, г. Реутов, ул.Октября, 5Б</address>
+              <p>Ежедневно <time datetime="09:00">9:00</time> - <time datetime="19:00">19:00</time></p>
+            </div>
+            <div class="footer__socials socials">
+              <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+              <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+              <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+            </div>
+          </div>
+          <div class="footer__catalog">
+            <h6>Каталог</h6>
+            <ul>
+              <li><a href="#">Финские сауны в квартиру</a></li>
+              <li><a href="#">Фитобочки</a></li>
+              <li><a href="#">Комбинированная финская с инфракрасной сауной</a></li>
+              <li><a href="#">Инфракрасные сауны</a></li>
+              <li><a href="#">Инфракрасные сауны с гималайской солью</a></li>
+              <li><a href="#">Комбинированная финская с паровой сауной</a></li>
+              <li><a href="#">Электрические печи</a></li>
+              <li><a href="#">Парогенераторы</a></li>
+              <li><a href="#">Фитосборы</a></li>
+              <li><a href="#">Соляные сауны</a></li>
+              <li><a href="#">Комплектующие для саун</a></li>
+            </ul>
+          </div>
+          <div class="footer__company">
+            <h6>Компания</h6>
+            <ul>
+              <li><a href="#">О компании</a></li>
+              <li><a href="#">Отзывы</a></li>
+              <li><a href="#">Контакты</a></li>
+              <li><a href="#">Портфолио</a></li>
+              <li><a href="#">Доставка и оплата</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <ul>
+          <li><a href="#">© 2026 ФИТОБАНЯ</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Политика обработки персональных данных</a></li>
+          <li><a href="#">Публичная оферта</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <dialog class="feedback" id="popup_feedback">
+    <div class="container">
+      <div class="feedback__content">
+        <div class="feedback__header">
+          <div class="feedback__title">
+            <h2>Свяжитесь с нами</h2>
+            <button class="feedback__close" data-btn="close">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+        </div>
+        <form action="#" method="post" class="feedback__form">
+          <fieldset class="feedback__data">
+            <ul>
+              <li>
+                <label for="name-feedback">Ваше имя</label>
+                <input type="text" name="name-feedback" id="name-feedback" placeholder="Иван Иванов" required>
+              </li>
+              <li>
+                <label for="phone-number-feedback">Номер телефона</label>
+                <input type="tel" name="phone-number-feedback" id="phone-number-feedback" placeholder="+7 911 123-45-67"
+                  required>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="feedback__submit-box">
+            <button type="submit" class="feedback__submit btn btn-light">Отправить заявку</button>
+            <fieldset class="feedback__pd-policy">
+              <input type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+              <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                Федеральным законом Nº 152-ФЗ</label>
+            </fieldset>
+          </div>
+        </form>
+        <div class="feedback__contacts">
+          <img src="./assets/image/icons/phone-call-icon.svg" alt="Позвонить по номеру 8 (800) 300-83-27">
+          <a href="tel:8 (800) 300-83-27">8 (800) 300-83-27</a>
+          <p>Ежедневно <time datetime="09:00">9:00</time> - <time datetime="19:00">19:00</time></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <dialog class="success" id="popup_success">
+    <div class="container">
+      <div class="success__content">
+        <button class="success__close" data-btn="close">
+          <span></span>
+          <span></span>
+        </button>
+        <img src="./assets/image/icons/success.svg" alt="">
+        <div class="success__text">
+          <h2>Спасибо за заявку</h2>
+          <p>Мы получили ваш запрос и скоро перезвоним</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <div class="cookie-banner">
+    <div class="container">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          <h5>Используем куки для улучшения работы сайта</h3>
+            <p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
+        </div>
+        <button class="cookie-banner__button btn btn-light">Понятно</button>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/accordeon.js" defer></script>
+  <script src="./scripts/carousel.js" defer></script>
+  <script src="./scripts/slider.js" defer></script>
+  <script src="./scripts/header.js" defer></script>
+  <script src="./scripts/popup.js" defer></script>
+  <script src="./scripts/cookie-banner.js" defer></script>
+</body>
+
+</html>

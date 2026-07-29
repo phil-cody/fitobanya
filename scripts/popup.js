@@ -13,6 +13,7 @@
 
       if (popup) {
         popup.showModal();
+        document.body.classList.add('no-scroll');
       }
     });
   });
@@ -22,6 +23,7 @@
       event.preventDefault();
 
       popups.forEach((popup) => popup.close());
+      document.body.classList.remove('no-scroll');
     });
   });
 
@@ -30,6 +32,7 @@
     
     if (target.tagName.toLowerCase() === 'dialog') {
       popups.forEach((popup) => popup.close());
+      document.body.classList.remove('no-scroll');
     }
   })
 })()

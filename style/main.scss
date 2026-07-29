@@ -9,12 +9,14 @@
 @use "./components/burger-menu";
 @use "./sections/form-cost";
 @use "./layout/footer";
+@use "./components/tabbar";
 @use "./sections/cookie-banner";
 @use "./sections/feedback-popup";
 @use "./sections/success-popup";
 
 @use "./pages/home";
-@use "./pages/catalog-page";
+@use "./pages/catalog-root-page";
+@use "./pages/catalog-category-page";
 
 body {
   @include flex;
@@ -26,6 +28,10 @@ body {
   position: relative;
   margin: 0 auto;
   overflow-x: hidden;
+
+  &.no-scroll {
+    overflow-y: hidden;
+  }
 }
 
 main {

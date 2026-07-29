@@ -209,7 +209,7 @@
 
         &:open {
           .arrow {
-            transform: rotate(270deg);
+            transform: rotate(180deg);
           }
 
           .header__contacts-list {
@@ -218,7 +218,6 @@
         }
 
         .arrow {
-          transform: rotate(90deg);
           transition: all 0.5s ease;
         }
 
@@ -335,7 +334,7 @@
     }
   }
 
-  .arrow {
+  .toggle-level-menu .arrow {
     width: $spacing-sm-mobile;
     height: $spacing-xxs;
     transform: rotate(270deg);

@@ -12,12 +12,17 @@ function openMenu() {
   menu.classList.add("menu__open");
   overlay.classList.add("active");
 
+  document.body.classList.add('no-scroll');
+
   isMenuOpen = true;
 }
 
 function closeMenu() {
   menu.classList.remove("menu__open");
   overlay.classList.remove("active");
+
+  document.body.classList.remove('no-scroll');
+
   isMenuOpen = false;
 }
 

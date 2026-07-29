@@ -3,7 +3,7 @@
 
 .cookie-banner {
   position: fixed;
-  bottom: 0;
+  bottom: $spacing-md;
   left: 50%;
   right: 0;
   transform: translateX(-50%);
@@ -18,6 +18,7 @@
 
   @media (max-width: 770px) {
     width: 328px;
+    bottom: calc($spacing-xxxl * 2);
   }
 
   &--visible {

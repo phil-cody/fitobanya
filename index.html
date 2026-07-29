@@ -18,7 +18,7 @@
             <img src="./assets/image/logo-light.svg" alt="Логотип" />
           </a>
         </div>
-        <nav class="header__nav" aria-label="Основная навигация">
+        <nav class="header__nav">
           <ul>
             <li>
               <a href="#">Каталог
@@ -187,29 +187,29 @@
               </div>
             </div>
             <div class="menu-2-level level-1-active" id="burger-menu-2-level">
-              <nav class="menu__nav" aria-label="Навигация каталога">
+              <nav class="menu__nav">
                 <div class="menu__nav-title toggle-level-menu">
                   <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации" />
                   <h3>Каталог</h3>
                 </div>
                 <ul>
                   <li>
-                    <a href="#">Сауны из канадского кедра</a>
+                    <a href="./catalog-category.html">Сауны из канадского кедра</a>
                   </li>
                   <li>
-                    <a href="#">Сауны из Российского кедра</a>
+                    <a href="./catalog-category.html">Сауны из Российского кедра</a>
                   </li>
                   <li>
-                    <a href="#">Кедровые фитобочки</a>
+                    <a href="./catalog-category.html">Кедровые фитобочки</a>
                   </li>
                   <li>
-                    <a href="#">Электрические печи</a>
+                    <a href="./catalog-category.html">Электрические печи</a>
                   </li>
                   <li>
-                    <a href="#">Комплектующие и аксессуары</a>
+                    <a href="./catalog-category.html">Комплектующие и аксессуары</a>
                   </li>
                   <li>
-                    <a href="#">Криосауны</a>
+                    <a href="./catalog-category.html">Криосауны</a>
                   </li>
                 </ul>
               </nav>
@@ -890,23 +890,174 @@
       </div>
     </div>
   </dialog>
+  <section class="tabbar">
+    <div class="tabbar__drag-handle" data-drag-tab></div>
+    <div class="container">
+      <div class="tabbar__content">
+        <ul class="tabbar__list">
+          <li data-tab="catalog">
+            <div class="tabbar__icon">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 6.75H12.75M0.75 0.75H18.75M0.75 12.75H18.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Каталог</h6>
+          </li>
+          <li data-tab="search">
+            <div class="tabbar__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.75 18.75L15.2501 15.25M17.75 9.25C17.75 13.9444 13.9444 17.75 9.25 17.75C4.55558 17.75 0.75 13.9444 0.75 9.25C0.75 4.55558 4.55558 0.75 9.25 0.75C13.9444 0.75 17.75 4.55558 17.75 9.25Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Поиск</h6>
+          </li>
+          <li data-tab="call">
+            <div class="tabbar__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.87 4.75006C13.8467 4.94063 14.7444 5.41832 15.448 6.122C16.1517 6.82567 16.6294 7.72333 16.82 8.70006M12.87 0.750061C14.8992 0.975497 16.7916 1.88424 18.2362 3.32707C19.6809 4.7699 20.592 6.66107 20.82 8.69006M9.04695 12.6131C7.84537 11.4116 6.89659 10.0529 6.20059 8.60329C6.14072 8.4786 6.11079 8.41626 6.08779 8.33736C6.00607 8.05701 6.06477 7.71275 6.23478 7.47532C6.28262 7.40851 6.33978 7.35135 6.45409 7.23704C6.8037 6.88744 6.9785 6.71263 7.09278 6.53685C7.52378 5.87396 7.52378 5.01938 7.09279 4.35649C6.9785 4.18071 6.8037 4.00591 6.45409 3.65631L6.25922 3.46144C5.72778 2.92999 5.46206 2.66427 5.17668 2.51993C4.60912 2.23286 3.93885 2.23286 3.37129 2.51993C3.08591 2.66427 2.82019 2.92999 2.28874 3.46144L2.13111 3.61907C1.60149 4.14869 1.33668 4.41351 1.13443 4.77354C0.910007 5.17304 0.748645 5.79353 0.750009 6.25176C0.751237 6.6647 0.831341 6.94693 0.991548 7.51137C1.85252 10.5448 3.47699 13.4071 5.86497 15.7951C8.25295 18.1831 11.1153 19.8076 14.1487 20.6685C14.7132 20.8287 14.9954 20.9088 15.4083 20.9101C15.8665 20.9114 16.487 20.7501 16.8865 20.5257C17.2466 20.3234 17.5114 20.0586 18.041 19.529L18.1986 19.3713C18.7301 18.8399 18.9958 18.5742 19.1402 18.2888C19.4272 17.7212 19.4272 17.051 19.1402 16.4834C18.9958 16.198 18.7301 15.9323 18.1986 15.4009L18.0038 15.206C17.6542 14.8564 17.4794 14.6816 17.3036 14.5673C16.6407 14.1363 15.7861 14.1363 15.1232 14.5673C14.9475 14.6816 14.7726 14.8564 14.423 15.206C14.3087 15.3203 14.2516 15.3775 14.1848 15.4253C13.9473 15.5953 13.6031 15.654 13.3227 15.5723C13.2438 15.5493 13.1815 15.5194 13.0568 15.4595C11.6072 14.7635 10.2485 13.8147 9.04695 12.6131Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Связаться</h6>
+          </li>
+          <li data-tab="cart">
+            <div class="tabbar__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.75014 12.75H16.8859C17.8987 12.75 18.4051 12.75 18.8082 12.5612C19.1634 12.3948 19.4618 12.1277 19.6663 11.7932C19.8985 11.4133 19.9544 10.91 20.0663 9.90338L20.6513 4.63835C20.6855 4.33088 20.7025 4.17715 20.6531 4.05816C20.6097 3.95366 20.5321 3.86697 20.433 3.81228C20.3202 3.75 20.1655 3.75 19.8562 3.75H3.25014M0.75 0.75H1.99844C2.26306 0.75 2.39537 0.75 2.49889 0.800324C2.59002 0.844628 2.66554 0.915574 2.71544 1.00376C2.77212 1.10394 2.78037 1.23599 2.79688 1.5001L3.70312 15.9999C3.71963 16.264 3.72788 16.3961 3.78456 16.4962C3.83446 16.5844 3.90998 16.6554 4.00111 16.6997C4.10463 16.75 4.23694 16.75 4.50156 16.75H17.75M6.25 20.25H6.26M15.25 20.25H15.26M6.75 20.25C6.75 20.5261 6.52614 20.75 6.25 20.75C5.97386 20.75 5.75 20.5261 5.75 20.25C5.75 19.9739 5.97386 19.75 6.25 19.75C6.52614 19.75 6.75 19.9739 6.75 20.25ZM15.75 20.25C15.75 20.5261 15.5261 20.75 15.25 20.75C14.9739 20.75 14.75 20.5261 14.75 20.25C14.75 19.9739 14.9739 19.75 15.25 19.75C15.5261 19.75 15.75 19.9739 15.75 20.25Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Корзина</h6>
+          </li>
+        </ul>
+        <ul class="tabbar__content-list">
+          <li data-tab-content="catalog" class="tabbar__catalog">
+            <nav class="tabbar__catalog-nav">
+              <h3>Каталог</h3>
+              <ul>
+                <li>
+                  <a href="./catalog-category.html">Сауны из канадского кедра</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Сауны из Российского кедра</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Кедровые фитобочки</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Электрические печи</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Комплектующие и аксессуары</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Криосауны</a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+          <li data-tab-content="search" class="tabbar__search">
+            <div class="tabbar__search-wrap">
+              <h3>Поиск</h3>
+              <form method="get">
+                <button type="submit" class="tabbar__search-submit">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 19L15.5001 15.5M18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 4.80558 4.80558 1 9.5 1C14.1944 1 18 4.80558 18 9.5Z"
+                      stroke="#544945" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <input type="search" placeholder="Сауна финская">
+                <button type="button" class="tabbar__search-clear">
+                  <span></span>
+                  <span></span>
+                </button>
+              </form>
+              <ul class="tabbar__search-results">
+                <li>
+                  <a href="./product-card.html">
+                    <img src="./assets/image/search/search-result-1.webp" alt="Результат поиска">
+                    <p>Эконом сауна с печью HARVIA Одноместная</p>
+                    <h6>105 000 ₽</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product-card.html">
+                    <img src="./assets/image/search/search-result-2.webp" alt="Результат поиска">
+                    <p>Трехместная финская сауна. Глубина 100см Массив Кедра</p>
+                    <h6>105 000 ₽</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product-card.html">
+                    <img src="./assets/image/search/search-result-1.webp" alt="Результат поиска">
+                    <p>Одноместная финская сауна. Массив Кедра</p>
+                    <h6>105 000 ₽</h6>
+                  </a>
+                </li>
+                <a href="#" class="tabbar__search-more">
+                  Все результаты
+                  <div class="tabbar__search-more-icon">
+                    <img src="./assets/image/icons/link-icon-dark.svg" alt="Перейкти ко всем результатам">
+                  </div>
+                </a>
+              </ul>
+            </div>
+          </li>
+          <li data-tab-content="call" class="tabbar__call">
+            <div class="tabbar__call-list">
+              <ul>
+                <li>
+                  <a href="tel:88003008327">8 (800) 300-83-27</a>
+                  <p>Бесплатно по России</p>
+                </li>
+                <li>
+                  <a href="tel:89267706833">8 (926) 770-68-33</a>
+                  <p>Звоните, пишите в Telegram</p>
+                </li>
+                <li>
+                  <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                  <p>Электронная почта</p>
+                </li>
+                <li>
+                  <div class="contacts__social-list socials">
+                    <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+                    <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                    <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li data-tab-content="cart" class="tabbar__cart"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="tabbar__overlay"></div>
   <div class="cookie-banner">
-		<div class="container">
-			<div class="cookie-banner__content">
-				<div class="cookie-banner__text">
-					<h5>Используем куки для улучшения работы сайта</h3>
-					<p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
-				</div>
-				<button class="cookie-banner__button btn btn-light">Понятно</button>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          <h5>Используем куки для улучшения работы сайта</h3>
+            <p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
+        </div>
+        <button class="cookie-banner__button btn btn-light">Понятно</button>
+      </div>
+    </div>
+  </div>
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/accordeon.js" defer></script>
   <script src="./scripts/carousel.js" defer></script>
   <script src="./scripts/slider.js" defer></script>
   <script src="./scripts/header.js" defer></script>
   <script src="./scripts/popup.js" defer></script>
+  <script src="./scripts/tab-bar.js" defer></script>
   <script src="./scripts/cookie-banner.js" defer></script>
 </body>
 

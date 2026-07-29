@@ -1,0 +1,409 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.tabbar {
+  position: absolute;
+  z-index: 1200;
+  bottom: 0;
+  width: 100%;
+  padding: $spacing-none;
+  background-color: $surface;
+  transition: all 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-box-shadow: 0px -1px 19px 1px $black-5;
+  box-shadow: 0px -1px 19px 1px $black-5;
+  will-change: transform;
+
+  @media (min-width: 771px) {
+    display: none;
+  }
+
+  &__drag-handle {
+    position: absolute;
+    z-index: 2;
+    top: -38px;
+    left: 50%;
+    width: 120px;
+    height: 48px;
+    transform: translateX(-50%);
+    background: transparent;
+
+    opacity: 0;
+    visibility: hidden;
+    transition:
+      opacity 0.5s ease,
+      visibility 0.5s ease;
+
+    cursor: grab;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 22px;
+      left: 50%;
+      width: 82px;
+      height: $spacing-xxxs;
+      border-radius: $radius-max;
+      transform: translate(-50%, -50%);
+      background-color: $surface;
+    }
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $black;
+    inset: 0;
+    z-index: 999;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+    @include backdrop-24;
+
+    &.active {
+      visibility: visible;
+      opacity: 0.7;
+    }
+  }
+
+  &__sticky {
+    position: fixed;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1200;
+    padding: $spacing-none;
+  }
+
+  &__content {
+    @include flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__list {
+    @include flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 6px $spacing-none;
+
+    li {
+      @include flex-center;
+      flex-direction: column;
+      gap: 6px;
+      cursor: pointer;
+      padding: 6px;
+      width: 83px;
+      border-radius: $radius-s;
+
+      h6 {
+        @include text;
+        font-size: $text-sm-font-size-mobile;
+        color: $text-color-medium;
+      }
+
+      .tabbar__icon {
+        width: $spacing-lg;
+        height: $spacing-lg;
+        @include flex-center;
+      }
+
+      svg {
+        stroke: $text-color-medium;
+      }
+
+      &.active {
+        h6 {
+          color: $text-color-default;
+        }
+
+        svg {
+          stroke: $text-color-default;
+        }
+      }
+    }
+  }
+
+  &__content-list {
+    .tabbar__catalog {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &-nav {
+        margin: $spacing-lg $spacing-sm;
+        @include flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: $spacing-lg;
+
+        h3 {
+          text-transform: uppercase;
+          font-size: $heading-3-font-size-mobile;
+          color: $text-color-default;
+        }
+
+        ul {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-sm;
+          font-size: $text-md-font-size;
+          color: $text-color-default;
+          width: 100%;
+
+          @media (max-width: 540px) {
+            width: 100%;
+          }
+
+          li {
+            border-bottom: 1px solid $borders;
+            width: 100%;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            a {
+              @include flex-between;
+              padding-bottom: $spacing-sm;
+              color: $text-color-default;
+              font-size: $text-md-font-size-mobile;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .tabbar__search {
+      display: none;
+
+      &.active {
+        @include flex;
+      }
+
+      &-wrap {
+        width: 100%;
+        margin: $spacing-lg $spacing-sm;
+        @include flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: $spacing-lg;
+
+        h3 {
+          text-transform: uppercase;
+          font-size: $heading-3-font-size-mobile;
+          color: $text-color-default;
+        }
+
+        form {
+          @include flex-between;
+          border-bottom: 1px solid $borders;
+          padding: $spacing-lg-mobile $spacing-none;
+          gap: $spacing-xs;
+
+          button {
+            border: none;
+            background-color: transparent;
+            min-width: $spacing-lg;
+            width: $spacing-lg;
+            height: $spacing-lg;
+            @include flex-center;
+          }
+
+          input {
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            font-size: $text-md-font-size;
+            color: $text-color-default;
+            padding-block: $spacing-none;
+            padding-inline: $spacing-none;
+
+            &::placeholder {
+              font-size: $text-md-font-size;
+              color: $text-color-default;
+            }
+          }
+
+          .tabbar__search-clear {
+            width: fit-content;
+            height: fit-content;
+            @include flex;
+            flex-direction: column;
+            gap: $spacing-sm-mobile;
+            background-color: transparent;
+            border: none;
+
+            span {
+              display: block;
+              background-color: $text-color-default;
+              width: $spacing-lg-mobile;
+              height: $spacing-xxxxs;
+              position: relative;
+
+              &:first-child {
+                transform: rotate(45deg);
+                top: 8px;
+              }
+
+              &:last-child {
+                transform: rotate(-45deg);
+                top: -8px;
+              }
+            }
+          }
+        }
+
+        .tabbar__search-results {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-sm;
+          font-size: $text-md-font-size;
+          color: $text-color-default;
+          width: 100%;
+
+          @media (max-width: 540px) {
+            width: 100%;
+          }
+
+          li {
+            border-bottom: 1px solid $borders;
+            width: 100%;
+
+            &:last-child {
+              border-bottom: none;
+            }
+
+            a {
+              @include flex-between;
+              gap: $spacing-sm-mobile;
+              padding-bottom: $spacing-sm;
+              color: $text-color-default;
+              font-size: $text-md-font-size-mobile;
+              width: 100%;
+
+              img {
+                min-width: 54px;
+                width: 54px;
+                height: 54px;
+                object-fit: contain;
+              }
+
+              h6 {
+                text-wrap: nowrap;
+                line-height: 120%;
+                letter-spacing: -3%;
+                color: $text-color-default;
+                font-size: $heading-6-font-size-mobile;
+              }
+            }
+          }
+
+          .tabbar__search-more {
+            width: 100%;
+            @include flex-center;
+            gap: $spacing-sm-mobile;
+            cursor: pointer;
+
+            &-icon {
+              width: $spacing-lg;
+              height: $spacing-lg;
+              @include flex-center;
+
+              img {
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .tabbar__call {
+      background-color: $background;
+      display: none;
+      height: calc(100dvh - 69px);
+      position: relative;
+
+      &.active {
+        @include flex-end;
+      }
+
+      &-list {
+        cursor: default;
+        position: absolute;
+        bottom: $spacing-sm;
+        right: calc((100dvw - 83px * 4) / 5 * 2);
+
+        ul {
+          @include flex-start;
+          flex-direction: column;
+          gap: $spacing-none;
+          padding: calc($spacing-xxxs + $spacing-xxxxs);
+          background-color: $surface;
+          border: none;
+          border-radius: $radius-lg;
+
+          li {
+            transition: all 0.5s ease;
+            padding: $spacing-xs $spacing-sm;
+            width: 100%;
+            @include flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: calc($spacing-xxxxs + $spacing-xxxs);
+            border-bottom: 1px solid $borders;
+
+            &:last-child {
+              border-bottom: none;
+            }
+          }
+
+          a {
+            color: $text-color-default;
+          }
+
+          p {
+            text-wrap: nowrap;
+            color: $text-color-medium;
+            font-size: $text-sm-font-size;
+          }
+
+          .contacts__social-list {
+            a {
+              padding: $spacing-xs-mobile;
+              background-color: $primary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
