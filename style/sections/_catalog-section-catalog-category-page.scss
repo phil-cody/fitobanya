@@ -1,44 +1,35 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.populars {
-  min-width: 100%;
-  padding: $spacing-none;
+.category {
+  padding-bottom: 90px;
 
-  .populars__content {
-    position: relative;
-    @include flex-start;
+  @media (max-width: 770px) {
+    padding-bottom: $spacing-xxxl;
+  }
+
+  &__content {
+    @include flex;
+    justify-content: flex-start;
+    align-items: stretch;
     flex-direction: column;
-    gap: $spacing-xxl;
-    color: $text-color-default;
+    gap: 90px;
 
     @media (max-width: 770px) {
-      gap: $spacing-md;
-    }
-
-    h2 {
-      @include heading;
-      font-size: $heading-2-font-size;
-
-      @media (max-width: 770px) {
-        font-size: $heading-2-font-size-mobile;
-      }
+      gap: 25px;
     }
   }
-  .populars__list {
+
+  &__list {
     width: min(100vw, 1440px);
     max-width: none;
     margin: $spacing-none calc(50% - min(50vw, 720px));
     padding: $spacing-none $spacing-xxxl;
     box-sizing: border-box;
-    @include flex-start;
-    align-items: stretch;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
     gap: $spacing-md;
-    overflow-x: auto;
-    overflow-y: hidden;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-    scroll-padding-left: $spacing-xxxxl;
+    overflow: hidden;
 
     @media (min-width: 771px) {
       scrollbar-width: none;
@@ -79,17 +70,14 @@
     }
   }
 
-  .populars__item {
-    min-width: 325px;
-    width: 325px;
+  &__item {
+    width: 100%;
     @include flex-start;
     flex-direction: column;
     gap: $spacing-lg;
     scroll-snap-align: start;
 
     @media (max-width: 540px) {
-      min-width: 216px;
-      width: 216px;
       gap: $spacing-sm-mobile;
     }
   }
@@ -212,45 +200,68 @@
     }
   }
 
-  &__slider-btn {
-    position: absolute;
-    @include flex-between;
-    width: 100%;
-    top: 41%;
+  &__pagination {
+    @include flex-center;
+    gap: $spacing-xs;
 
     @media (max-width: 770px) {
-      display: none;
+      gap: $spacing-xs-mobile;
     }
 
-    button {
-      width: calc($spacing-xxxl + $spacing-sm-mobile);
-      height: calc($spacing-xxxl + $spacing-sm-mobile);
+    ul {
       @include flex-center;
-      border: none;
-      border-radius: $radius-max;
-      background-color: $surface;
-      opacity: 0.7;
-      cursor: pointer;
-      @include backdrop-24;
+      gap: $spacing-none;
 
-      &:disabled {
-        visibility: hidden;
-        opacity: 0;
+      li {
+        @include flex-center;
+        width: 54px;
+        height: 54px;
+        border-radius: $radius-max;
+        color: $black;
+        font-size: $text-md-font-size;
+        @include text;
+        cursor: pointer;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+          width: 48px;
+          height: 48px;
+
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          border: 1px solid $primary;
+        }
+
+        &.active {
+          background-color: $surface;
+        }
       }
     }
 
-    .button__prev {
-      transform: translateX(-50%);
+    & .btn {
+      padding: 17px $spacing-md;
+      gap: $spacing-xs-mobile;
 
-      img {
-        transform: rotate(90deg);
+      @media (max-width: 770px) {
+        padding: $spacing-xs;
+
+        span {
+          display: none;
+        }
       }
-    }
-    .button__next {
-      transform: translateX(50%);
 
-      img {
-        transform: rotate(270deg);
+      .pagination__next-page-img {
+        width: $spacing-lg;
+        height: $spacing-lg;
+        @include flex-center;
+
+        & img {
+          transform: rotate(-90deg);
+        }
       }
     }
   }

@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.title {
+.title-root {
   width: 100%;
   padding: 118px $spacing-none 87px;
 
@@ -13,7 +13,7 @@
     padding-top: 64px;
   }
 
-  &__content {
+  .title__content {
     @include flex-start;
     flex-direction: column;
     gap: $spacing-xxxl;
@@ -33,7 +33,7 @@
     }
   }
 
-  &__breadcrumbs {
+  .title__breadcrumbs {
     ul {
       display: flex;
       flex-wrap: wrap;

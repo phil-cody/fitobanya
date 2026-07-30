@@ -67,7 +67,6 @@
 
         img {
           transition: all 0.5s ease;
-          margin-top: 6px;
         }
       }
       &:hover {
@@ -75,7 +74,7 @@
           display: block;
         }
         img {
-          transform: rotate(270deg);
+          transform: rotate(180deg);
         }
       }
     }
@@ -168,7 +167,7 @@
           }
 
           .arrow {
-            transform: rotate(270deg);
+            transform: rotate(180deg);
           }
         }
       }

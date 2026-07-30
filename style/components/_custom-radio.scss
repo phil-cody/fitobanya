@@ -1,0 +1,29 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.custom-radio {
+  @include flex-center;
+  gap: $spacing-xs;
+
+  input {
+    appearance: none;
+    position: relative;
+    width: $spacing-lg;
+    height: $spacing-lg;
+    background-color: $background;
+    border: 1px solid $borders;
+    border-radius: $radius-max;
+    transition: all 0.5s ease;
+
+    &::after {
+      content: '\2022';
+      position: absolute;
+      transition: all 0.5s ease;
+      overflow: hidden;
+    }
+  }
+
+  label {
+
+  }
+}

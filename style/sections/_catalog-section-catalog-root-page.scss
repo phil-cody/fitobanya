@@ -1,7 +1,7 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.category {
+.catalog {
   padding: $spacing-none;
   padding-bottom: calc($spacing-xxxxl * 2);
   min-width: 100%;
@@ -14,7 +14,7 @@
     padding: $spacing-none;
   }
 
-  .category__content {
+  .catalog__content {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin: $spacing-none;
@@ -25,7 +25,7 @@
     }
   }
 
-  .category__item {
+  .catalog__item {
     min-width: 0;
     padding: clamp($spacing-lg, 2.78vw, $spacing-xxxl);
     min-height: clamp(259px, 35vw, 502px);
