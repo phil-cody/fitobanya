@@ -16,7 +16,8 @@
     transition: all 0.5s ease;
 
     &::after {
-      content: '\2022';
+      content: url('../assets/image/icons/radio-bullet.svg');
+      left: 5px;
       position: absolute;
       transition: all 0.5s ease;
       overflow: hidden;

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -257,7 +256,8 @@ pre {
   transition: all 0.5s ease;
 }
 .custom-radio input::after {
-  content: "•";
+  content: url("../assets/image/icons/radio-bullet.svg");
+  left: 5px;
   position: absolute;
   transition: all 0.5s ease;
   overflow: hidden;
