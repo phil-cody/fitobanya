@@ -275,17 +275,29 @@
               <p>Фильтры</p>
             </button>
             <li data-filter="cost">
-              <details>
+              <details name="filter">
                 <summary>
                   <p>Стоимость</p>
                   <div class="title__filter-img">
                     <img src="./assets/image/icons/arrow-icon-medium.svg" alt="">
                   </div>
                 </summary>
+                <div class="filter">
+                  <div class="custom-range">
+                    <div class="custom-range-diapason">
+                      <p class="custom-range-min">от<span data-val="min"></span></p>
+                      <p class="custom-range-max">до<span data-val="max"></span></p>
+                    </div>
+                    <div class="custom-range-track"></div>
+                    <input type="range" min="0" max="999999" value="50000" class="custom-range__input-min">
+                    <input type="range" min="0" max="999999" value="550000" class="custom-range__input-max">
+                    <button data-btn="clear-range">Сбросить</button>
+                  </div>
+                </div>
               </details>
             </li>
             <li data-filter="form">
-              <details>
+              <details name="filter">
                 <summary>
                   <p>Форма</p>
                   <div class="title__filter-img">
@@ -294,22 +306,26 @@
                 </summary>
                 <div class="filter">
                   <fieldset>
-                    <input type="checkbox" name="category-filter-form" id="category-filter-form-straight" role="switch" class="checkbox">
+                    <input type="checkbox" name="category-filter-form" id="category-filter-form-straight" role="switch"
+                      class="checkbox">
                     <label for="category-filter-form">Прямые</label>
                   </fieldset>
                   <fieldset>
-                    <input type="checkbox" name="category-filter-form" id="category-filter-form-corned" role="switch" class="checkbox">
+                    <input type="checkbox" name="category-filter-form" id="category-filter-form-corned" role="switch"
+                      class="checkbox">
                     <label for="category-filter-form">Угловые</label>
                   </fieldset>
                   <fieldset>
-                    <input type="checkbox" name="category-filter-form" id="category-filter-form-embed" role="switch" class="checkbox">
+                    <input type="checkbox" name="category-filter-form" id="category-filter-form-embed" role="switch"
+                      class="checkbox">
                     <label for="category-filter-form">Встроенные</label>
                   </fieldset>
+                  <button data-btn="clear-filter">Сбросить</button>
                 </div>
               </details>
             </li>
             <li data-filter="size">
-              <details>
+              <details name="filter">
                 <summary>
                   <p>Количество мест</p>
                   <div class="title__filter-img">
@@ -318,22 +334,36 @@
                 </summary>
                 <div class="filter">
                   <fieldset>
-                    <input type="checkbox" name="category-filter-size" id="category-filter-size-one-size" role="switch" class="checkbox">
+                    <input type="checkbox" name="category-filter-size" id="category-filter-size-one-size" role="switch"
+                      class="checkbox">
                     <label for="category-filter-size">1</label>
                   </fieldset>
                   <fieldset>
-                    <input type="checkbox" name="category-filter-size" id="category-filter-size-two-size" role="switch" class="checkbox">
+                    <input type="checkbox" name="category-filter-size" id="category-filter-size-two-size" role="switch"
+                      class="checkbox">
                     <label for="category-filter-size">2</label>
                   </fieldset>
                   <fieldset>
-                    <input type="checkbox" name="category-filter-size" id="category-filter-size-three-size" role="switch" class="checkbox">
+                    <input type="checkbox" name="category-filter-size" id="category-filter-size-three-size"
+                      role="switch" class="checkbox">
                     <label for="category-filter-size">3</label>
                   </fieldset>
+                  <fieldset>
+                    <input type="checkbox" name="category-filter-size" id="category-filter-size-four-size" role="switch"
+                      class="checkbox">
+                    <label for="category-filter-size">4</label>
+                  </fieldset>
+                  <fieldset>
+                    <input type="checkbox" name="category-filter-size" id="category-filter-size-five-size" role="switch"
+                      class="checkbox">
+                    <label for="category-filter-size">5</label>
+                  </fieldset>
+                  <button data-btn="clear-filter">Сбросить</button>
                 </div>
               </details>
             </li>
             <li data-filter="type">
-              <details>
+              <details name="filter">
                 <summary>
                   <p>Тип нагревателей</p>
                   <div class="title__filter-img">
@@ -342,45 +372,46 @@
                 </summary>
                 <div class="filter">
                   <fieldset>
-                    <input type="checkbox" name="category-filter-type" id="category-filter-type-1" role="switch" class="checkbox">
-                    <label for="category-filter-type">Прямые</label>
+                    <input type="checkbox" name="category-filter-type" id="category-filter-type-carbon" role="switch"
+                      class="checkbox">
+                    <label for="category-filter-type">Карбоновый</label>
                   </fieldset>
                   <fieldset>
-                    <input type="checkbox" name="category-filter-type" id="category-filter-type-2" role="switch" class="checkbox">
-                    <label for="category-filter-type">Угловые</label>
+                    <input type="checkbox" name="category-filter-type" id="category-filter-type-ceramic" role="switch"
+                      class="checkbox">
+                    <label for="category-filter-type">Керамической</label>
                   </fieldset>
-                  <fieldset>
-                    <input type="checkbox" name="category-filter-type" id="category-filter-type-3" role="switch" class="checkbox">
-                    <label for="category-filter-type">Встроенные</label>
-                  </fieldset>
+                  <button data-btn="clear-filter">Сбросить</button>
                 </div>
               </details>
             </li>
             <li data-filter="sort">
-              <details>
+              <details name="filter">
                 <summary>
-                  <p>По популяности</p>
+                  <p>По популярности</p>
                   <div class="title__filter-img">
                     <img src="./assets/image/icons/arrow-icon-medium.svg" alt="">
                   </div>
                 </summary>
                 <div class="sort">
                   <fieldset class='custom-radio'>
-                    <input type="radio" name="category-sort" id="category-sort-populars">
+                    <input type="radio" value="populars" data-default="true" name="category-sort"
+                      id="category-sort-populars">
                     <label for="category-sort">Сначала популярные</label>
                   </fieldset>
                   <fieldset class='custom-radio'>
-                    <input type="radio" name="category-sort" id="category-sort-expensive">
+                    <input type="radio" value="expensive" name="category-sort" id="category-sort-expensive">
                     <label for="category-sort">Сначала дорогие</label>
                   </fieldset>
                   <fieldset class='custom-radio'>
-                    <input type="radio" name="category-sort" id="category-sort-cheapest">
+                    <input type="radio" value="cheapest" name="category-sort" id="category-sort-cheapest">
                     <label for="category-sort">Сначала дешевые</label>
                   </fieldset>
                   <fieldset class='custom-radio'>
-                    <input type="radio" name="category-sort" id="category-sort-newest">
+                    <input type="radio" value="newest" name="category-sort" id="category-sort-newest">
                     <label for="category-sort">Новинки</label>
                   </fieldset>
+                  <button data-btn="clear-sort">Сбросить</button>
                 </div>
               </details>
             </li>
@@ -819,8 +850,8 @@
     </div>
   </dialog>
   <section class="tabbar">
-    <div class="tabbar__drag-handle" data-drag-tab></div>
     <div class="container">
+      <div class="tabbar__drag-handle" data-drag-tab></div>
       <div class="tabbar__content">
         <ul class="tabbar__list">
           <li data-tab="catalog">
@@ -967,6 +998,86 @@
       </div>
     </div>
   </section>
+  <section class="filterbar">
+    <div class="container">
+      <div class="filterbar__content">
+        <div class="filterbar__header">
+          <h2>Фильтры</h2>
+          <button type="button" class="filterbar__close" id="filterbar-close">
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <form action="#" class="filterbar__filters">
+          <fieldset>
+            <legend>Стоимость</legend>
+            <div class="custom-range">
+              <div class="custom-range-diapason">
+                <p class="custom-range-min">от<span data-val="min"></span></p>
+                <p class="custom-range-max">до<span data-val="max"></span></p>
+              </div>
+              <div class="custom-range-track"></div>
+              <input type="range" min="0" max="999999" value="50000" class="custom-range__input-min">
+              <input type="range" min="0" max="999999" value="550000" class="custom-range__input-max">
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Форма</legend>
+            <ul>
+              <li>
+                <label for="form-straight">Прямые</label>
+                <input type="radio" name="filterbar-sauna-form" id="form-straight" value="form-straight" checked>
+              </li>
+              <li>
+                <label for="form-corned">Угловые</label>
+                <input type="radio" name="filterbar-sauna-form" id="form-corned" value="form-corned">
+              </li>
+              <li>
+                <label for="form-embed">Встроенные</label>
+                <input type="radio" name="filterbar-sauna-form" id="form-embed" value="form-embed">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Тип нагревателя</legend>
+            <li>
+              <label for="heater-carbon">Карбоновый</label>
+              <input type="radio" name="filterbar-heater-type" id="heater-carbon" value="heater-carbon">
+            </li>
+            <li>
+              <label for="heater-ceramic">Керамической</label>
+              <input type="radio" name="filterbar-heater-type" id="heater-ceramic" value="heater-ceramic">
+            </li>
+          </fieldset>
+          <fieldset>
+            <legend>Количество мест</legend>
+            <li>
+              <label for="size-one">1</label>
+              <input type="radio" name="filterbar-size" id="size-one" value="size-one">
+            </li>
+            <li>
+              <label for="size-two">2</label>
+              <input type="radio" name="filterbar-size" id="size-two" value="size-two">
+            </li>
+            <li>
+              <label for="size-three">3</label>
+              <input type="radio" name="filterbar-size" id="size-three" value="size-three">
+            </li>
+            <li>
+              <label for="size-four">4</label>
+              <input type="radio" name="filterbar-size" id="size-four" value="size-four">
+            </li>
+            <li>
+              <label for="size-five">5</label>
+              <input type="radio" name="filterbar-size" id="size-five" value="size-five">
+            </li>
+          </fieldset>
+          <button type="submit" class="btn btn-dark">Применить</button>
+          <button type="reset" class="btn btn-light">Сбросить</button>
+        </form>
+      </div>
+    </div>
+  </section>
   <div class="tabbar__overlay"></div>
   <div class="cookie-banner">
     <div class="container">
@@ -982,11 +1093,13 @@
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/accordeon.js" defer></script>
   <script src="./scripts/carousel.js" defer></script>
+  <script src="./scripts/filters.js" defer></script>
   <script src="./scripts/slider.js" defer></script>
   <script src="./scripts/header.js" defer></script>
   <script src="./scripts/popup.js" defer></script>
   <script src="./scripts/tab-bar.js" defer></script>
   <script src="./scripts/cookie-banner.js" defer></script>
+  <script src="./scripts/custom-range.js" defer></script>
   <script src="./scripts/pagination.js" defer></script>
 </body>
 

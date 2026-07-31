@@ -138,15 +138,10 @@
       }
 
       li {
-        padding: $spacing-xs $spacing-sm;
         border: 1px solid $borders-alpha;
         border-radius: $radius-max;
         cursor: pointer;
         letter-spacing: -2%;
-
-        @media (max-width: 540px) {
-          padding: calc($spacing-xxxxs * 3.5) 13px;
-        }
 
         &:has(input:checked) {
           background-color: $text-color-inverse;
@@ -159,12 +154,20 @@
       }
 
       label {
+        width: 100%;
+        height: 100%;
+        padding: $spacing-xs $spacing-sm;
         font-size: $text-md-font-size;
         color: $text-color-inverse-alpha;
         cursor: pointer;
+        display: block;
 
         @media (max-width: 770px) {
           font-size: $text-md-font-size-mobile;
+        }
+
+        @media (max-width: 540px) {
+          padding: calc($spacing-xxxxs * 3.5) 13px;
         }
       }
 

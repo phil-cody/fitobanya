@@ -1,0 +1,155 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.filterbar {
+  position: absolute;
+  z-index: 1200;
+  bottom: 0;
+  width: 100%;
+  padding: $spacing-lg $spacing-sm;
+  background-color: $background;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0px -1px 19px 1px $black-5;
+  box-shadow: 0px -1px 19px 1px $black-5;
+  will-change: transform;
+
+  .container {
+    position: relative;
+    z-index: 1200;
+    padding: $spacing-none;
+  }
+
+  .filterbar__content {
+    @include flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: $spacing-xl;
+  }
+  .filterbar__header {
+    @include flex-between;
+
+    h2 {
+      @include heading;
+      font-size: $heading-2-font-size;
+      color: $text-color-default;
+
+      @media (max-width: 540px) {
+        font-size: $heading-2-font-size-mobile;
+      }
+    }
+  }
+  .filterbar__close {
+    @include flex-between;
+    flex-direction: column;
+    position: relative;
+    height: $spacing-lg;
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    @media (max-width: 540px) {
+      height: $spacing-xs;
+    }
+
+    span {
+      width: $spacing-xxl;
+      height: $spacing-xxxxs;
+      background-color: $primary;
+      position: relative;
+      transition: all 0.5s ease;
+
+      &:first-child {
+        top: 11px;
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        bottom: 11px;
+        transform: rotate(-45deg);
+      }
+
+      @media (max-width: 540px) {
+        width: $spacing-lg-mobile;
+
+        &:first-child {
+          top: 5px;
+        }
+        &:last-child {
+          bottom: 5px;
+        }
+      }
+    }
+  }
+  .filterbar__filters {
+    @include flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: $spacing-xl;
+
+    fieldset {
+      @include flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: $spacing-sm-mobile;
+      flex-direction: column;
+    }
+
+    legend {
+      color: $text-color-default;
+      font-size: $heading-6-font-size-mobile;
+    }
+  }
+  .custom-range {
+    width: 100%;
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-xxxxl;
+    margin-top: 6px;
+    margin-bottom: 34px;
+
+    .custom-range-diapason {
+      width: 100%;
+      @include flex;
+      justify-content: stretch;
+      align-items: stretch;
+      gap: $spacing-sm;
+
+      p {
+        @include text;
+        @include flex-center;
+        gap: 6px;
+        text-wrap: nowrap;
+        width: 100%;
+        color: $text-color-low;
+        font-size: $text-sm-font-size;
+        background-color: $surface;
+        border-radius: $radius-max;
+        padding: 22px $spacing-none;
+
+        span {
+          color: $text-color-default;
+          font-size: $text-md-font-size;
+        }
+      }
+    }
+  }
+  .custom-range {
+  }
+  .custom-range-diapason {
+  }
+  .custom-range-min {
+  }
+  .custom-range-max {
+  }
+  .custom-range-track {
+  }
+  .custom-range__input-min {
+  }
+  .custom-range__input-max {
+  }
+  .btn-light {
+    background-color: $surface;
+  }
+}
