@@ -1,10 +1,17 @@
-(() => {
-  const inputMin = document.querySelector(".custom-range__input-min");
-  const inputMax = document.querySelector(".custom-range__input-max");
-  const track = document.querySelector(".custom-range-track");
-  const textMin = document.querySelector('[data-val="min"]');
-  const textMax = document.querySelector('[data-val="max"]');
-  const resetBtn = document.querySelector('[data-btn="clear-range"]');
+function initRangeSlider(container) {
+  const root = container || document;
+  
+  const inputMin = root.querySelector(".custom-range__input-min");
+  const inputMax = root.querySelector(".custom-range__input-max");
+  const track = root.querySelector(".custom-range-track");
+  const textMin = root.querySelector('[data-val="min"]');
+  const textMax = root.querySelector('[data-val="max"]');
+  const resetBtn = root.querySelector('[data-btn="clear-range"]');
+
+  if (!inputMin || !inputMax || !track || !textMin || !textMax) {
+    console.warn('Не все элементы слайдера найдены в контейнере', container);
+    return null;
+  }
 
   const defaultMin = inputMin.value || inputMin.min;
   const defaultMax = inputMax.value || inputMax.max;
@@ -45,20 +52,65 @@
 
     track.style.background = `linear-gradient(to right, #ebe9e5 ${percentMin}%, #544945 ${percentMin}%, #544945 ${percentMax}%, #ebe9e5 ${percentMax}%)`;
 
-    textMin.textContent = valMin.toLocaleString("ru-RU")+ " ₽";
-    textMax.textContent = valMax.toLocaleString("ru-RU")+ " ₽";
+    if (textMin) {
+      textMin.textContent = valMin.toLocaleString("ru-RU") + " ₽";
+    }
+    if (textMax) {
+      textMax.textContent = valMax.toLocaleString("ru-RU") + " ₽";
+    }
   }
 
   function resetSlider(e) {
-    e.preventDefault();
+    if (e) e.preventDefault();
     inputMin.value = defaultMin;
     inputMax.value = defaultMax;
     updateSlider();
   }
 
-  inputMin.addEventListener("input", (e) => updateSlider(e));
-  inputMax.addEventListener("input", (e) => updateSlider(e));
-  resetBtn.addEventListener("click", resetSlider);
+  const handlers = {
+    inputMin: (e) => updateSlider(e),
+    inputMax: (e) => updateSlider(e),
+    reset: resetSlider
+  };
+
+  inputMin.addEventListener("input", handlers.inputMin);
+  inputMax.addEventListener("input", handlers.inputMax);
+  if (resetBtn) {
+    resetBtn.addEventListener("click", handlers.reset);
+  }
 
   updateSlider();
-})();
+
+  return {
+    update: updateSlider,
+    reset: resetSlider,
+    getValues: () => ({
+      min: parseInt(inputMin.value),
+      max: parseInt(inputMax.value)
+    }),
+    destroy: () => {
+      inputMin.removeEventListener("input", handlers.inputMin);
+      inputMax.removeEventListener("input", handlers.inputMax);
+      if (resetBtn) {
+        resetBtn.removeEventListener("click", handlers.reset);
+      }
+    }
+  };
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const sliders = document.querySelectorAll('.custom-range');
+  
+  sliders.forEach((sliderContainer, index) => {
+    let container = sliderContainer.closest('.filter') || 
+                    sliderContainer.closest('fieldset') || 
+                    sliderContainer.parentElement;
+    
+    if (container) {
+      const slider = initRangeSlider(container);
+      if (slider) {
+        console.log(`Слайдер #${index + 1} инициализирован`);
+      }
+    }
+  });
+});

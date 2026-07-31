@@ -3,8 +3,9 @@
 
 .filterbar {
   position: absolute;
-  z-index: 1200;
+  z-index: 1300;
   bottom: 0;
+  bottom: -100dvh;
   width: 100%;
   padding: $spacing-lg $spacing-sm;
   background-color: $background;
@@ -12,6 +13,11 @@
   -webkit-box-shadow: 0px -1px 19px 1px $black-5;
   box-shadow: 0px -1px 19px 1px $black-5;
   will-change: transform;
+
+  &.active {
+    bottom: 0;
+    position: fixed;
+  }
 
   .container {
     position: relative;
@@ -100,7 +106,57 @@
       color: $text-color-default;
       font-size: $heading-6-font-size-mobile;
     }
+
+    ul {
+      @include flex-start;
+      gap: calc($spacing-xxxxs + $spacing-xxxs);
+
+      li {
+        border: 1px solid $borders;
+        border-radius: $radius-max;
+        cursor: pointer;
+        letter-spacing: -2%;
+
+        &:has(input:checked) {
+          background-color: $primary;
+          border: none;
+
+          label {
+            color: $text-color-inverse;
+          }
+        }
+      }
+
+      label {
+        text-align: center;
+        min-width: 54px;
+        width: 100%;
+        height: 100%;
+        padding: 9px $spacing-sm;
+        color: $primary;
+        font-size: $text-md-font-size-mobile;
+        cursor: pointer;
+        display: block;
+      }
+
+      input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
   }
+
+  &__actions {
+    @include flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: $spacing-sm-mobile;
+    flex-direction: column;
+  }
+
   .custom-range {
     width: 100%;
     @include flex-start;
@@ -135,20 +191,14 @@
       }
     }
   }
-  .custom-range {
+
+  @media (max-width: 540px) {
+    .btn {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
   }
-  .custom-range-diapason {
-  }
-  .custom-range-min {
-  }
-  .custom-range-max {
-  }
-  .custom-range-track {
-  }
-  .custom-range__input-min {
-  }
-  .custom-range__input-max {
-  }
+
   .btn-light {
     background-color: $surface;
   }

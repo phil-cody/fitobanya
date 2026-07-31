@@ -170,6 +170,7 @@
       align-items: center;
       @include text;
       gap: 6px;
+      cursor: pointer;
 
       @media (max-width: 770px) {
         font-size: $text-md-font-size-mobile;

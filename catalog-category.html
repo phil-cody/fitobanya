@@ -1040,40 +1040,46 @@
           </fieldset>
           <fieldset>
             <legend>Тип нагревателя</legend>
-            <li>
-              <label for="heater-carbon">Карбоновый</label>
-              <input type="radio" name="filterbar-heater-type" id="heater-carbon" value="heater-carbon">
-            </li>
-            <li>
-              <label for="heater-ceramic">Керамической</label>
-              <input type="radio" name="filterbar-heater-type" id="heater-ceramic" value="heater-ceramic">
-            </li>
+            <ul>
+              <li>
+                <label for="heater-carbon">Карбоновый</label>
+                <input type="radio" name="filterbar-heater-type" id="heater-carbon" value="heater-carbon" checked>
+              </li>
+              <li>
+                <label for="heater-ceramic">Керамической</label>
+                <input type="radio" name="filterbar-heater-type" id="heater-ceramic" value="heater-ceramic">
+              </li>
+            </ul>
           </fieldset>
           <fieldset>
             <legend>Количество мест</legend>
-            <li>
-              <label for="size-one">1</label>
-              <input type="radio" name="filterbar-size" id="size-one" value="size-one">
-            </li>
-            <li>
-              <label for="size-two">2</label>
-              <input type="radio" name="filterbar-size" id="size-two" value="size-two">
-            </li>
-            <li>
-              <label for="size-three">3</label>
-              <input type="radio" name="filterbar-size" id="size-three" value="size-three">
-            </li>
-            <li>
-              <label for="size-four">4</label>
-              <input type="radio" name="filterbar-size" id="size-four" value="size-four">
-            </li>
-            <li>
-              <label for="size-five">5</label>
-              <input type="radio" name="filterbar-size" id="size-five" value="size-five">
-            </li>
+            <ul>
+              <li>
+                <label for="size-one">1</label>
+                <input type="radio" name="filterbar-size" id="size-one" value="size-one" checked>
+              </li>
+              <li>
+                <label for="size-two">2</label>
+                <input type="radio" name="filterbar-size" id="size-two" value="size-two">
+              </li>
+              <li>
+                <label for="size-three">3</label>
+                <input type="radio" name="filterbar-size" id="size-three" value="size-three">
+              </li>
+              <li>
+                <label for="size-four">4</label>
+                <input type="radio" name="filterbar-size" id="size-four" value="size-four">
+              </li>
+              <li>
+                <label for="size-five">5</label>
+                <input type="radio" name="filterbar-size" id="size-five" value="size-five">
+              </li>
+            </ul>
           </fieldset>
-          <button type="submit" class="btn btn-dark">Применить</button>
-          <button type="reset" class="btn btn-light">Сбросить</button>
+          <div class="filterbar__actions">
+            <button type="submit" class="btn btn-dark">Применить</button>
+            <button type="reset" class="btn btn-light">Сбросить</button>
+          </div>
         </form>
       </div>
     </div>
