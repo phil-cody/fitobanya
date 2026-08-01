@@ -4,8 +4,7 @@
 .filterbar {
   position: absolute;
   z-index: 1300;
-  bottom: 0;
-  bottom: -100dvh;
+  bottom: -100%;
   width: 100%;
   padding: $spacing-lg $spacing-sm;
   background-color: $background;
@@ -13,9 +12,13 @@
   -webkit-box-shadow: 0px -1px 19px 1px $black-5;
   box-shadow: 0px -1px 19px 1px $black-5;
   will-change: transform;
+  opacity: 0;
+  visibility: hidden;
 
   &.active {
     bottom: 0;
+    opacity: 1;
+    visibility: visible;
     position: fixed;
   }
 

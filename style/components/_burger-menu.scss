@@ -168,6 +168,19 @@
               width: 100%;
             }
           }
+
+          .toggle-level-menu {
+            @include flex-between;
+            flex-direction: row;
+            gap: $spacing-md;
+            padding-bottom: $spacing-sm;
+            width: 250px;
+            height: $spacing-xxxl;
+
+            @media (max-width: 540px) {
+              width: 100%;
+            }
+          }
         }
       }
     }

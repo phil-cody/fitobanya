@@ -1,15 +1,15 @@
 function initRangeSlider(container) {
   const root = container || document;
-  
+
   const inputMin = root.querySelector(".custom-range__input-min");
   const inputMax = root.querySelector(".custom-range__input-max");
   const track = root.querySelector(".custom-range-track");
   const textMin = root.querySelector('[data-val="min"]');
   const textMax = root.querySelector('[data-val="max"]');
   const resetBtn = root.querySelector('[data-btn="clear-range"]');
+  const resetFormBtn = document.querySelectorAll('button[type="reset"]');
 
   if (!inputMin || !inputMax || !track || !textMin || !textMax) {
-    console.warn('Не все элементы слайдера найдены в контейнере', container);
     return null;
   }
 
@@ -21,7 +21,8 @@ function initRangeSlider(container) {
     const max = parseInt(inputMax.max);
     let valMin = parseInt(inputMin.value);
     let valMax = parseInt(inputMax.value);
-
+    
+    // console.log(e.target);
     if (e && e.target === inputMin) {
       if (valMin >= valMax) {
         inputMin.value = valMax;
@@ -70,13 +71,25 @@ function initRangeSlider(container) {
   const handlers = {
     inputMin: (e) => updateSlider(e),
     inputMax: (e) => updateSlider(e),
-    reset: resetSlider
+    reset: resetSlider,
+    updateSlider: (e) => {
+      updateSlider(e);
+    },
   };
 
   inputMin.addEventListener("input", handlers.inputMin);
   inputMax.addEventListener("input", handlers.inputMax);
+
   if (resetBtn) {
     resetBtn.addEventListener("click", handlers.reset);
+  }
+
+  if (resetFormBtn) {
+    resetFormBtn.forEach((btn) =>
+      btn.addEventListener("click", (e) => {
+        setTimeout(() => handlers.updateSlider(), 0)
+      }),
+    );
   }
 
   updateSlider();
@@ -86,7 +99,7 @@ function initRangeSlider(container) {
     reset: resetSlider,
     getValues: () => ({
       min: parseInt(inputMin.value),
-      max: parseInt(inputMax.value)
+      max: parseInt(inputMax.value),
     }),
     destroy: () => {
       inputMin.removeEventListener("input", handlers.inputMin);
@@ -94,23 +107,28 @@ function initRangeSlider(container) {
       if (resetBtn) {
         resetBtn.removeEventListener("click", handlers.reset);
       }
-    }
+      if (resetFormBtn) {
+        resetFormBtn.removeEventListener("click", handlers.resetForm);
+        const form = resetFormBtn.closest("form");
+        if (form) {
+          form.removeEventListener("reset", handlers.resetForm);
+        }
+      }
+    },
   };
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const sliders = document.querySelectorAll('.custom-range');
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const sliders = document.querySelectorAll(".custom-range");
+
   sliders.forEach((sliderContainer, index) => {
-    let container = sliderContainer.closest('.filter') || 
-                    sliderContainer.closest('fieldset') || 
-                    sliderContainer.parentElement;
-    
+    let container =
+      sliderContainer.closest(".filter") ||
+      sliderContainer.closest("fieldset") ||
+      sliderContainer.parentElement;
+
     if (container) {
       const slider = initRangeSlider(container);
-      if (slider) {
-        console.log(`Слайдер #${index + 1} инициализирован`);
-      }
     }
   });
 });

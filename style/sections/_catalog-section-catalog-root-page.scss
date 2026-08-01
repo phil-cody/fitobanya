@@ -81,6 +81,7 @@
         @include heading;
         font-size: $heading-4-font-size;
         color: $text-color-default;
+        text-transform: uppercase;
         text-wrap: wrap;
 
         @media (max-width: 770px) {

@@ -64,6 +64,7 @@
       h2 {
         @include heading;
         font-size: $heading-2-font-size;
+        text-transform: uppercase;
 
         @media (max-width: 770px) {
           font-size: $heading-2-font-size-mobile;

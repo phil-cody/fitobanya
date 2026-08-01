@@ -61,6 +61,7 @@
     h1 {
       font-size: $heading-1-sm-font-size;
       max-width: 700px;
+      text-transform: uppercase;
 
       @media (max-width: 770px) {
         font-size: $heading-1-sm-font-size-mobile;

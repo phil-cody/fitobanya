@@ -42,6 +42,7 @@
       @include heading;
       font-size: $heading-6-font-size;
       color: $text-color-default;
+      text-transform: uppercase;
       max-width: 215px;
       align-self: flex-start;
       text-wrap: wrap;
