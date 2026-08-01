@@ -2530,6 +2530,7 @@ pre {
   letter-spacing: -3%;
   font-size: 20px;
   color: #544945;
+  text-transform: uppercase;
   max-width: 215px;
   align-self: flex-start;
   text-wrap: wrap;
