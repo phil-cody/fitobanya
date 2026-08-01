@@ -1,0 +1,79 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.pay {
+  padding: 90px $spacing-none;
+
+  @media (max-width: 540px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
+
+  .container {
+    @include flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: $spacing-xxxl;
+
+    @media (max-width: 770px) {
+      gap: $spacing-md;
+    }
+  }
+
+  h3 {
+    @include heading;
+    font-size: $heading-3-font-size;
+    color: $text-color-default;
+
+    @media (max-width: 770px) {
+      font-size: $heading-3-font-size-mobile;
+    }
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $spacing-lg-mobile;
+
+    @media (max-width: 770px) {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      @include flex;
+      align-items: center;
+      gap: $spacing-xs;
+
+      h6 {
+        @include heading;
+        font-size: $heading-6-font-size;
+        color: $text-color-default;
+
+        @media (max-width: 770px) {
+          font-size: $heading-6-font-size-mobile;
+          max-width: 65%;
+        }
+      }
+    }
+  }
+
+  &__option-icon {
+    min-width: 52px;
+    min-height: 52px;
+    width: 52px;
+    height: 52px;
+    @include flex-center;
+    padding: 6px;
+
+    img {
+      width: auto;
+      height: 100%;
+    }
+
+    @media (max-width: 770px) {
+      min-width: 42px;
+      min-height: 42px;
+      width: 42px;
+      height: 42px;
+    }
+  }
+}
