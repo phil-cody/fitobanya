@@ -2401,6 +2401,7 @@ pre {
 .hero .hero__text h1 {
   font-size: 56px;
   max-width: 700px;
+  text-transform: uppercase;
 }
 @media (max-width: 770px) {
   .hero .hero__text h1 {
@@ -2590,6 +2591,7 @@ pre {
   line-height: 100%;
   letter-spacing: -3%;
   font-size: 32px;
+  text-transform: uppercase;
   max-width: 245px;
 }
 @media (max-width: 1100px) {
@@ -2889,6 +2891,7 @@ pre {
   line-height: 100%;
   letter-spacing: -3%;
   font-size: 40px;
+  text-transform: uppercase;
 }
 @media (max-width: 770px) {
   .populars .populars__content h2 {
@@ -3171,6 +3174,7 @@ pre {
   line-height: 100%;
   letter-spacing: -3%;
   font-size: 40px;
+  text-transform: uppercase;
 }
 @media (max-width: 770px) {
   .reviews__content .reviews__title h2 {
@@ -3502,6 +3506,7 @@ pre {
   line-height: 100%;
   letter-spacing: -3%;
   font-size: 40px;
+  text-transform: uppercase;
 }
 @media (max-width: 770px) {
   .gallery__content .gallery__title h2 {
@@ -4352,6 +4357,7 @@ pre {
   letter-spacing: -3%;
   font-size: 28px;
   color: #544945;
+  text-transform: uppercase;
   text-wrap: wrap;
 }
 @media (max-width: 770px) {
