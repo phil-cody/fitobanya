@@ -1,9 +1,13 @@
 @use "../abstracts/mixins" as *;
 @use "../abstracts/variables" as *;
 
-.populars {
+.intrested {
   min-width: 100%;
-  padding: $spacing-none;
+  padding: calc($spacing-xxxxl * 2) $spacing-none;
+
+  @media (max-width: 770px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
 
   &__content {
     position: relative;

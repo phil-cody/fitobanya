@@ -12,6 +12,63 @@
   @include flex-end;
   color: $text-color-inverse;
 
+  &.error {
+    background: url("../assets/image/hero/404-bg.webp");
+    background-size: 100% 100%;
+    background-position: center top;
+    background-repeat: no-repeat;
+
+    .container {
+      @media (max-width: 650px) {
+        max-height: 478px;
+        height: calc(100% - $spacing-xxxl);
+      }
+
+      @media (max-width: 540px) {
+        max-height: 478px;
+        height: 100%;
+      }
+    }
+
+    .hero__content {
+      flex-direction: column;
+      gap: $spacing-xxl;
+      align-items: flex-start;
+      max-height: 100%;
+
+      .btn {
+        line-height: 1;
+
+        @media (max-width: 540px) {
+          align-self: stretch;
+        }
+      }
+    }
+
+    .hero__text {
+      h1 {
+        max-width: 370px;
+
+        @media (max-width: 650px) {
+          max-width: 205px;
+        }
+      }
+
+      p {
+        @media (max-width: 650px) {
+          max-width: none;
+        }
+      }
+    }
+
+    @media (max-width: 770px) {
+      background-size: cover;
+      min-height: 0;
+      max-height: 478px;
+      height: calc(100dvw * 1.33);
+    }
+  }
+
   @media (max-width: 650px) {
     background: url("../assets/image/hero/hero-bg-mobile.webp");
     background-size: cover;
@@ -88,7 +145,7 @@
     @include flex-start;
     flex-direction: column;
     gap: $spacing-md;
-    z-index:0;
+    z-index: 0;
     isolation: isolate;
     position: relative;
 
