@@ -26,6 +26,7 @@
       @include heading;
       font-size: $heading-1-font-size;
       color: $text-color-default;
+      text-transform: uppercase;
 
       @media (max-width: 770px) {
         font-size: $heading-1-font-size-mobile;

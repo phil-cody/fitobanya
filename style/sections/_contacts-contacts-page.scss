@@ -1,0 +1,39 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.contacts {
+  padding: $spacing-xxxl $spacing-none;
+  border-top: 1px solid $borders;
+  border-bottom: 1px solid $borders;
+
+  @media (max-width: 770px) {
+    border: none;
+  }
+
+  &__list {
+    @include flex;
+    align-items: center;
+    gap: calc($spacing-xxxl * 2);
+    row-gap: $spacing-lg;
+    color: $text-color-default;
+    flex-wrap: wrap;
+
+    h4 a {
+      @include heading;
+      font-size: $heading-4-font-size;
+
+      @media (max-width: 770px) {
+        font-size: $heading-4-font-size-mobile;
+      }
+    }
+
+    p {
+      @include text;
+      font-size: $text-md-font-size;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+}

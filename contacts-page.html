@@ -223,6 +223,91 @@
     </div>
   </header>
   <main>
+    <section class="title">
+      <div class="container">
+        <div class="title__content">
+          <nav class="title__breadcrumbs">
+            <ul>
+              <li>
+                <a href="./index.html">Главная</a>
+              </li>
+              <li>
+                <a href="./contacts-page.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <h1>Контакты</h1>
+        </div>
+      </div>
+    </section>
+    <section class="contacts">
+      <div class="container">
+        <ul class="contacts__list">
+          <li>
+            <h4>
+              <a href="tel:88003008327">8 (800) 300-83-27</a>
+            </h4>
+            <p>Бесплатно по России</p>
+          </li>
+          <li>
+            <h4>
+              <a href="tel:89267706833">8 (926) 770-68-33</a>
+            </h4>
+            <p>Звоните, пишите в Telegram</p>
+          </li>
+          <li>
+            <h4>
+              <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+            </h4>
+            <p>Электронная почта</p>
+          </li>
+          <li>
+            <div class="contacts__social-list socials">
+              <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+              <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+              <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="address">
+      <div class="container">
+        <div class="address__content">
+          <div class="address__address">
+            <h6>ФАКТИЧЕСКИЙ АДРЕС</h6>
+            <div class="address__text">
+              <p>Московская область, г. Реутов, ул. Октября д. 5Б</p>
+              <span>Перед посещением магазина обязательно позвоните менеджеру</span>
+            </div>
+          </div>
+          <div class="address__step-by-step">
+            <h6>КАК ДОБРАТЬСЯ</h6>
+            <ol>
+              <li>
+                <p>2 минуты пешком от станции МЦД4 Реутов</p>
+              </li>
+              <li>
+                <p>10 минут пешком от м. Новокосино</p>
+              </li>
+              <li>
+                <p>ТЦ "Весна", вход с правого торца, по ступеням вниз.</p>
+              </li>
+            </ol>
+          </div>
+          <button class="btn btn-dark" id="open-in-ymap-btn">
+            <div class="address__map-icon">
+              <img src="./assets/image/icons/yandexmap-icon.svg" alt="Открыть в картах">
+            </div>
+            Открыть в картах
+          </button>
+        </div>
+        <div class="address__map-wrap" data-lat="55.750332" data-lng="37.853470"
+          data-address="Московская область, г. Реутов, ул. Октября д. 5Б">
+
+        </div>
+      </div>
+    </section>
     <section class="form-cost">
       <div class="container">
         <div class="form-cost__content">
@@ -576,24 +661,21 @@
   </section>
   <div class="tabbar__overlay"></div>
   <div class="cookie-banner">
-		<div class="container">
-			<div class="cookie-banner__content">
-				<div class="cookie-banner__text">
-					<h5>Используем куки для улучшения работы сайта</h3>
-					<p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
-				</div>
-				<button class="cookie-banner__button btn btn-light">Понятно</button>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          <h5>Используем куки для улучшения работы сайта</h3>
+            <p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
+        </div>
+        <button class="cookie-banner__button btn btn-light">Понятно</button>
+      </div>
+    </div>
+  </div>
   <script src="./scripts/main.js" defer></script>
-  <script src="./scripts/accordeon.js" defer></script>
-  <script src="./scripts/carousel.js" defer></script>
-  <script src="./scripts/slider.js" defer></script>
   <script src="./scripts/header.js" defer></script>
   <script src="./scripts/popup.js" defer></script>
   <script src="./scripts/tab-bar.js" defer></script>
-  <script src="./scripts/custom-range.js" defer></script>
+  <script src="./scripts/yamap.js" defer></script>
   <script src="./scripts/cookie-banner.js" defer></script>
 </body>
 

@@ -140,7 +140,7 @@
         position: relative;
 
         a {
-          @include flex-start;
+          @include flex;
           align-items: center;
           gap: $spacing-sm;
           color: $text-color-default;
@@ -148,12 +148,6 @@
           font-weight: $text-font-weight-medium;
           text-wrap: nowrap;
           width: max-content;
-        }
-
-        .socials a {
-          background-color: $primary;
-          width: 48px;
-          @include flex-center;
         }
 
         .arrow {

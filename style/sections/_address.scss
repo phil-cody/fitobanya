@@ -1,0 +1,145 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.address {
+  padding: $spacing-none;
+
+  .container {
+    padding: $spacing-none;
+    @include flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 0;
+
+    @media (max-width: 770px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__content {
+    padding: $spacing-xxxl;
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-xxxxl;
+    width: 49%;
+
+    @media (max-width: 770px) {
+      gap: $spacing-md;
+      width: 100%;
+    }
+
+    @media (max-width: 540px) {
+      padding: $spacing-sm $spacing-lg;
+    }
+
+    h6 {
+      text-transform: uppercase;
+      @include heading;
+      color: $text-color-default;
+      font-size: $heading-6-font-size;
+
+      @media (max-width: 770px) {
+        font-size: $heading-6-font-size;
+      }
+    }
+
+    p,
+    li {
+      font-size: $text-md-font-size;
+      color: $text-color-default;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+
+    span {
+      font-size: $text-sm-font-size;
+      color: $text-color-medium;
+
+      @media (max-width: 770px) {
+        font-size: $text-sm-font-size-mobile;
+      }
+    }
+
+    & > div {
+      @include flex;
+      flex-direction: column;
+      gap: $spacing-lg;
+    }
+  }
+
+  &__address {
+    padding-bottom: $spacing-xxxxl;
+    border-bottom: 1px solid $borders;
+
+    @media (max-width: 770px) {
+      padding-bottom: $spacing-md;
+      gap: $spacing-xs-mobile;
+    }
+
+    &__text {
+      @include flex;
+      flex-direction: column;
+      gap: $spacing-xs-mobile;
+      @include text;
+    }
+  }
+
+  &__step-by-step {
+    ol {
+      @include flex;
+      flex-direction: column;
+      gap: $spacing-lg-mobile;
+      counter-reset: myCounter;
+      padding: 0;
+
+      li {
+        @include flex;
+        align-items: center;
+        gap: $spacing-xs-mobile;
+
+        &:before {
+          counter-increment: myCounter;
+          content: counter(myCounter);
+          color: $text-color-inverse;
+          background: $primary;
+          display: inline-block;
+          @include flex-center;
+          border-radius: $radius-max;
+          line-height: normal;
+          height: $spacing-lg;
+          width: $spacing-lg;
+        }
+      }
+    }
+  }
+  .btn {
+    flex-direction: row;
+    padding: $spacing-md;
+
+    @media (max-width: 770px) {
+      padding: $spacing-xs;
+    }
+  }
+  &__map-icon {
+    @include flex-center;
+    width: $spacing-lg;
+    height: $spacing-lg;
+    padding: 1.5px 3px 0 3px;
+  }
+  &__map-wrap {
+    width: 51%;
+    filter: grayscale(100%) brightness(80%) contrast(100%)
+      invert(100%);
+    -webkit-filter: grayscale(100%) brightness(80%) contrast(100%)
+      invert(100%);
+    -moz-filter: grayscale(100%) brightness(80%) contrast(100%)
+      invert(100%);
+
+    @media (max-width: 770px) {
+      max-height: 410px;
+      width: 100%;
+    }
+  }
+}
