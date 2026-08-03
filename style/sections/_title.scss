@@ -216,7 +216,9 @@
         flex-direction: column;
         gap: $spacing-xs;
 
-        button[data-btn="clear-filter"], button[data-btn="clear-range"], button[data-btn="clear-sort"] {
+        button[data-btn="clear-filter"],
+        button[data-btn="clear-range"],
+        button[data-btn="clear-sort"] {
           border: none;
           background: none;
           color: $text-color-low;
@@ -295,6 +297,69 @@
     @media (max-width: 770px) {
       li:not([data-filter="sort"]) {
         display: none;
+      }
+    }
+  }
+
+  &__search-field {
+    padding: $spacing-md $spacing-none;
+    border-bottom: 1px solid $borders;
+    width: 100%;
+    @include flex;
+    align-items: center;
+    gap: $spacing-xs;
+
+    @media (max-width: 540px) {
+      gap: $spacing-xs-mobile;
+      padding: $spacing-sm $spacing-none;
+    }
+
+    button {
+      background: none;
+      border: none;
+      width: $spacing-lg;
+      height: $spacing-lg;
+      padding: $spacing-xxxxs;
+    }
+
+    input {
+      @include text;
+      width: 100%;
+      background: none;
+      border: none;
+      font-size: $text-md-font-size;
+      color: $text-color-default;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+
+    .title__clear-search {
+      @include flex-between;
+      flex-direction: column;
+      position: relative;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      span {
+        width: $spacing-md;
+        height: $spacing-xxxxs;
+        background-color: $primary;
+        position: relative;
+        transition: all 0.5s ease;
+
+        &:first-child {
+          top: 1px;
+          transform: rotate(45deg);
+        }
+        &:last-child {
+          bottom: 1px;
+          transform: rotate(-45deg);
+        }
       }
     }
   }

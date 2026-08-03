@@ -93,6 +93,7 @@
   const filterBarOpen = document.querySelector(".filter__open-menu");
   const filterBarClose = document.getElementById("filterbar-close");
   const overlay = document.querySelector(".tabbar__overlay");
+  console.log()
 
   filterBarOpen.addEventListener("click", (event) => {
     filterBar.classList.add("active");
