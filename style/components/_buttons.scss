@@ -4,7 +4,7 @@
 .btn {
   font-size: $text-button-font-size;
   line-height: $text-line-height;
-  padding: $spacing-lg 22px;
+  padding: 22px $spacing-lg;
   border: none;
   border-radius: $radius-max;
   text-wrap: nowrap;
