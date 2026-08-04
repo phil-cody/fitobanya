@@ -99,11 +99,46 @@
             <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
           </div>
           <div class="header__contacts-action">
-            <button type="button" class="header__search-btn">
-              <img src="./assets/image/icons/search-icon-medium.svg" alt="Кнопка для поиска по сайту" />
-            </button>
+            <form class="header__search" action="./search-result.html" method="get">
+              <button type="submit" class="header__search-btn">
+                <img src="./assets/image/icons/search-icon-medium.svg" alt="">
+              </button>
+
+              <label class="visually-hidden" for="site-search-input">
+                Поиск по сайту
+              </label>
+
+              <input id="site-search-input" class="header__search-input" type="search" name="q"
+                placeholder="Поиск по сайту" autocomplete="off">
+
+              <button class="header__search-clear" type="reset">
+                <span></span>
+                <span></span>
+              </button>
+            </form>
+            <div class="header__search-results" aria-live="polite">
+              <a class="header__search-result" href="./product-card.html">
+                <img src="./assets/image/product-image/econom-harvia-one-size.webp" alt="">
+                <span>Эконом сауна с печью HARVIA Одноместная</span>
+                <p>105 000 ₽</p>
+              </a>
+              <a class="header__search-result" href="./product-card.html">
+                <img src="./assets/image/product-image/finnish-three-size-100.webp" alt="">
+                <span>Трехместная финская сауна. Глубина 100см Массив Кедра</span>
+                <p>105 000 ₽</p>
+              </a>
+              <a class="header__search-result" href="./product-card.html">
+                <img src="./assets/image/product-image/finnish-three-size-100.webp" alt="">
+                <span>Одноместная финская сауна. Массив Кедра</span>
+                <p>105 000 ₽</p>
+              </a>
+              <a class="header__search-all" href="./search-result.html">
+                Все результаты
+                <span>→</span>
+              </a>
+            </div>
             <button type="button" class="header__cart-btn">
-              <img src="./assets/image/icons/cart-icon-medium.svg" alt="Кнопка для просмотра корзины" />
+              <img src="./assets/image/icons/cart-icon-medium.svg" alt="Кнопка для просмотра корзины">
             </button>
           </div>
         </div>
