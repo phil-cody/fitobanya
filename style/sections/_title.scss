@@ -36,7 +36,7 @@
 
   &__breadcrumbs {
     flex: 1 1 auto;
-    min-width: 0; // критично, если nav лежит внутри display: flex
+    min-width: 0;
     max-width: 100%;
     overflow: hidden;
 
