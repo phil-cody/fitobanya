@@ -1,0 +1,145 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.reviews-from-socials {
+  min-width: 100%;
+  padding: calc($spacing-xxxxl * 2) $spacing-none;
+
+  &__content {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+    position: relative;
+  }
+
+  h2 {
+    @include heading;
+    font-size: $heading-2-font-size;
+    text-transform: uppercase;
+
+    @media (max-width: 770px) {
+      font-size: $heading-2-font-size-mobile;
+    }
+  }
+
+  &__list {
+    width: min(100vw, 1440px);
+    max-width: none;
+    margin: $spacing-none calc(50% - min(50vw, 720px));
+    padding: $spacing-none $spacing-xxxl;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    position: relative;
+    @include flex-start;
+    align-items: stretch;
+    gap: $spacing-md;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (max-width: 540px) {
+      padding: $spacing-none $spacing-sm;
+      gap: $spacing-sm;
+    }
+  }
+
+  & li {
+    min-width: 256px;
+    width: 256px;
+    padding: 5px;
+    border-radius: $radius-lg;
+    scroll-snap-align: center;
+    overflow: hidden;
+    background-color: $surface;
+    position: relative;
+
+    @media (max-width: 540px) {
+      min-width: 328px;
+      width: 328px;
+    }
+
+    img {
+      border-radius: 19px;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  }
+
+  &__carousel-btn {
+    position: absolute;
+    @include flex-between;
+    width: 100%;
+    top: 56%;
+
+    @media (max-width: 770px) {
+      display: none;
+    }
+
+    button {
+      width: calc($spacing-xxxl + $spacing-sm-mobile);
+      height: calc($spacing-xxxl + $spacing-sm-mobile);
+      @include flex-center;
+      border: none;
+      border-radius: $radius-max;
+      background-color: $surface;
+      opacity: 0.7;
+      cursor: pointer;
+      @include backdrop-24;
+
+      &:disabled {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    .carousel-button__prev {
+      transform: translateX(-50%);
+
+      img {
+        transform: rotate(90deg);
+      }
+    }
+    .carousel-button__next {
+      transform: translateX(50%);
+
+      img {
+        transform: rotate(270deg);
+      }
+    }
+  }
+
+  &__scroll-progress {
+    align-self: center;
+    display: none;
+    gap: $spacing-xxxs;
+    width: 60%;
+
+    @media (max-width: 770px) {
+      @include flex;
+    }
+
+    button {
+      flex: 1;
+      min-width: $spacing-xxs;
+      height: 3px;
+      padding: $spacing-none;
+      border: $spacing-none;
+      border-radius: $radius-max;
+      background: $primary-sub;
+      cursor: pointer;
+      transition: background-color 0.5s ease;
+
+      &.is-active {
+        background: $primary;
+      }
+    }
+  }
+}

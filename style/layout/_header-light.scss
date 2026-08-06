@@ -228,23 +228,6 @@
         }
       }
     }
-    &-action {
-      @include flex-end;
-      align-items: center;
-      gap: $spacing-xs;
-
-      button {
-        width: calc($spacing-xxxl + $spacing-sm);
-        height: calc($spacing-xxxl + $spacing-sm);
-        @include flex-center;
-        box-shadow: inset 0 0 0 1px $borders-alpha;
-        border: none;
-        border-radius: $radius-max;
-        background-color: $white-5;
-        @include backdrop-24;
-        cursor: pointer;
-      }
-    }
 
     &-action {
       position: relative;
@@ -266,9 +249,9 @@
         max-width: 48px;
         height: 48px;
         overflow: hidden;
-        border-radius: $radius-max;
-        background-color: $white-5;
         box-shadow: inset 0 0 0 1px $borders-alpha;
+        border: none;
+        border-radius: $radius-max;
         @include backdrop-24;
         transition: all 0.5s ease;
 
@@ -446,9 +429,10 @@
         flex: 0 0 48px;
         width: 48px;
         height: 48px;
+        box-shadow: inset 0 0 0 1px $borders-alpha;
+        border: none;
         border-radius: $radius-max;
         background-color: $white-5;
-        box-shadow: inset 0 0 0 1px $borders-alpha;
         @include backdrop-24;
         cursor: pointer;
       }
