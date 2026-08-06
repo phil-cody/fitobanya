@@ -22,6 +22,7 @@
       @include heading;
       font-size: $heading-4-font-size;
       position: relative;
+      text-transform: uppercase;
 
       &:not(:last-child) {
         margin-bottom: $spacing-xxxxl;
@@ -48,6 +49,7 @@
         margin-top: $spacing-lg;
         position: relative;
         left: -$spacing-xs-mobile;
+        text-transform: none;
 
         @media (max-width: 770px) {
           margin-top: $spacing-lg-mobile;

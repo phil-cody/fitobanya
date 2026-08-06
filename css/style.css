@@ -7486,6 +7486,7 @@ pre {
   letter-spacing: -3%;
   font-size: 28px;
   position: relative;
+  text-transform: uppercase;
 }
 .pd-policy ol li:not(:last-child) {
   margin-bottom: 50px;
@@ -7516,6 +7517,7 @@ pre {
   margin-top: 24px;
   position: relative;
   left: -10px;
+  text-transform: none;
 }
 @media (max-width: 770px) {
   .pd-policy ol li pre {
