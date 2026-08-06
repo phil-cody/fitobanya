@@ -4647,9 +4647,16 @@ pre {
     font-size: 32px;
   }
 }
+.title__breadcrumbs {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
 .title__breadcrumbs ul {
+  width: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 0;
   margin: 0;
   padding: 0;
@@ -4668,6 +4675,19 @@ pre {
   .title__breadcrumbs li {
     font-size: 12px;
   }
+}
+.title__breadcrumbs li:last-child {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.title__breadcrumbs li:last-child a {
+  display: block;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .title__breadcrumbs li + li::before {
   content: "/";

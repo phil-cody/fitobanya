@@ -35,9 +35,15 @@
   }
 
   &__breadcrumbs {
+    flex: 1 1 auto;
+    min-width: 0; // критично, если nav лежит внутри display: flex
+    max-width: 100%;
+    overflow: hidden;
+
     ul {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 0;
       margin: 0;
       padding: 0;
@@ -53,6 +59,21 @@
 
       @media (max-width: 770px) {
         font-size: $text-sm-font-size-mobile;
+      }
+    }
+
+    li:last-child {
+      @include flex;
+      flex: 1 1 auto;
+      min-width: 0;
+
+      & a {
+        display: block;
+        flex: 1 1 auto;
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
 
