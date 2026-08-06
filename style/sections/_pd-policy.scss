@@ -1,0 +1,60 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.pd-policy {
+  padding-bottom: calc($spacing-xxxxl * 2);
+
+  @media (max-width: 770px) {
+    padding-bottom: $spacing-xxxl;
+  }
+
+  & ol {
+    padding-inline-start: $spacing-xs-mobile;
+
+    @media (max-width: 770px) {
+      padding-inline-start: $spacing-xxxs;
+    }
+
+    & li {
+      color: $text-color-default;
+      list-style-type: decimal;
+      list-style-position: inside;
+      @include heading;
+      font-size: $heading-4-font-size;
+      position: relative;
+
+      &:not(:last-child) {
+        margin-bottom: $spacing-xxxxl;
+
+        @media (max-width: 770px) {
+          margin-bottom: $spacing-lg;
+          font-size: $heading-4-font-size-mobile;
+        }
+      }
+
+      &::marker {
+        @include heading;
+        font-size: $heading-4-font-size;
+
+        @media (max-width: 770px) {
+          font-size: $heading-4-font-size-mobile;
+        }
+      }
+
+      pre {
+        @include text;
+        font-size: $text-md-font-size;
+        line-height: 150%;
+        margin-top: $spacing-lg;
+        position: relative;
+        left: -$spacing-xs-mobile;
+
+        @media (max-width: 770px) {
+          margin-top: $spacing-lg-mobile;
+          font-size: $text-md-font-size-mobile;
+          left: -$spacing-xxxs;
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,7 @@
 @use "./pages/product_card";
 @use "./pages/search-result-page";
 @use "./pages/reviews-page";
+@use "./pages/pd-policy-page";
 
 body {
   @include flex;

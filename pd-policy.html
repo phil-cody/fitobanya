@@ -1,0 +1,697 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <header class="header header-dark">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo">
+          <a href="./index.html">
+            <img src="./assets/image/logo-dark.svg" alt="Логотип" />
+          </a>
+        </div>
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul>
+            <li>
+              <a href="./catalog-root.html">Каталог
+                <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации"
+                  class="arrow" />
+              </a>
+              <div class="header__category-list">
+                <ul>
+                  <li>
+                    <a href="./catalog-category.html">Сауны из канадского кедра</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Сауны из Российского кедра</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Кедровые фитобочки</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Электрические печи</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Комплектующие и аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Криосауны</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <a href="./about-page.html">О компании</a>
+            </li>
+            <li>
+              <a href="./portfolio.html">Наши работы</a>
+            </li>
+            <li>
+              <a href="./reviews-page.html">Отзывы</a>
+            </li>
+            <li>
+              <a href="./delivery-page.html">Доставка и оплата</a>
+            </li>
+            <li>
+              <a href="./contacts-page.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="header__contacts">
+          <div class="header__contacts-base">
+            <div class="header__phone">
+              <a href="tel:88003008327">8 (800) 300-83-27
+                <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Кнопка показа вкладки контактов"
+                  class="arrow" />
+              </a>
+              <div class="header__contacts-list">
+                <ul>
+                  <li>
+                    <a href="tel:88003008327">8 (800) 300-83-27</a>
+                    <p>Бесплатно по России</p>
+                  </li>
+                  <li>
+                    <a href="tel:89267706833">8 (926) 770-68-33</a>
+                    <p>Звоните, пишите в Telegram</p>
+                  </li>
+                  <li>
+                    <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                    <p>Электронная почта</p>
+                  </li>
+                  <li>
+                    <div class="contacts__social-list socials">
+                      <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+                      <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                      <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+          </div>
+          <div class="header__contacts-action">
+            <form class="header__search" action="./search-result.html" method="get">
+              <button type="submit" class="header__search-btn">
+                <img src="./assets/image/icons/search-icon-medium.svg" alt="">
+              </button>
+
+              <label class="visually-hidden" for="site-search-input">
+                Поиск по сайту
+              </label>
+
+              <input id="site-search-input" class="header__search-input" type="search" name="q"
+                placeholder="Поиск по сайту" autocomplete="off">
+
+              <button class="header__search-clear" type="reset">
+                <span></span>
+                <span></span>
+              </button>
+            </form>
+            <div class="header__search-results" aria-live="polite">
+              <a class="header__search-result" href="./product-card.html">
+                <img src="./assets/image/product-image/econom-harvia-one-size.webp" alt="">
+                <span>Эконом сауна с печью HARVIA Одноместная</span>
+                <p>105 000 ₽</p>
+              </a>
+              <a class="header__search-result" href="./product-card.html">
+                <img src="./assets/image/product-image/finnish-three-size-100.webp" alt="">
+                <span>Трехместная финская сауна. Глубина 100см Массив Кедра</span>
+                <p>105 000 ₽</p>
+              </a>
+              <a class="header__search-result" href="./product-card.html">
+                <img src="./assets/image/product-image/finnish-three-size-100.webp" alt="">
+                <span>Одноместная финская сауна. Массив Кедра</span>
+                <p>105 000 ₽</p>
+              </a>
+              <a class="header__search-all" href="./search-result.html">
+                Все результаты
+                <span>→</span>
+              </a>
+            </div>
+            <button type="button" class="header__cart-btn">
+              <img src="./assets/image/icons/cart-icon-medium.svg" alt="Кнопка для просмотра корзины" />
+            </button>
+          </div>
+        </div>
+        <button type="button" class="header__burger" id="burger-open" aria-label="Открыть меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="header__menu" id="burger-menu">
+          <div class="menu__header">
+            <div class="menu__logo">
+              <a href="./index.html"><img src="./assets/image/logo-dark.svg" alt="Логотип" /></a>
+            </div>
+            <button type="button" class="menu__close" id="burger-close" aria-label="Закрыть меню">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="menu__content">
+            <div class="menu-1-level level-1-active" id="burger-menu-1-level">
+              <nav class="menu__nav" aria-label="Каталог">
+                <ul>
+                  <li>
+                    <div class="toggle-level-menu">
+                      Каталог
+                      <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации"
+                        class="arrow">
+                    </div>
+                  </li>
+                  <li>
+                    <a href="./about-page.html">О компании</a>
+                  </li>
+                  <li>
+                    <a href="./portfolio.html">Наши работы</a>
+                  </li>
+                  <li>
+                    <a href="./reviews-page.html">Отзывы</a>
+                  </li>
+                  <li>
+                    <a href="./delivery-page.html">Доставка и оплата</a>
+                  </li>
+                  <li>
+                    <a href="./contacts-page.html">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+              <div class="menu__contacts">
+                <div class="menu__contacts-base">
+                  <details class="menu__phone">
+                    <summary>8 (800) 300-83-27
+                      <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Кнопка показа вкладки контактов"
+                        class="arrow" />
+                    </summary>
+                    <div class="header__contacts-list">
+                      <ul>
+                        <li>
+                          <a href="tel:88003008327">8 (800) 300-83-27</a>
+                          <p>Бесплатно по России</p>
+                        </li>
+                        <li>
+                          <a href="tel:89267706833">8 (926) 770-68-33</a>
+                          <p>Звоните, пишите в Telegram</p>
+                        </li>
+                        <li>
+                          <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                          <p>Электронная почта</p>
+                        </li>
+                        <li>
+                          <div class="contacts__social-list socials">
+                            <a href="#"><img src="./assets/image/icons/max-icon.svg"
+                                alt="Переход в мессенджер Макс" /></a>
+                            <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                            <a href="#"><img src="./assets/image/icons/telegram-icon.svg"
+                                alt="Переход в Телеграм" /></a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </details>
+                  <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="menu-2-level level-1-active" id="burger-menu-2-level">
+              <nav class="menu__nav" aria-label="Навигация каталога">
+                <div class="menu__nav-title toggle-level-menu">
+                  <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации" />
+                  <h3>Каталог</h3>
+                </div>
+                <ul>
+                  <li>
+                    <a href="./catalog-category.html">Сауны из канадского кедра</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Сауны из Российского кедра</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Кедровые фитобочки</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Электрические печи</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Комплектующие и аксессуары</a>
+                  </li>
+                  <li>
+                    <a href="./catalog-category.html">Криосауны</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <div class="header__overlay" id="overlay"></div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="title">
+      <div class="container">
+        <div class="title__content">
+          <nav class="title__breadcrumbs">
+            <ul>
+              <li>
+                <a href="./index.html">Главная</a>
+              </li>
+              <li>
+                <a href="./pd-policy.html">Политика в отношении обработки персональных данных</a>
+              </li>
+            </ul>
+          </nav>
+          <h1>Политика в отношении обработки персональных данных</h1>
+        </div>
+      </div>
+    </section>
+    <section class="pd-policy">
+      <div class="container">
+        <ol>
+          <li>
+            ОБЩИЕ ПОЛОЖЕНИЯ
+            <pre>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального закона от 27.07.2006. № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые ООО "Организация" (далее — Оператор).
+1.1. Оператор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.
+1.2. Настоящая политика Оператора в отношении обработки персональных данных (далее — Политика) применяется ко всей информации, которую Оператор может получить о посетителях веб-сайта https://website.ru.</pre>
+          </li>
+          <li>
+            ОСНОВНЫЕ ПОНЯТИЯ
+            <pre>2.1. Автоматизированная обработка персональных данных — обработка персональных данных с помощью средств вычислительной техники.
+2.2. Блокирование персональных данных — временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных).
+2.3. Веб-сайт — совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу https://website.ru.
+2.4. Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных и обеспечивающих их обработку информационных технологий и технических средств.
+2.5. Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных.
+2.6. Обработка персональных данных — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.
+2.7. Оператор — государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и/или осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.
+2.8. Персональные данные — любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта https://website.ru.
+2.9. Персональные данные, разрешенные субъектом персональных данных для распространения, — персональные данные, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных путем дачи согласия на обработку персональных данных, разрешенных субъектом персональных данных для распространения в порядке, предусмотренном Законом о персональных данных (далее — персональные данные, разрешенные для распространения).
+2.10. Пользователь — любой посетитель веб-сайта https://website.ru.
+2.11. Предоставление персональных данных — действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц.
+2.12. Распространение персональных данных — любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом.
+2.13. Трансграничная передача персональных данных — передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу.
+2.14. Уничтожение персональных данных — любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и/или уничтожаются материальные носители персональных данных.</pre>
+          </li>
+          <li>
+            ОСНОВНЫЕ ПРАВА И ОБЯЗАННОСТИ ОПЕРАТОРА
+            <pre>3.1. Оператор имеет право:
+— получать от субъекта персональных данных достоверные информацию и/или документы, содержащие персональные данные;
+— в случае отзыва субъектом персональных данных согласия на обработку персональных данных, а также, направления обращения с требованием о прекращении обработки персональных данных, Оператор вправе продолжить обработку персональных данных без согласия субъекта персональных данных при наличии оснований, указанных в Законе о персональных данных;
+— самостоятельно определять состав и перечень мер, необходимых и достаточных для обеспечения выполнения обязанностей, предусмотренных Законом о персональных данных и принятыми в соответствии с ним нормативными правовыми актами, если иное не предусмотрено Законом о персональных данных или другими федеральными законами.
+3.2. Оператор обязан:
+— предоставлять субъекту персональных данных по его просьбе информацию, касающуюся обработки его персональных данных;
+— организовывать обработку персональных данных в порядке, установленном действующим законодательством РФ;
+— отвечать на обращения и запросы субъектов персональных данных и их законных представителей в соответствии с требованиями Закона о персональных данных;
+— сообщать в уполномоченный орган по защите прав субъектов персональных данных по запросу этого органа необходимую информацию в течение 10 дней с даты получения такого запроса;
+— публиковать или иным образом обеспечивать неограниченный доступ к настоящей Политике в отношении обработки персональных данных;
+— принимать правовые, организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, а также от иных неправомерных действий в отношении персональных данных;
+— прекратить передачу (распространение, предоставление, доступ) персональных данных, прекратить обработку и уничтожить персональные данные в порядке и случаях, предусмотренных Законом о персональных данных;
+— исполнять иные обязанности, предусмотренные Законом о персональных данных.</pre>
+          </li>
+        </ol>
+      </div>
+    </section>
+    <section class="form-cost">
+      <div class="container">
+        <div class="form-cost__content">
+          <div class="form-cost__text">
+            <h2>РАССЧИТАТЬ СТОИМОСТЬ САУНЫ</h2>
+            <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+          </div>
+          <div class="form-cost__form">
+            <form action="#" method="post">
+              <fieldset class="form-cost__types">
+                <div class="form-cost__radio">
+                  <h6>Тип сауны</h6>
+                  <ul>
+                    <li>
+                      <label for="finnish-sauna">Финская</label>
+                      <input type="radio" name="type-sauna" id="finnish-sauna" value="finnish-sauna" checked>
+                    </li>
+                    <li>
+                      <label for="infrared-sauna">Инфракрасная</label>
+                      <input type="radio" name="type-sauna" id="infrared-sauna" value="infrared-sauna">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Размер</h6>
+                  <ul>
+                    <li>
+                      <label for="corner-size">Угловая</label>
+                      <input type="radio" name="sauna-size" id="corner-size" value="corner-size" checked>
+                    </li>
+                    <li>
+                      <label for="straight-size">Прямая</label>
+                      <input type="radio" name="sauna-size" id="straight-size" value="straight-size">
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-cost__radio">
+                  <h6>Древесина</h6>
+                  <ul>
+                    <li>
+                      <label for="canadian-cedar">Канадский кедр</label>
+                      <input type="radio" name="wood-type" id="canadian-cedar" value="canadian-cedar" checked>
+                    </li>
+                    <li>
+                      <label for="russian-cedar">Российский кедр</label>
+                      <input type="radio" name="wood-type" id="russian-cedar" value="russian-cedar">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-cost__contacts">
+                <h6>Куда выслать расчёт?</h6>
+                <ul>
+                  <li>
+                    <label for="name">Ваше имя</label>
+                    <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
+                  </li>
+                  <li>
+                    <label for="phone-number">Номер телефона</label>
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="+7 911 123-45-67" required>
+                  </li>
+                </ul>
+              </fieldset>
+              <div class="form-cost__submit-box">
+                <button type="submit" class="form-cost__submit btn btn-light">Отправить заявку</button>
+                <fieldset class="form-cost__pd-policy">
+                  <input class="checkbox" type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+                  <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                    Федеральным законом Nº 152-ФЗ</label>
+                </fieldset>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__info">
+            <div class="footer__logo">
+              <a href="./index.html">
+                <img src="./assets/image/logo-light.svg" alt="Логотип" />
+              </a>
+            </div>
+            <div class="footer__contacts">
+              <h6>
+                <a href="tel:88003008327">8 (800) 300-83-27</a>
+              </h6>
+              <a href="mailto:info@fitobanya.com">info@fitobanya.com</a>
+            </div>
+            <div class="footer__address">
+              <address>Московская область, г. Реутов, ул.Октября, 5Б</address>
+              <p>Ежедневно <time datetime="09:00">9:00</time> - <time datetime="19:00">19:00</time></p>
+            </div>
+            <div class="footer__socials socials">
+              <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+              <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+              <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+            </div>
+          </div>
+          <div class="footer__catalog">
+            <h6>Каталог</h6>
+            <ul>
+              <li><a href="./catalog-category.html">Финские сауны в квартиру</a></li>
+              <li><a href="./catalog-category.html">Фитобочки</a></li>
+              <li><a href="./catalog-category.html">Комбинированная финская с инфракрасной сауной</a></li>
+              <li><a href="./catalog-category.html">Инфракрасные сауны</a></li>
+              <li><a href="./catalog-category.html">Инфракрасные сауны с гималайской солью</a></li>
+              <li><a href="./catalog-category.html">Комбинированная финская с паровой сауной</a></li>
+              <li><a href="./catalog-category.html">Электрические печи</a></li>
+              <li><a href="./catalog-category.html">Парогенераторы</a></li>
+              <li><a href="./catalog-category.html">Фитосборы</a></li>
+              <li><a href="./catalog-category.html">Соляные сауны</a></li>
+              <li><a href="./catalog-category.html">Комплектующие для саун</a></li>
+            </ul>
+          </div>
+          <div class="footer__company">
+            <h6>Компания</h6>
+            <ul>
+              <li><a href="./about-page.html">О компании</a></li>
+              <li><a href="./reviews-page.html">Отзывы</a></li>
+              <li><a href="./contacts-page.html">Контакты</a></li>
+              <li><a href="./portfolio.html">Портфолио</a></li>
+              <li><a href="./delivery-page.html">Доставка и оплата</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <ul>
+          <li><a href="#">© 2026 ФИТОБАНЯ</a></li>
+          <li><a href="#">Политика конфиденциальности</a></li>
+          <li><a href="#">Политика обработки персональных данных</a></li>
+          <li><a href="#">Публичная оферта</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <dialog class="feedback" id="popup_feedback">
+    <div class="container">
+      <div class="feedback__content">
+        <div class="feedback__header">
+          <div class="feedback__title">
+            <h2>Свяжитесь с нами</h2>
+            <button class="feedback__close" data-btn="close">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
+        </div>
+        <form action="#" method="post" class="feedback__form">
+          <fieldset class="feedback__data">
+            <ul>
+              <li>
+                <label for="name-feedback">Ваше имя</label>
+                <input type="text" name="name-feedback" id="name-feedback" placeholder="Иван Иванов" required>
+              </li>
+              <li>
+                <label for="phone-number-feedback">Номер телефона</label>
+                <input type="tel" name="phone-number-feedback" id="phone-number-feedback" placeholder="+7 911 123-45-67"
+                  required>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="feedback__submit-box">
+            <button type="submit" class="feedback__submit btn btn-light">Отправить заявку</button>
+            <fieldset class="feedback__pd-policy">
+              <input type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
+              <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
+                Федеральным законом Nº 152-ФЗ</label>
+            </fieldset>
+          </div>
+        </form>
+        <div class="feedback__contacts">
+          <img src="./assets/image/icons/phone-call-icon.svg" alt="Позвонить по номеру 8 (800) 300-83-27">
+          <a href="tel:8 (800) 300-83-27">8 (800) 300-83-27</a>
+          <p>Ежедневно <time datetime="09:00">9:00</time> - <time datetime="19:00">19:00</time></p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <dialog class="success" id="popup_success">
+    <div class="container">
+      <div class="success__content">
+        <button class="success__close" data-btn="close">
+          <span></span>
+          <span></span>
+        </button>
+        <img src="./assets/image/icons/success.svg" alt="">
+        <div class="success__text">
+          <h2>Спасибо за заявку</h2>
+          <p>Мы получили ваш запрос и скоро перезвоним</p>
+        </div>
+      </div>
+    </div>
+  </dialog>
+  <section class="tabbar">
+    <div class="tabbar__drag-handle" data-drag-tab></div>
+    <div class="container">
+      <div class="tabbar__content">
+        <ul class="tabbar__list">
+          <li data-tab="catalog">
+            <div class="tabbar__icon">
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0.75 6.75H12.75M0.75 0.75H18.75M0.75 12.75H18.75" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Каталог</h6>
+          </li>
+          <li data-tab="search">
+            <div class="tabbar__icon">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18.75 18.75L15.2501 15.25M17.75 9.25C17.75 13.9444 13.9444 17.75 9.25 17.75C4.55558 17.75 0.75 13.9444 0.75 9.25C0.75 4.55558 4.55558 0.75 9.25 0.75C13.9444 0.75 17.75 4.55558 17.75 9.25Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Поиск</h6>
+          </li>
+          <li data-tab="call">
+            <div class="tabbar__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.87 4.75006C13.8467 4.94063 14.7444 5.41832 15.448 6.122C16.1517 6.82567 16.6294 7.72333 16.82 8.70006M12.87 0.750061C14.8992 0.975497 16.7916 1.88424 18.2362 3.32707C19.6809 4.7699 20.592 6.66107 20.82 8.69006M9.04695 12.6131C7.84537 11.4116 6.89659 10.0529 6.20059 8.60329C6.14072 8.4786 6.11079 8.41626 6.08779 8.33736C6.00607 8.05701 6.06477 7.71275 6.23478 7.47532C6.28262 7.40851 6.33978 7.35135 6.45409 7.23704C6.8037 6.88744 6.9785 6.71263 7.09278 6.53685C7.52378 5.87396 7.52378 5.01938 7.09279 4.35649C6.9785 4.18071 6.8037 4.00591 6.45409 3.65631L6.25922 3.46144C5.72778 2.92999 5.46206 2.66427 5.17668 2.51993C4.60912 2.23286 3.93885 2.23286 3.37129 2.51993C3.08591 2.66427 2.82019 2.92999 2.28874 3.46144L2.13111 3.61907C1.60149 4.14869 1.33668 4.41351 1.13443 4.77354C0.910007 5.17304 0.748645 5.79353 0.750009 6.25176C0.751237 6.6647 0.831341 6.94693 0.991548 7.51137C1.85252 10.5448 3.47699 13.4071 5.86497 15.7951C8.25295 18.1831 11.1153 19.8076 14.1487 20.6685C14.7132 20.8287 14.9954 20.9088 15.4083 20.9101C15.8665 20.9114 16.487 20.7501 16.8865 20.5257C17.2466 20.3234 17.5114 20.0586 18.041 19.529L18.1986 19.3713C18.7301 18.8399 18.9958 18.5742 19.1402 18.2888C19.4272 17.7212 19.4272 17.051 19.1402 16.4834C18.9958 16.198 18.7301 15.9323 18.1986 15.4009L18.0038 15.206C17.6542 14.8564 17.4794 14.6816 17.3036 14.5673C16.6407 14.1363 15.7861 14.1363 15.1232 14.5673C14.9475 14.6816 14.7726 14.8564 14.423 15.206C14.3087 15.3203 14.2516 15.3775 14.1848 15.4253C13.9473 15.5953 13.6031 15.654 13.3227 15.5723C13.2438 15.5493 13.1815 15.5194 13.0568 15.4595C11.6072 14.7635 10.2485 13.8147 9.04695 12.6131Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Связаться</h6>
+          </li>
+          <li data-tab="cart">
+            <div class="tabbar__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3.75014 12.75H16.8859C17.8987 12.75 18.4051 12.75 18.8082 12.5612C19.1634 12.3948 19.4618 12.1277 19.6663 11.7932C19.8985 11.4133 19.9544 10.91 20.0663 9.90338L20.6513 4.63835C20.6855 4.33088 20.7025 4.17715 20.6531 4.05816C20.6097 3.95366 20.5321 3.86697 20.433 3.81228C20.3202 3.75 20.1655 3.75 19.8562 3.75H3.25014M0.75 0.75H1.99844C2.26306 0.75 2.39537 0.75 2.49889 0.800324C2.59002 0.844628 2.66554 0.915574 2.71544 1.00376C2.77212 1.10394 2.78037 1.23599 2.79688 1.5001L3.70312 15.9999C3.71963 16.264 3.72788 16.3961 3.78456 16.4962C3.83446 16.5844 3.90998 16.6554 4.00111 16.6997C4.10463 16.75 4.23694 16.75 4.50156 16.75H17.75M6.25 20.25H6.26M15.25 20.25H15.26M6.75 20.25C6.75 20.5261 6.52614 20.75 6.25 20.75C5.97386 20.75 5.75 20.5261 5.75 20.25C5.75 19.9739 5.97386 19.75 6.25 19.75C6.52614 19.75 6.75 19.9739 6.75 20.25ZM15.75 20.25C15.75 20.5261 15.5261 20.75 15.25 20.75C14.9739 20.75 14.75 20.5261 14.75 20.25C14.75 19.9739 14.9739 19.75 15.25 19.75C15.5261 19.75 15.75 19.9739 15.75 20.25Z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h6>Корзина</h6>
+          </li>
+        </ul>
+        <ul class="tabbar__content-list">
+          <li data-tab-content="catalog" class="tabbar__catalog">
+            <nav class="tabbar__catalog-nav">
+              <h3>Каталог</h3>
+              <ul>
+                <li>
+                  <a href="./catalog-category.html">Сауны из канадского кедра</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Сауны из Российского кедра</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Кедровые фитобочки</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Электрические печи</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Комплектующие и аксессуары</a>
+                </li>
+                <li>
+                  <a href="./catalog-category.html">Криосауны</a>
+                </li>
+              </ul>
+            </nav>
+          </li>
+          <li data-tab-content="search" class="tabbar__search">
+            <div class="tabbar__search-wrap">
+              <h3>Поиск</h3>
+              <form method="get">
+                <button type="submit" class="tabbar__search-submit">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M19 19L15.5001 15.5M18 9.5C18 14.1944 14.1944 18 9.5 18C4.80558 18 1 14.1944 1 9.5C1 4.80558 4.80558 1 9.5 1C14.1944 1 18 4.80558 18 9.5Z"
+                      stroke="#544945" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </button>
+                <input type="search" placeholder="Сауна финская">
+                <button type="button" class="tabbar__search-clear">
+                  <span></span>
+                  <span></span>
+                </button>
+              </form>
+              <ul class="tabbar__search-results">
+                <li>
+                  <a href="./product-card.html">
+                    <img src="./assets/image/search/search-result-1.webp" alt="Результат поиска">
+                    <p>Эконом сауна с печью HARVIA Одноместная</p>
+                    <h6>105 000 ₽</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product-card.html">
+                    <img src="./assets/image/search/search-result-2.webp" alt="Результат поиска">
+                    <p>Трехместная финская сауна. Глубина 100см Массив Кедра</p>
+                    <h6>105 000 ₽</h6>
+                  </a>
+                </li>
+                <li>
+                  <a href="./product-card.html">
+                    <img src="./assets/image/search/search-result-1.webp" alt="Результат поиска">
+                    <p>Одноместная финская сауна. Массив Кедра</p>
+                    <h6>105 000 ₽</h6>
+                  </a>
+                </li>
+                <a href="#" class="tabbar__search-more">
+                  Все результаты
+                  <div class="tabbar__search-more-icon">
+                    <img src="./assets/image/icons/link-icon-dark.svg" alt="Перейкти ко всем результатам">
+                  </div>
+                </a>
+              </ul>
+            </div>
+          </li>
+          <li data-tab-content="call" class="tabbar__call">
+            <div class="tabbar__call-list">
+              <ul>
+                <li>
+                  <a href="tel:88003008327">8 (800) 300-83-27</a>
+                  <p>Бесплатно по России</p>
+                </li>
+                <li>
+                  <a href="tel:89267706833">8 (926) 770-68-33</a>
+                  <p>Звоните, пишите в Telegram</p>
+                </li>
+                <li>
+                  <a href="mailto:fitobochka@bk.ru">fitobochka@bk.ru</a>
+                  <p>Электронная почта</p>
+                </li>
+                <li>
+                  <div class="contacts__social-list socials">
+                    <a href="#"><img src="./assets/image/icons/max-icon.svg" alt="Переход в мессенджер Макс" /></a>
+                    <a href="#"><img src="./assets/image/icons/vk-icon.svg" alt="Переход в Вконтакте" /></a>
+                    <a href="#"><img src="./assets/image/icons/telegram-icon.svg" alt="Переход в Телеграм" /></a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li data-tab-content="cart" class="tabbar__cart"></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <div class="tabbar__overlay"></div>
+  <div class="cookie-banner">
+    <div class="container">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          <h5>Используем куки для улучшения работы сайта</h3>
+            <p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
+        </div>
+        <button class="cookie-banner__button btn btn-light">Понятно</button>
+      </div>
+    </div>
+  </div>
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/accordeon.js" defer></script>
+  <script src="./scripts/carousel.js" defer></script>
+  <script src="./scripts/slider.js" defer></script>
+  <script src="./scripts/header.js" defer></script>
+  <script src="./scripts/popup.js" defer></script>
+  <script src="./scripts/custom-range.js" defer></script>
+  <script src="./scripts/tab-bar.js" defer></script>
+  <script src="./scripts/cookie-banner.js" defer></script>
+</body>
+
+</html>
