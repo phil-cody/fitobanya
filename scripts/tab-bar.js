@@ -3,8 +3,8 @@
   const dragHandle = document.querySelector("[data-drag-tab]");
   const overlay = document.querySelector(".tabbar__overlay");
   const overlayCall = document.querySelector(".tabbar__call");
-  const tabs = document.querySelectorAll("[data-tab]");
-  const tabsContent = document.querySelectorAll("[data-tab-content]");
+  const tabs = document.querySelectorAll(".tabbar [data-tab]");
+  const tabsContent = document.querySelectorAll(".tabbar [data-tab-content]");
 
   if (!tabbar || !dragHandle || !overlay || !tabs.length || !tabsContent.length) {
     return;

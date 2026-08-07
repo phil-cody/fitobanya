@@ -1,0 +1,216 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.portfolio {
+  padding-bottom: calc($spacing-xxxxl * 2);
+
+  &__content {
+    @include flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__list {
+    @include flex;
+    gap: $spacing-xxl;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background: linear-gradient(
+      to bottom,
+      transparent calc(100% - 1px),
+      $text-color-medium calc(100% - 1px)
+    );
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    & li {
+      padding: $spacing-none $spacing-xs-mobile $spacing-lg;
+      border-bottom: 1px solid $text-color-medium;
+      transition: all 0.5s ease;
+      cursor: pointer;
+
+      @media (max-width: 770px) {
+        padding: $spacing-none $spacing-none $spacing-xs-mobile;
+      }
+
+      &.active {
+        border-bottom-color: $primary;
+
+        h6 {
+          color: $text-color-default;
+        }
+      }
+
+      h6 {
+        color: $text-color-medium;
+        font-size: $heading-6-font-size;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size;
+        }
+      }
+    }
+  }
+
+  &__content-list {
+    padding-bottom: 70px;
+
+    @media (max-width: 770px) {
+      padding-bottom: $spacing-none;
+    }
+
+    li {
+      display: none;
+      grid-template-columns: repeat(2, minmax(328px, 1fr));
+      gap: 1px;
+
+      @media (max-width: 770px) {
+        grid-template-columns: 1fr;
+      }
+
+      &.active {
+        display: grid;
+      }
+    }
+
+    .portfolio__list-item {
+      min-height: 535px;
+      height: 535px;
+      @include flex-end;
+      justify-content: flex-start;
+      gap: $spacing-lg;
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+
+      @media (max-width: 540px) {
+        min-height: 306px;
+        height: 306px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        bottom: 0;
+        width: 100%;
+        height: 30%;
+        background: linear-gradient(to top, $black, transparent);
+        opacity: 0.6;
+      }
+
+      img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        z-index: 1;
+      }
+
+      .portfolio__item-info {
+        position: relative;
+        z-index: 5;
+        padding: $spacing-lg;
+        @include flex-start;
+        flex-direction: column;
+        gap: $spacing-xs-mobile;
+
+        @media (max-width: 770px) {
+          gap: 6px;
+          padding: $spacing-sm;
+        }
+
+        h6 {
+          @include heading;
+          font-size: $heading-6-font-size;
+          color: $text-color-inverse;
+        }
+
+        p {
+          @include text;
+          font-size: $text-md-font-size;
+          color: $text-color-inverse-alpha;
+
+          @media (max-width: 770px) {
+            font-size: $text-md-font-size-mobile;
+          }
+        }
+      }
+    }
+  }
+
+  &__pagination {
+    @include flex-center;
+    gap: $spacing-xs;
+
+    @media (max-width: 770px) {
+      gap: $spacing-xs-mobile;
+    }
+
+    ul {
+      @include flex-center;
+      gap: $spacing-none;
+
+      li {
+        @include flex-center;
+        width: 54px;
+        height: 54px;
+        border-radius: $radius-max;
+        color: $black;
+        font-size: $text-md-font-size;
+        @include text;
+        cursor: pointer;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+          width: 48px;
+          height: 48px;
+
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+
+        &:hover {
+          border: 1px solid $primary;
+        }
+
+        &.active {
+          background-color: $surface;
+        }
+      }
+    }
+
+    & .btn {
+      padding: 17px $spacing-md;
+      gap: $spacing-xs-mobile;
+
+      @media (max-width: 770px) {
+        padding: $spacing-xs;
+
+        span {
+          display: none;
+        }
+      }
+
+      .pagination__next-page-img {
+        width: $spacing-lg;
+        height: $spacing-lg;
+        @include flex-center;
+
+        & img {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
