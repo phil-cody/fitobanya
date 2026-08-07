@@ -1,0 +1,100 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.detailed-about-page {
+  padding: calc($spacing-xxxxl * 2) $spacing-none;
+  min-width: 100%;
+
+  @media(max-width: 540px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
+
+  &__content {
+    color: $text-color-default;
+    @include flex-between;
+    align-items: stretch;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+    width: 100%;
+  }
+
+  &__info {
+
+    &-text {
+      max-width: 584px;
+
+      h2 {
+        font-size: $heading-2-font-size;
+        text-transform: uppercase;
+        @include heading;
+
+        @media (max-width: 770px) {
+          font-size: $heading-2-font-size-mobile;
+        }
+      }
+    }
+  }
+  &__advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-xxxl;
+
+    @media (max-width: 770px) {
+      gap: $spacing-md;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  &__advantages-item {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-lg;
+
+    @media (max-width: 770px) {
+      gap: $spacing-xxs;
+    }
+  }
+  &__item-icon {
+    width: 52px;
+    height: 52px;
+    @include flex-center;
+
+    @media (max-width: 770px) {
+      width: 36px;
+      height: 36px;
+
+      img {
+        transform: scale(0.73);
+      }
+    }
+  }
+  &__item-text {
+    @include flex-start;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    @media (max-width: 770px) {
+      gap: $spacing-sm-mobile;
+    }
+
+    h6 {
+      font-size: $heading-6-font-size;
+      line-height: 120%;
+
+      @media (max-width: 770px) {
+        font-size: $heading-6-font-size-mobile;
+        letter-spacing: -3%;
+      }
+    }
+
+    p {
+      @include text;
+      font-size: $text-md-font-size;
+      color: $text-color-medium;
+
+      @media (max-width: 770px) {
+        font-size: $text-sm-font-size-mobile;
+      }
+    }
+  }
+}

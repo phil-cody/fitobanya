@@ -418,6 +418,7 @@
     &-statistic {
       @include flex;
       gap: calc($spacing-xxxl * 2);
+      flex-wrap: wrap;
 
       @media (max-width: 770px) {
         gap: $spacing-lg;
@@ -431,6 +432,20 @@
 
       @media (max-width: 770px) {
         gap: $spacing-xs-mobile;
+      }
+
+      &.ladder {
+        @media (max-width: 540px) {
+          width: 100%;
+
+          &:nth-child(2) {
+            align-items: center;
+          }
+
+          &:last-child {
+            align-items: flex-end;
+          }
+        }
       }
     }
   }
