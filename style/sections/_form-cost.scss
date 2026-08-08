@@ -240,6 +240,10 @@
           font-size: $text-md-font-size-mobile;
         }
 
+        &:focus::placeholder {
+          color: transparent;
+        }
+
         &::placeholder {
           color: $text-color-inverse;
           font-size: $text-md-font-size;

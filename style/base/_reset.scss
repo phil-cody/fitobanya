@@ -92,6 +92,11 @@ h6 {
   @include heading;
 }
 
+input {
+  padding-inline: 0;
+  padding-block: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;

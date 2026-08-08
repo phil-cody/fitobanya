@@ -1,0 +1,179 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.cart-list {
+  padding: $spacing-none;
+
+  .container > ul {
+    @include flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    & > li {
+      display: grid;
+      grid-template-columns: 135px minmax(0, 1fr) auto $spacing-lg;
+      grid-template-rows: 149px auto auto;
+      align-items: center;
+      gap: $spacing-sm;
+      border-bottom: 1px solid $borders;
+      padding: $spacing-xxl $spacing-none;
+      @include text;
+      position: relative;
+
+      @media (max-width: 770px) {
+        grid-template-columns: 135px minmax(0, 1fr);
+        grid-template-rows: 149px;
+        gap: $spacing-sm;
+        padding: $spacing-xxl $spacing-none;
+      }
+
+      &:first-child {
+        padding-top: $spacing-none;
+      }
+
+      &:last-child {
+        padding-bottom: $spacing-none;
+        border-bottom: none;
+      }
+
+      img {
+        height: 100%;
+        justify-self: center;
+      }
+
+      p {
+        font-size: $text-md-font-size;
+        color: $text-color-default;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+
+      span {
+        font-size: $text-md-font-size;
+        color: $text-color-medium;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+      }
+
+      .item__price {
+        @include flex-start;
+        align-items: center;
+        gap: $spacing-sm;
+
+        @media (max-width: 770px) {
+          grid-column: 1 / -1;
+          gap: $spacing-sm-mobile;
+        }
+
+        p {
+          @include heading;
+          color: $text-color-default;
+          font-size: $heading-6-font-size;
+
+          @media (max-width: 770px) {
+            font-size: $heading-5-font-size-mobile;
+            order: 0;
+          }
+        }
+
+        span {
+          color: $text-color-medium;
+          font-size: $text-lg-font-size;
+          text-decoration: line-through;
+
+          @media (max-width: 770px) {
+            font-size: $text-sm-font-size-mobile;
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+
+  &__item-description {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+
+    @media (max-width: 770px) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      gap: $spacing-xs-mobile;
+    }
+  }
+
+  .item__badge-list {
+    @include flex-start;
+    gap: 7px;
+    font-size: $text-medium-sm-font-size;
+    letter-spacing: -3%;
+    line-height: $text-line-height;
+    font-weight: $text-font-weight-medium;
+
+    @media (max-width: 770px) {
+      font-size: $text-sm-font-size-mobile;
+      order: 1;
+    }
+
+    @media (max-width: 540px) {
+      bottom: $spacing-xs-mobile;
+      gap: 6px;
+    }
+
+    li {
+      border-radius: $radius-xxxs-mobile;
+      border: none;
+      color: $text-color-inverse;
+      font-weight: $text-font-weight-medium;
+    }
+
+    .badge-discount {
+      background-color: $black;
+      padding: $spacing-xxxxs $spacing-xxxs;
+    }
+    
+    .badge-hot {
+      background-color: $green;
+      text-transform: uppercase;
+      padding: $spacing-xxxxs $spacing-xxs;
+    }
+  }
+
+  &__delete-item {
+    @include flex-between;
+    flex-direction: column;
+    position: relative;
+    width: $spacing-lg;
+    aspect-ratio: 1 / 1;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @media (max-width: 770px) {
+      grid-row: 1;
+      grid-column: 2;
+      justify-self: end;
+      align-self: start;
+    }
+
+    span {
+      width: $spacing-sm;
+      height: $spacing-xxxxs;
+      background-color: $text-color-medium;
+      position: relative;
+
+      &:first-child {
+        top: calc(50% - 1px);
+        transform: rotate(45deg);
+      }
+      &:last-child {
+        bottom: calc(50% - 1px);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}

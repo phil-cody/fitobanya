@@ -1,0 +1,128 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.adv-cart {
+  padding: calc($spacing-xxxxl * 2) $spacing-none;
+
+  @media (max-width: 770px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
+
+  &__content {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+
+    h3 {
+      @include heading;
+      font-size: $heading-3-font-size;
+      color: $text-color-default;
+
+      @media (max-width: 770px) {
+        font-size: $heading-3-font-size-mobile;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    gap: $spacing-none;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    overflow-x: auto;
+
+    @media (max-width: 770px) {
+      grid-template-columns: 1fr;
+    }
+
+    & li {
+      display: grid;
+      grid-template-columns: clamp(83px, 9dvw, 130px) minmax(0, 1fr) 54px;
+      grid-template-rows: 130px;
+      padding-right: $spacing-md;
+      gap: $spacing-xs;
+      align-items: center;
+      border: 1px solid $borders;
+      min-width: 335px;
+
+      @media (max-width: 770px) {
+        grid-template-columns: 83px minmax(0, 1fr) 36px;
+        grid-template-rows: 83px;
+        min-width: $spacing-none;
+      }
+
+      &:not(:first-child) {
+        border-left: none;
+
+        @media (max-width: 770px) {
+          border-left: 1px solid $borders;
+        }
+      }
+
+      &:not(:last-child) {
+        @media (max-width: 770px) {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+
+  &__item-img {
+    padding: clamp($spacing-sm, 1.6dvw, $spacing-lg);
+  }
+
+  &__item-info {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    @include text;
+
+    @media (max-width: 770px) {
+      gap: $spacing-xs-mobile;
+    }
+
+    & > p {
+      font-size: $text-md-font-size;
+      color: $text-color-default;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+
+  &__item-price {
+    @include flex;
+    gap: $spacing-sm;
+    align-items: center;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
+    row-gap: $spacing-xxxs;
+
+    & > p {
+      font-size: $heading-6-font-size;
+      color: $text-color-default;
+
+      @media (max-width: 770px) {
+        font-size: $heading-6-font-size-mobile;
+      }
+    }
+
+    & > span {
+      color: $text-color-medium;
+      font-size: $text-md-font-size;
+      text-decoration: line-through;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+
+  &__add-btn {
+    background-color: $primary;
+    border-radius: $radius-max;
+    aspect-ratio: 1 / 1;
+    @include flex-center;
+  }
+}

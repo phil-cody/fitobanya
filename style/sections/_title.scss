@@ -17,6 +17,7 @@
     @include flex-start;
     flex-direction: column;
     gap: $spacing-xxxl;
+    position: relative;
 
     @media (max-width: 770px) {
       gap: $spacing-xs-mobile;
@@ -446,6 +447,38 @@
             align-items: flex-end;
           }
         }
+      }
+    }
+  }
+
+  &__clear-trash {
+    position: absolute;
+    bottom: $spacing-xxs;
+    right: 0;
+    @include flex;
+    align-items: center;
+    gap: $spacing-xs-mobile;
+    cursor: pointer;
+
+    @media (max-width: 770px) {
+      bottom: $spacing-xxxxs;
+    }
+
+    &-icon {
+      width: $spacing-lg;
+      height: $spacing-lg;
+      @include flex-center;
+    }
+
+    p {
+      font-size: $text-button-font-size;
+      color: $text-color-medium;
+      text-wrap: nowrap;
+
+      @media (max-width: 770px) {
+        max-width: 65px;
+        overflow: hidden;
+        font-size: $text-button-font-size-mobile;
       }
     }
   }

@@ -272,81 +272,175 @@
             </ul>
           </nav>
           <h1>Корзина</h1>
+          <div class="title__clear-trash">
+            <div class="title__clear-trash-icon">
+              <img src="./assets/image/icons/trash-icon.svg" alt="Очистить корзину">
+            </div>
+            <p>Очистить корзину</p>
+          </div>
         </div>
       </div>
     </section>
-    <section class="form-cost">
+    <section class="cart-list">
       <div class="container">
-        <div class="form-cost__content">
-          <div class="form-cost__text">
-            <h2>РАССЧИТАТЬ СТОИМОСТЬ САУНЫ</h2>
-            <p>Перезвоним в течение 10 минут. Обсудим задачи, найдём оптимальное решение и запланируем работы</p>
-          </div>
-          <div class="form-cost__form">
-            <form action="#" method="post">
-              <fieldset class="form-cost__types">
-                <div class="form-cost__radio">
-                  <h6>Тип сауны</h6>
-                  <ul>
-                    <li>
-                      <label for="finnish-sauna">Финская</label>
-                      <input type="radio" name="type-sauna" id="finnish-sauna" value="finnish-sauna" checked>
-                    </li>
-                    <li>
-                      <label for="infrared-sauna">Инфракрасная</label>
-                      <input type="radio" name="type-sauna" id="infrared-sauna" value="infrared-sauna">
-                    </li>
-                  </ul>
-                </div>
-                <div class="form-cost__radio">
-                  <h6>Размер</h6>
-                  <ul>
-                    <li>
-                      <label for="corner-size">Угловая</label>
-                      <input type="radio" name="sauna-size" id="corner-size" value="corner-size" checked>
-                    </li>
-                    <li>
-                      <label for="straight-size">Прямая</label>
-                      <input type="radio" name="sauna-size" id="straight-size" value="straight-size">
-                    </li>
-                  </ul>
-                </div>
-                <div class="form-cost__radio">
-                  <h6>Древесина</h6>
-                  <ul>
-                    <li>
-                      <label for="canadian-cedar">Канадский кедр</label>
-                      <input type="radio" name="wood-type" id="canadian-cedar" value="canadian-cedar" checked>
-                    </li>
-                    <li>
-                      <label for="russian-cedar">Российский кедр</label>
-                      <input type="radio" name="wood-type" id="russian-cedar" value="russian-cedar">
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-              <fieldset class="form-cost__contacts">
-                <h6>Куда выслать расчёт?</h6>
-                <ul>
-                  <li>
-                    <label for="name">Ваше имя</label>
-                    <input type="text" name="name" id="name" placeholder="Иван Иванов" required>
-                  </li>
-                  <li>
-                    <label for="phone-number">Номер телефона</label>
-                    <input type="tel" name="phone-number" id="phone-number" placeholder="+7 911 123-45-67" required>
-                  </li>
-                </ul>
-              </fieldset>
-              <div class="form-cost__submit-box">
-                <button type="submit" class="form-cost__submit btn btn-light">Отправить заявку</button>
-                <fieldset class="form-cost__pd-policy">
-                  <input class="checkbox" type="checkbox" name="pd-policy" id="pd-policy" role="switch" required>
-                  <label for="pd-policy">Я согласен(а) с политикой обработки персональных данных в соответствии с
-                    Федеральным законом Nº 152-ФЗ</label>
-                </fieldset>
+        <ul>
+          <li>
+            <img src="./assets/image/product-image/econom-harvia-one-size.webp"
+              alt="Эконом сауна с печью HARVIA Одноместная">
+            <div class="cart-list__item-description">
+              <p>Эконом сауна с печью HARVIA Одноместная</p>
+              <span>100 х 200 х 100 см</span>
+            </div>
+            <div class="item__price">
+              <ul class="item__badge-list">
+                <li class="badge-discount">-10%</li>
+              </ul>
+              <span>133 500 ₽</span>
+              <p>105 000 ₽</p>
+            </div>
+            <button data-btn="delete-item" class="cart-list__delete-item">
+              <span></span>
+              <span></span>
+            </button>
+          </li>
+          <li>
+            <img src="./assets/image/product-image/econom-harvia-one-size.webp"
+              alt="Эконом сауна с печью HARVIA Одноместная">
+            <div class="cart-list__item-description">
+              <p>Эконом сауна с печью HARVIA Одноместная</p>
+              <span>100 х 200 х 100 см</span>
+            </div>
+            <div class="item__price">
+              <ul class="item__badge-list">
+              </ul>
+              <span></span>
+              <p>105 000 ₽</p>
+            </div>
+            <button data-btn="delete-item" class="cart-list__delete-item">
+              <span></span>
+              <span></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="adv-cart">
+      <div class="container">
+        <div class="adv-cart__content">
+          <h3>ДОБАВИТЬ К ЗАКАЗУ?</h3>
+          <ul class="adv-cart__list">
+            <li>
+              <div class="adv-cart__item-img">
+                <img src="./assets/image/adv-cart/stones.webp" alt="Камни для сауны 15кг">
               </div>
+              <div class="adv-cart__item-info">
+                <p>Камни для сауны 15кг</p>
+                <div class="adv-cart__item-price">
+                  <p>4 000 ₽</p>
+                  <span>133 500 ₽</span>
+                </div>
+              </div>
+              <div class="adv-cart__add-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 1V15M1 8H15" stroke="#E2DFD9" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </li>
+            <li>
+              <div class="adv-cart__item-img">
+                <img src="./assets/image/adv-cart/phitosbor.webp" alt="Фитосбор банный «Антистрессовый»">
+              </div>
+              <div class="adv-cart__item-info">
+                <p>Фитосбор банный «Антистрессовый»</p>
+                <div class="adv-cart__item-price">
+                  <p>500 ₽</p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="adv-cart__add-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 1V15M1 8H15" stroke="#E2DFD9" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </li>
+            <li>
+              <div class="adv-cart__item-img">
+                <img src="./assets/image/adv-cart/oven.webp" alt="Печь SAWO MINI MX-36NB-Z  ">
+              </div>
+              <div class="adv-cart__item-info">
+                <p>Печь SAWO MINI MX-36NB-Z </p>
+                <div class="adv-cart__item-price">
+                  <p>34 400 ₽</p>
+                  <span></span>
+                </div>
+              </div>
+              <div class="adv-cart__add-btn">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 1V15M1 8H15" stroke="#E2DFD9" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="order">
+      <div class="container">
+        <div class="order__content">
+          <div class="order__customer-info">
+            <h3>ДАННЫЕ ПОКУПАТЕЛЯ</h3>
+            <form action="">
+              <fieldset>
+                <label for="customer-name">Ваше имя</label>
+                <input type="text" name="customer-name" id="customer-name" placeholder="Иван Иванов">
+              </fieldset>
+              <fieldset>
+                <label for="customer-phone">Номер телефона</label>
+                <input type="tel" name="customer-phone" id="customer-phone" placeholder="+7 911 123-45-67">
+              </fieldset>
+              <fieldset>
+                <label for="customer-email">Email</label>
+                <input type="email" name="customer-email" id="customer-email" placeholder="email@example.com">
+              </fieldset>
+              <fieldset>
+                <label for="customer-address">Адрес доставки</label>
+                <input type="text" name="customer-address" id="customer-address"
+                  placeholder="Великий Новгород, ул Большая Московская, д 123 ">
+              </fieldset>
             </form>
+          </div>
+          <div class="order__order-info">
+            <h3>ВАШ ЗАКАЗ</h3>
+            <ul>
+              <li>
+                <span>Товаров</span>
+                <div></div>
+                <p>1</p>
+              </li>
+              <li>
+                <span>Стоимость</span>
+                <div></div>
+                <p>133 500 ₽</p>
+              </li>
+              <li>
+                <span>Скидка</span>
+                <div></div>
+                <p>28 500 ₽</p>
+              </li>
+              <li>
+                <span>Доставка</span>
+                <div></div>
+                <p>Расчитаем отдельно</p>
+              </li>
+            </ul>
+            <div class="order__order-amount">
+              <span>Итого</span>
+              <p>105 000 ₽</p>
+            </div>
+            <button class="btn btn-dark">Оформить заказ</button>
           </div>
         </div>
       </div>
@@ -628,16 +722,16 @@
   </section>
   <div class="tabbar__overlay"></div>
   <div class="cookie-banner">
-		<div class="container">
-			<div class="cookie-banner__content">
-				<div class="cookie-banner__text">
-					<h5>Используем куки для улучшения работы сайта</h3>
-					<p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
-				</div>
-				<button class="cookie-banner__button btn btn-light">Понятно</button>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+      <div class="cookie-banner__content">
+        <div class="cookie-banner__text">
+          <h5>Используем куки для улучшения работы сайта</h3>
+            <p>Оставаясь с нами, вы соглашаетесь на использование файлов куки</p>
+        </div>
+        <button class="cookie-banner__button btn btn-light">Понятно</button>
+      </div>
+    </div>
+  </div>
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/accordeon.js" defer></script>
   <script src="./scripts/carousel.js" defer></script>

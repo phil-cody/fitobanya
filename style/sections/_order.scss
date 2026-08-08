@@ -1,0 +1,176 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.order {
+  padding: $spacing-none $spacing-none calc($spacing-xxxxl * 2);
+
+  @media (max-width: 770px) {
+    padding: $spacing-none $spacing-none $spacing-xxxl;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+    @media (max-width: 770px) {
+      grid-template-columns: 1fr;
+      gap: $spacing-xxxl;
+    }
+
+    h3 {
+      font-size: $heading-3-font-size;
+      text-transform: uppercase;
+      color: $text-color-default;
+
+      @media (max-width: 770px) {
+        font-size: $heading-3-font-size-mobile;
+      }
+    }
+  }
+
+  &__customer-info {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+    border-right: 1px solid $borders;
+    padding-right: calc($spacing-xxxl * 1.5);
+
+    @media (max-width: 770px) {
+      gap: $spacing-xl;
+      border-right: none;
+      padding-right: $spacing-none;
+    }
+
+    form {
+      @include flex;
+      flex-direction: column;
+      gap: $spacing-sm;
+
+      @media (max-width: 770px) {
+        gap: $spacing-sm-mobile;
+      }
+    }
+
+    fieldset {
+      padding: 8.5px $spacing-none;
+      @include flex;
+      flex-direction: column;
+      gap: 6px;
+      @include text;
+      border-bottom: 1px solid $borders;
+
+      @media (max-width: 770px) {
+        gap: $spacing-xxxs;
+      }
+
+      label {
+        font-size: $text-sm-font-size;
+        color: $text-color-medium;
+
+        @media (max-width: 770px) {
+          font-size: $text-sm-font-size-mobile;
+        }
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        font-size: $text-md-font-size;
+        color: $text-color-default;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+        }
+
+        &:focus::placeholder {
+          color: transparent;
+        }
+
+        &::placeholder {
+          font-size: $text-md-font-size;
+          color: $text-color-default;
+
+          @media (max-width: 770px) {
+            font-size: $text-md-font-size-mobile;
+          }
+        }
+      }
+    }
+  }
+
+  &__order-info {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-lg;
+    padding-left: calc($spacing-xxxl * 1.5);
+
+    @media (max-width: 770px) {
+      padding-left: $spacing-none;
+    }
+
+    ul {
+      @include flex;
+      flex-direction: column;
+      gap: $spacing-xs;
+
+      li {
+        @include flex;
+        gap: $spacing-xs;
+        @include text;
+        font-size: $text-md-font-size;
+        text-wrap: nowrap;
+
+        @media (max-width: 770px) {
+          font-size: $text-md-font-size-mobile;
+          gap: $spacing-xs-mobile;
+        }
+
+        span {
+          color: $text-color-medium;
+        }
+
+        div {
+          width: 100%;
+          border-bottom: 1px dashed $borders;
+        }
+      }
+    }
+  }
+
+  &__order-amount {
+    flex: 1;
+    @include flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: $spacing-xs;
+
+    @media (max-width: 770px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      gap: $spacing-xs-mobile;
+      align-items: center;
+      margin-top: -$spacing-xxxs;
+    }
+
+    span {
+      font-size: $text-md-font-size;
+      color: $text-color-medium;
+      @include text;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+
+    p {
+      font-size: $heading-3-font-size;
+      color: $text-color-default;
+      @include heading;
+
+      @media (max-width: 770px) {
+        font-size: $heading-3-font-size-mobile;
+      }
+    }
+  }
+}

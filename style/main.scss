@@ -27,6 +27,7 @@
 @use "./pages/reviews-page";
 @use "./pages/pd-policy-page";
 @use "./pages/portfolio-page";
+@use "./pages/cart-page";
 
 body {
   @include flex;
