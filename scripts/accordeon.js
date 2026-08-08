@@ -12,7 +12,7 @@
 
     const isOpen = content.style.maxHeight && content.style.maxHeight !== "0px";
 
-    document.querySelectorAll("li").forEach((b) => {
+    container.querySelectorAll("li").forEach((b) => {
       const el = b.querySelector("p");
       if (el) el.style.maxHeight = "0px";
       b.classList.remove("active");

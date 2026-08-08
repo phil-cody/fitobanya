@@ -1,0 +1,64 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.success-order {
+  padding: $spacing-none $spacing-none calc($spacing-xxxxl * 2);
+
+  @media (max-width: 770px) {
+    padding: $spacing-none $spacing-none $spacing-xxxl;
+  }
+
+  &__content {
+    @include flex;
+    flex-direction: column;
+    gap: $spacing-xxxl;
+    padding-bottom: 45px;
+
+    @media (max-width: 770px) {
+      gap: $spacing-lg;
+      padding-bottom: $spacing-md;
+    }
+  }
+
+  &__img {
+    aspect-ratio: 1 / 1;
+    width: 87px;
+    @include flex-center;
+
+    svg {
+      width: 80;
+      height: 80;
+    }
+  }
+
+  &__text {
+    max-width: 579px;
+    @include text;
+    @include flex;
+    flex-direction: column;
+    color: $text-color-default;
+    gap: $spacing-sm;
+
+    h1 {
+      @include heading;
+      font-size: $heading-1-font-size;
+
+      @media (max-width: 770px) {
+        font-size: $heading-1-font-size-mobile;
+      }
+    }
+
+    p {
+      @include text;
+      font-size: $text-md-font-size;
+
+      @media (max-width: 770px) {
+        font-size: $text-md-font-size-mobile;
+      }
+    }
+  }
+
+  a {
+    width: fit-content;
+  }
+}
