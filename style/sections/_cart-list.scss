@@ -4,7 +4,7 @@
 .cart-list {
   padding: $spacing-none;
 
-  .container > ul {
+  & .container > ul {
     @include flex;
     flex-direction: column;
     align-items: stretch;
@@ -94,7 +94,7 @@
     }
   }
 
-  &__item-description {
+  & &__item-description {
     @include flex;
     flex-direction: column;
     gap: $spacing-sm;
@@ -106,7 +106,7 @@
     }
   }
 
-  .item__badge-list {
+  & .item__badge-list {
     @include flex-start;
     gap: 7px;
     font-size: $text-medium-sm-font-size;
@@ -143,7 +143,7 @@
     }
   }
 
-  &__delete-item {
+  & &__delete-item {
     @include flex-between;
     flex-direction: column;
     position: relative;

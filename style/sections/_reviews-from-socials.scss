@@ -5,6 +5,10 @@
   min-width: 100%;
   padding: calc($spacing-xxxxl * 2) $spacing-none;
 
+  @media (max-width: 770px) {
+    padding: $spacing-xxxl $spacing-none;
+  }
+
   &__content {
     @include flex;
     flex-direction: column;
