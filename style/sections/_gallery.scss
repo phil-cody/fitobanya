@@ -159,14 +159,20 @@
       opacity: 0.6;
     }
 
-    img {
+    a.glightbox {
       position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      z-index: 1;
+    }
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
       display: block;
-      z-index: 1;
     }
 
     &-info {
@@ -213,12 +219,14 @@
     @include flex-between;
     width: 100%;
     top: 57%;
+    pointer-events: none;
 
     @media (max-width: 770px) {
       display: none;
     }
 
     button {
+      pointer-events: all;
       width: calc($spacing-xxxl + $spacing-sm-mobile);
       height: calc($spacing-xxxl + $spacing-sm-mobile);
       @include flex-center;

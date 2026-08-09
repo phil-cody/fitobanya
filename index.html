@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <title>Document</title>
 </head>
 
@@ -622,28 +623,36 @@
                 <h6>Сауна в частный дом</h6>
                 <p>Москва, 2025г</p>
               </div>
-              <img src="./assets/image/gallery/gallery-1.webp" alt="Сауна в частный дом">
+              <a class="glightbox" href="./assets/image/gallery/gallery-1.webp" data-gallery="index-gallery">
+                <img src="./assets/image/gallery/gallery-1.webp" alt="Сауна в частный дом">
+              </a>
             </div>
             <div class="gallery__item">
               <div class="gallery__item-info">
                 <h6>Сауна в частный дом</h6>
                 <p>Москва, 2025г</p>
               </div>
-              <img src="./assets/image/gallery/gallery-2.webp" alt="Сауна в частный дом">
+              <a class="glightbox" href="./assets/image/gallery/gallery-2.webp" data-gallery="index-gallery">
+                <img src="./assets/image/gallery/gallery-2.webp" alt="Сауна в частный дом">
+              </a>
             </div>
             <div class="gallery__item">
               <div class="gallery__item-info">
                 <h6>Сауна в частный дом</h6>
                 <p>Москва, 2025г</p>
               </div>
-              <img src="./assets/image/gallery/gallery-3.webp" alt="Сауна в частный дом">
+              <a class="glightbox" href="./assets/image/gallery/gallery-3.webp" data-gallery="index-gallery">
+                <img src="./assets/image/gallery/gallery-3.webp" alt="Сауна в частный дом">
+              </a>
             </div>
             <div class="gallery__item">
               <div class="gallery__item-info">
                 <h6>Сауна в частный дом</h6>
                 <p>Москва, 2025г</p>
               </div>
-              <img src="./assets/image/gallery/gallery-1.webp" alt="Сауна в частный дом">
+              <a class="glightbox" href="./assets/image/gallery/gallery-1.webp" data-gallery="index-gallery">
+                <img src="./assets/image/gallery/gallery-1.webp" alt="Сауна в частный дом">
+              </a>
             </div>
           </div>
           <div class="gallery__slider-btn">
@@ -1166,6 +1175,13 @@
   <script src="./scripts/custom-range.js" defer></script>
   <script src="./scripts/tab-bar.js" defer></script>
   <script src="./scripts/cookie-banner.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    GLightbox({
+      selector: '.glightbox',
+      loop: false
+    });
+  </script>
 </body>
 
 </html>

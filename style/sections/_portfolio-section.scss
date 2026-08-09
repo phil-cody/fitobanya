@@ -106,14 +106,20 @@
         opacity: 0.6;
       }
 
-      img {
+      a.glightbox {
         position: absolute;
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 1;
+      }
+
+      img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
         display: block;
-        z-index: 1;
       }
 
       .portfolio__item-info {

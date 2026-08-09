@@ -219,6 +219,7 @@
 
   &__slider-btn {
     position: absolute;
+    pointer-events: none;
     @include flex-between;
     width: 100%;
     top: 41%;
@@ -228,6 +229,7 @@
     }
 
     button {
+      pointer-events: all;
       width: calc($spacing-xxxl + $spacing-sm-mobile);
       height: calc($spacing-xxxl + $spacing-sm-mobile);
       @include flex-center;

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no">
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
   <title>Document</title>
 </head>
 
@@ -412,25 +413,39 @@
           <h2>ОТЗЫВЫ ИЗ МЕССЕНДЖЕРОВ</h2>
           <ul class="reviews-from-socials__list carousel" data-carousel-track>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
             <li>
-              <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+                <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
+              </a>
             </li>
           </ul>
           <div class="reviews-from-socials__scroll-progress" data-carousel-progress></div>
@@ -883,6 +898,13 @@
   <script src="./scripts/custom-range.js" defer></script>
   <script src="./scripts/tab-bar.js" defer></script>
   <script src="./scripts/cookie-banner.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script>
+    GLightbox({
+      selector: '.glightbox',
+      loop: false
+    });
+  </script>
 </body>
 
 </html>
