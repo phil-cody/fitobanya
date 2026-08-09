@@ -920,9 +920,21 @@
   <script src="./scripts/cookie-banner.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
-    GLightbox({
+    let scrollPosition = 0;
+
+    const lightbox = GLightbox({
       selector: '.glightbox',
-      loop: false
+      loop: true
+    });
+
+    lightbox.on('open', () => {
+      scrollPosition = window.scrollY;
+    });
+
+    lightbox.on('close', () => {
+      requestAnimationFrame(() => {
+        window.scrollTo(0, scrollPosition);
+      });
     });
   </script>
 </body>

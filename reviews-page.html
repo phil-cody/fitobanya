@@ -413,37 +413,44 @@
           <h2>ОТЗЫВЫ ИЗ МЕССЕНДЖЕРОВ</h2>
           <ul class="reviews-from-socials__list carousel" data-carousel-track>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
             <li>
-              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" data-gallery="reviews-gallery">
+              <a class="glightbox" href="./assets/image/reviews-from-socials/reviews-from-socials-1.webp"
+                data-gallery="reviews-gallery">
                 <img src="./assets/image/reviews-from-socials/reviews-from-socials-1.webp" alt="">
               </a>
             </li>
@@ -900,9 +907,21 @@
   <script src="./scripts/cookie-banner.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
   <script>
-    GLightbox({
+    let scrollPosition = 0;
+
+    const lightbox = GLightbox({
       selector: '.glightbox',
-      loop: false
+      loop: true
+    });
+
+    lightbox.on('open', () => {
+      scrollPosition = window.scrollY;
+    });
+
+    lightbox.on('close', () => {
+      requestAnimationFrame(() => {
+        window.scrollTo(0, scrollPosition);
+      });
     });
   </script>
 </body>
