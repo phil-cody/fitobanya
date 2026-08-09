@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const searchInput = searchForm.querySelector(".header__search-input");
   const searchButton = searchForm.querySelector(".header__search-btn");
-  const clearButton = searchForm.querySelector(".header__search-clear");
+  const closeButton = searchForm.querySelector(".header__search-close");
 
   function closeSearch() {
     searchForm.classList.remove("is-open");
@@ -96,9 +96,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  clearButton.addEventListener("click", () => {
-    searchInput.value = "";
-    searchInput.focus();
+  closeButton.addEventListener("click", () => {
+    closeSearch();
+    searchButton.focus();
   });
 
   document.addEventListener("pointerdown", (event) => {

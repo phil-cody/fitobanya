@@ -258,7 +258,7 @@
           }
 
           .header__search-input,
-          .header__search-clear {
+          .header__search-close {
             opacity: 1;
             pointer-events: auto;
             transition-delay: 0.16s;
@@ -379,7 +379,7 @@
         }
       }
 
-      .header__search-clear {
+      .header__search-close {
         @include flex-between;
         flex-direction: column;
         position: relative;

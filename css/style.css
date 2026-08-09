@@ -28,7 +28,8 @@ dialog::backdrop {
 }
 
 @starting-style {
-  dialog[open], dialog[open]::backdrop {
+  dialog[open],
+  dialog[open]::backdrop {
     opacity: 0;
   }
 }
@@ -62,6 +63,17 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+input[type=search] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type=search]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
 }
 
 p,
@@ -2520,7 +2532,7 @@ pre {
   stroke: #8d8580;
 }
 .header-light .header__contacts-action .header__search.is-open .header__search-input,
-.header-light .header__contacts-action .header__search.is-open .header__search-clear {
+.header-light .header__contacts-action .header__search.is-open .header__search-close {
   opacity: 1;
   pointer-events: auto;
   transition-delay: 0.16s;
@@ -2628,7 +2640,7 @@ pre {
     font-size: 14px;
   }
 }
-.header-light .header__contacts-action .header__search-clear {
+.header-light .header__contacts-action .header__search-close {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -2639,17 +2651,17 @@ pre {
   border: none;
   cursor: pointer;
 }
-.header-light .header__contacts-action .header__search-clear span {
+.header-light .header__contacts-action .header__search-close span {
   width: 20px;
   height: 2px;
   background-color: #544945;
   position: relative;
 }
-.header-light .header__contacts-action .header__search-clear span:first-child {
+.header-light .header__contacts-action .header__search-close span:first-child {
   top: 27px;
   transform: rotate(45deg);
 }
-.header-light .header__contacts-action .header__search-clear span:last-child {
+.header-light .header__contacts-action .header__search-close span:last-child {
   bottom: 27px;
   transform: rotate(-45deg);
 }
@@ -4612,7 +4624,7 @@ pre {
   }
 }
 .header-dark .header__contacts-action .header__search.is-open .header__search-input,
-.header-dark .header__contacts-action .header__search.is-open .header__search-clear {
+.header-dark .header__contacts-action .header__search.is-open .header__search-close {
   opacity: 1;
   pointer-events: auto;
   transition-delay: 0.16s;
@@ -4720,7 +4732,7 @@ pre {
     font-size: 14px;
   }
 }
-.header-dark .header__contacts-action .header__search-clear {
+.header-dark .header__contacts-action .header__search-close {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4731,17 +4743,17 @@ pre {
   border: none;
   cursor: pointer;
 }
-.header-dark .header__contacts-action .header__search-clear span {
+.header-dark .header__contacts-action .header__search-close span {
   width: 20px;
   height: 2px;
   background-color: #544945;
   position: relative;
 }
-.header-dark .header__contacts-action .header__search-clear span:first-child {
+.header-dark .header__contacts-action .header__search-close span:first-child {
   top: 27px;
   transform: rotate(45deg);
 }
-.header-dark .header__contacts-action .header__search-clear span:last-child {
+.header-dark .header__contacts-action .header__search-close span:last-child {
   bottom: 27px;
   transform: rotate(-45deg);
 }

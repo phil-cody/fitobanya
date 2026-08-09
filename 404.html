@@ -18,7 +18,7 @@
             <img src="./assets/image/logo-light.svg" alt="Логотип" />
           </a>
         </div>
-        <nav class="header__nav" aria-label="Основная навигация">
+        <nav class="header__nav">
           <ul>
             <li>
               <a href="./catalog-root.html">Каталог
@@ -99,7 +99,12 @@
           <div class="header__contacts-action">
             <form class="header__search" action="./search-result.html" method="get">
               <button type="submit" class="header__search-btn">
-                <img src="./assets/image/icons/search-icon.svg" alt="">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M18.75 18.75L15.2501 15.25M17.75 9.25C17.75 13.9444 13.9444 17.75 9.25 17.75C4.55558 17.75 0.75 13.9444 0.75 9.25C0.75 4.55558 4.55558 0.75 9.25 0.75C13.9444 0.75 17.75 4.55558 17.75 9.25Z"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
               </button>
 
               <label class="visually-hidden" for="site-search-input">
@@ -109,7 +114,7 @@
               <input id="site-search-input" class="header__search-input" type="search" name="q"
                 placeholder="Поиск по сайту" autocomplete="off">
 
-              <button class="header__search-clear" type="reset">
+              <button class="header__search-close" type="reset">
                 <span></span>
                 <span></span>
               </button>
@@ -148,7 +153,7 @@
         <div class="header__menu" id="burger-menu">
           <div class="menu__header">
             <div class="menu__logo">
-              <a href="./index.html"><img src="./assets/image/logo-light.svg" alt="Логотип" /></a>
+              <a href="./index.html"><img src="./assets/image/logo-dark.svg" alt="Логотип" /></a>
             </div>
             <button type="button" class="menu__close" id="burger-close" aria-label="Закрыть меню">
               <span></span>
@@ -161,7 +166,7 @@
               <nav class="menu__nav" aria-label="Каталог">
                 <ul>
                   <li>
-                    <div class="toggle-level-menu">
+                    <div href="./catalog-root.html" class="toggle-level-menu">
                       Каталог
                       <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации"
                         class="arrow">
@@ -222,7 +227,7 @@
               </div>
             </div>
             <div class="menu-2-level level-1-active" id="burger-menu-2-level">
-              <nav class="menu__nav" aria-label="Навигация каталога">
+              <nav class="menu__nav">
                 <div class="menu__nav-title toggle-level-menu">
                   <img src="./assets/image/icons/arrow-icon-dark.svg" alt="Стрелка открытия пункта навигации" />
                   <h3>Каталог</h3>

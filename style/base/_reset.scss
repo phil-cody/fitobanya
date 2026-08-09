@@ -31,7 +31,8 @@ dialog {
 }
 
 @starting-style {
-  dialog[open], dialog[open]::backdrop {
+  dialog[open],
+  dialog[open]::backdrop {
     opacity: 0;
   }
 }
@@ -67,6 +68,17 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+input[type="search"] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
 }
 
 p,
