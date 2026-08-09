@@ -1179,19 +1179,29 @@
   <script>
     let scrollPosition = 0;
 
+    function saveScrollPosition(event) {
+      if (event.target.closest('.glightbox')) {
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+      }
+    }
+
+    document.addEventListener('touchstart', saveScrollPosition, {
+      capture: true,
+      passive: true
+    });
+
+    document.addEventListener('mousedown', saveScrollPosition, true);
+
     const lightbox = GLightbox({
       selector: '.glightbox',
       loop: true
     });
 
-    lightbox.on('open', () => {
-      scrollPosition = window.scrollY;
-    });
-
     lightbox.on('close', () => {
-      requestAnimationFrame(() => {
+      window.scrollTo(0, scrollPosition);
+      setTimeout(() => {
         window.scrollTo(0, scrollPosition);
-      });
+      }, 350);
     });
   </script>
 </body>
