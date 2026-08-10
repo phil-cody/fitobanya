@@ -3133,9 +3133,15 @@ pre {
     flex-direction: column;
   }
 }
+@media (max-width: 650px) {
+  .sticker-adv .sticker-adv__info {
+    width: 100%;
+  }
+}
 .sticker-adv .sticker-adv__info p {
   font-size: 16px;
   max-width: 200px;
+  align-self: flex-start;
 }
 @media (max-width: 991px) {
   .sticker-adv .sticker-adv__info p {
@@ -5779,7 +5785,7 @@ pre {
 }
 @media (max-width: 540px) {
   .category .item__img-box {
-    height: 236px;
+    height: 358px;
     padding: 14px;
   }
 }

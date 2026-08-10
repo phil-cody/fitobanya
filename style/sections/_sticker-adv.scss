@@ -89,9 +89,14 @@
       flex-direction: column;
     }
 
+    @media (max-width: 650px) {
+      width: 100%;
+    }
+
     p {
       font-size: $text-md-font-size;
       max-width: 200px;
+      align-self: flex-start;
 
       @media (max-width: 991px) {
         font-size: $text-md-font-size-mobile;
