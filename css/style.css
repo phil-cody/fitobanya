@@ -1611,6 +1611,12 @@ pre {
   border: none;
   border-radius: 24px;
 }
+@media (max-height: 400px) {
+  .tabbar__content-list .tabbar__call-list ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .tabbar__content-list .tabbar__call-list ul li {
   transition: all 0.5s ease;
   padding: 12px 16px;
@@ -1625,6 +1631,17 @@ pre {
 }
 .tabbar__content-list .tabbar__call-list ul li:last-child {
   border-bottom: none;
+}
+@media (max-height: 400px) {
+  .tabbar__content-list .tabbar__call-list ul li {
+    border: none;
+  }
+  .tabbar__content-list .tabbar__call-list ul li:nth-child(2n-1) {
+    border-right: 1px solid #c0bbb5;
+  }
+  .tabbar__content-list .tabbar__call-list ul li:first-child, .tabbar__content-list .tabbar__call-list ul li:nth-child(2) {
+    border-bottom: 1px solid #c0bbb5;
+  }
 }
 .tabbar__content-list .tabbar__call-list ul a {
   color: #544945;
