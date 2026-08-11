@@ -130,7 +130,7 @@
       flex-direction: column;
       gap: calc($spacing-xxxxs + $spacing-xxxs);
 
-      @media (max-width: 1324px) {
+      @media (max-width: 650px) {
         display: none;
       }
 

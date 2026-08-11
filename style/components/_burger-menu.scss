@@ -155,14 +155,25 @@
         li {
           border-bottom: 1px solid $borders;
           width: 100%;
+          padding-bottom: $spacing-sm;
+          height: $spacing-xxxl;
 
           a {
             @include flex-between;
             flex-direction: row;
             gap: $spacing-md;
-            padding-bottom: $spacing-sm;
             width: 250px;
-            height: $spacing-xxxl;
+
+            @media (max-width: 540px) {
+              width: 100%;
+            }
+          }
+
+          .menu__nav-catalog {
+            @include flex-between;
+            flex-direction: row;
+            gap: $spacing-md;
+            width: 250px;
 
             @media (max-width: 540px) {
               width: 100%;
@@ -170,16 +181,10 @@
           }
 
           .toggle-level-menu {
-            @include flex-between;
-            flex-direction: row;
-            gap: $spacing-md;
-            padding-bottom: $spacing-sm;
-            width: 250px;
-            height: $spacing-xxxl;
-
-            @media (max-width: 540px) {
-              width: 100%;
-            }
+            width: $spacing-lg;
+            height: $spacing-lg;
+            @include flex-center;
+            transition: all 0.5s ease;
           }
         }
       }
@@ -379,10 +384,21 @@
 .level-2-active {
   &#burger-menu-1-level {
     display: flex;
+    .toggle-level-menu {
+      transform: rotate(180deg) !important;
+    }
   }
 
   &#burger-menu-2-level {
     display: flex;
+  }
+
+  @media (min-width: 541px) {
+    &#burger-menu-2-level {
+      & .toggle-level-menu {
+        display: none !important;
+      }
+    }
   }
 
   @media (max-width: 540px) {

@@ -496,6 +496,8 @@ pre {
 .header__menu #burger-menu-1-level .menu__nav ul li {
   border-bottom: 1px solid #c0bbb5;
   width: 100%;
+  padding-bottom: 16px;
+  height: 40px;
 }
 .header__menu #burger-menu-1-level .menu__nav ul li a {
   display: flex;
@@ -503,29 +505,33 @@ pre {
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  padding-bottom: 16px;
   width: 250px;
-  height: 40px;
 }
 @media (max-width: 540px) {
   .header__menu #burger-menu-1-level .menu__nav ul li a {
     width: 100%;
   }
 }
-.header__menu #burger-menu-1-level .menu__nav ul li .toggle-level-menu {
+.header__menu #burger-menu-1-level .menu__nav ul li .menu__nav-catalog {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
   gap: 20px;
-  padding-bottom: 16px;
   width: 250px;
-  height: 40px;
 }
 @media (max-width: 540px) {
-  .header__menu #burger-menu-1-level .menu__nav ul li .toggle-level-menu {
+  .header__menu #burger-menu-1-level .menu__nav ul li .menu__nav-catalog {
     width: 100%;
   }
+}
+.header__menu #burger-menu-1-level .menu__nav ul li .toggle-level-menu {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
 }
 .header__menu #burger-menu-1-level .menu__contacts {
   display: flex;
@@ -706,8 +712,16 @@ pre {
 .level-2-active#burger-menu-1-level {
   display: flex;
 }
+.level-2-active#burger-menu-1-level .toggle-level-menu {
+  transform: rotate(180deg) !important;
+}
 .level-2-active#burger-menu-2-level {
   display: flex;
+}
+@media (min-width: 541px) {
+  .level-2-active#burger-menu-2-level .toggle-level-menu {
+    display: none !important;
+  }
 }
 @media (max-width: 540px) {
   .level-2-active#burger-menu-1-level {
@@ -1375,6 +1389,10 @@ pre {
 .tabbar__list li.active svg {
   stroke: #544945;
 }
+.tabbar__content-list {
+  max-height: calc(100dvh - 69px);
+  overflow-y: auto;
+}
 .tabbar__content-list .tabbar__catalog {
   display: none;
 }
@@ -1412,6 +1430,7 @@ pre {
 .tabbar__content-list .tabbar__catalog-nav ul li {
   border-bottom: 1px solid #c0bbb5;
   width: 100%;
+  overflow-y: auto;
 }
 .tabbar__content-list .tabbar__catalog-nav ul li:last-child {
   border-bottom: none;
@@ -2397,7 +2416,7 @@ pre {
   flex-direction: column;
   gap: 6px;
 }
-@media (max-width: 1324px) {
+@media (max-width: 650px) {
   .header-light .header__contacts-base {
     display: none;
   }
@@ -4511,7 +4530,7 @@ pre {
   flex-direction: column;
   gap: 6px;
 }
-@media (max-width: 1324px) {
+@media (max-width: 650px) {
   .header-dark .header__contacts-base {
     display: none;
   }
