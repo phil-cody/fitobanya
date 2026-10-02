@@ -24,7 +24,6 @@
   }
 
   function closeBanner() {
-    console.log(1)
     banner.classList.remove(VISIBLE_CLASS);
     localStorage.setItem(STORAGE_KEY, "true");
 

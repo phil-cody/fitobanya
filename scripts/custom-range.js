@@ -22,7 +22,6 @@ function initRangeSlider(container) {
     let valMin = parseInt(inputMin.value);
     let valMax = parseInt(inputMax.value);
     
-    // console.log(e.target);
     if (e && e.target === inputMin) {
       if (valMin >= valMax) {
         inputMin.value = valMax;
